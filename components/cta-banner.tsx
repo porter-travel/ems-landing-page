@@ -27,10 +27,10 @@ export default function CTABanner() {
         />
         <div className="relative z-0 flex flex-col gap-3">
           <h3 className="text-3xl md:text-4xl font-semibold">
-            Ready to Break the Mold?
+            The guest experience is evolving. Are you?
           </h3>
           <p className="mt-2 text-base md:text-lg">
-            Stop settling for patchwork tools and endless phone tag. Give your guests the mobile experience they expect—and your teams the clarity they need.
+            Drop the clunky workflows. EMS brings ordering, requests, chat, and upsells into one streamlined system.
           </p>
         </div>
         <div className="relative z-0 mt-14 flex flex-col sm:flex-row gap-4">
