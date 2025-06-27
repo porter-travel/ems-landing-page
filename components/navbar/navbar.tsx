@@ -9,10 +9,9 @@ const Navbar = () => {
       <div className="h-full flex items-center justify-between mx-auto px-4">
         <Logo />
 
-        {/* Desktop Menu */}
-        <NavMenu className="hidden md:block" />
-
         <div className="flex items-center gap-3">
+          {/* Desktop Menu */}
+          <NavMenu className="hidden md:block" />
           <Button variant="outline" className="hidden sm:inline-flex">
             Sign In
           </Button>

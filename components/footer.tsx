@@ -1,24 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
-import {
-  DribbbleIcon,
-  GithubIcon,
-  TwitchIcon,
-  TwitterIcon,
-} from "lucide-react";
+import { Linkedin } from "lucide-react";
 import Link from "next/link";
 
-const footerLinks = [
+const productLinks = [
   { title: "EMS Serve", href: "/ems-serve" },
   { title: "EMS Send", href: "/ems-send" },
   { title: "EMS Rate", href: "/ems-rate" },
+];
+
+const industryLinks = [
   { title: "Hotels", href: "/industries/hotels" },
   { title: "Restaurants", href: "/industries/restaurants" },
   { title: "Venues", href: "/industries/venues" },
-  { title: "Airbnbs", href: "/industries/airbnbs" },
-  { title: "Contact Us", href: "/contact-us" },
+  { title: "Airbnb", href: "/industries/airbnbs" },
+];
+
+const companyLinks = [
   { title: "About Us", href: "/about-us" },
+  { title: "Contact Us", href: "/contact-us" },
   { title: "Privacy Policy", href: "/privacy-policy" },
   { title: "Terms of Service", href: "/terms-of-service" },
 ];
@@ -48,18 +49,35 @@ const Footer = () => {
               />
             </svg>
 
-            <ul className="mt-6 flex items-center gap-4 flex-wrap">
-              {footerLinks.map(({ title, href }) => (
-                <li key={title}>
-                  <Link
-                    href={href}
-                    className="text-white hover:text-white"
-                  >
-                    {title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
+              <ul className="space-y-2">
+                {productLinks.map(({ title, href }) => (
+                  <li key={title}>
+                    <Link href={href} className="text-white hover:text-white">
+                      {title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <ul className="space-y-2">
+                {industryLinks.map(({ title, href }) => (
+                  <li key={title}>
+                    <Link href={href} className="text-white hover:text-white">
+                      {title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <ul className="space-y-2">
+                {companyLinks.map(({ title, href }) => (
+                  <li key={title}>
+                    <Link href={href} className="text-white hover:text-white">
+                      {title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Subscribe Newsletter */}
@@ -79,17 +97,8 @@ const Footer = () => {
           </span>
 
           <div className="flex items-center gap-5 text-white">
-            <Link href="#" target="_blank">
-              <TwitterIcon className="h-5 w-5" />
-            </Link>
-            <Link href="#" target="_blank">
-              <DribbbleIcon className="h-5 w-5" />
-            </Link>
-            <Link href="#" target="_blank">
-              <TwitchIcon className="h-5 w-5" />
-            </Link>
-            <Link href="#" target="_blank">
-              <GithubIcon className="h-5 w-5" />
+            <Link href="https://www.linkedin.com/company/ems-core/" target="_blank">
+              <Linkedin className="h-5 w-5" />
             </Link>
           </div>
         </div>

@@ -1,10 +1,12 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 const plans = [
   {
     name: "Free",
-    price: "\u00a30/pm",
+    price: 0,
     description:
       "For small properties or Airbnb's who want to use EMS with no strings attached.",
     features: [
@@ -16,7 +18,7 @@ const plans = [
   },
   {
     name: "Basic",
-    price: "\u00a330/pm",
+    price: 30,
     description:
       "Perfect for solo properties handling orders, reviews, and basic requests in one clean flow.",
     features: [
@@ -30,7 +32,8 @@ const plans = [
   },
   {
     name: "Growth",
-    price: "\u00a350/pm",
+    price: 50,
+    popular: true,
     description:
       "For ambitious venues and hotels layering in upsells, live chat, and smarter fulfilment.",
     features: [
@@ -45,7 +48,7 @@ const plans = [
   },
   {
     name: "Pro",
-    price: "\u00a3175/pm",
+    price: 175,
     description:
       "Best for high-volume properties that want full power, zero limits, and total flexibility.",
     features: [
@@ -70,11 +73,29 @@ export default function Pricing() {
       </p>
       <div className="mt-12 max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {plans.map((plan) => (
-          <div key={plan.name} className="border rounded-xl p-6 text-center bg-background/50">
-            <h3 className="text-lg font-medium">{plan.name}</h3>
-            <p className="mt-2 text-4xl font-bold">{plan.price}</p>
+          <div
+            key={plan.name}
+            className={
+              "relative border rounded-xl p-6 text-center bg-background/50" +
+              (plan.popular ? " border-primary" : "")
+            }
+          >
+            {plan.popular && (
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                <span className="inline-block rounded-md bg-primary px-2 py-0.5 text-xs font-semibold text-primary-foreground">
+                  Most Popular
+                </span>
+              </div>
+            )}
+            <h3 className="text-lg font-medium mt-2">{plan.name}</h3>
+            <div className="mt-2 flex items-baseline justify-center gap-1">
+              <span className="text-4xl font-bold">£{plan.price}</span>
+              <span className="text-sm text-muted-foreground">/month</span>
+            </div>
             <p className="mt-4 text-sm">{plan.description}</p>
-            <ul className="mt-4 space-y-1 text-sm text-left">
+            <Button className="mt-4 w-full">Get Started</Button>
+            <Separator className="my-4" />
+            <ul className="space-y-1 text-sm text-left">
               {plan.features.map((feature) => (
                 <li key={feature}>{feature}</li>
               ))}
