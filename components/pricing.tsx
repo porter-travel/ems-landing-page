@@ -4,7 +4,7 @@
 const plans = [
   {
     name: "Free",
-    price: "\u00a30/month",
+    price: "\u00a30/m",
     description:
       "For small properties or Airbnb's who want to use EMS with no strings attached.",
     features: [
@@ -16,7 +16,7 @@ const plans = [
   },
   {
     name: "Basic",
-    price: "\u00a330/month",
+    price: "\u00a330/m",
     description:
       "Perfect for solo properties handling orders, reviews, and basic requests in one clean flow.",
     features: [
@@ -30,7 +30,7 @@ const plans = [
   },
   {
     name: "Growth",
-    price: "\u00a350/month",
+    price: "\u00a350/m",
     description:
       "For ambitious venues and hotels layering in upsells, live chat, and smarter fulfilment.",
     features: [
@@ -45,7 +45,7 @@ const plans = [
   },
   {
     name: "Pro",
-    price: "\u00a3175/month",
+    price: "\u00a3175/m",
     description:
       "Best for high-volume properties that want full power, zero limits, and total flexibility.",
     features: [
@@ -85,7 +85,7 @@ export default function Pricing() {
       <p className="mt-8 text-center text-sm text-muted-foreground max-w-[65ch]">
         All plans also include a 3.5% processing fee on any payments made through the platform
         <br />
-        You purchase one core plan for your first property, then add extra sites you manage for just an additional \u00a325 per month.
+        Start with a core plan for your main property, then run multiple sites by adding each additional location for just £25/month.
       </p>
     </div>
   );
