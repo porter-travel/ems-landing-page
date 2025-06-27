@@ -4,7 +4,7 @@
 const plans = [
   {
     name: "Free",
-    price: "\u00a30/m",
+    price: "\u00a30/pm",
     description:
       "For small properties or Airbnb's who want to use EMS with no strings attached.",
     features: [
@@ -16,7 +16,7 @@ const plans = [
   },
   {
     name: "Basic",
-    price: "\u00a330/m",
+    price: "\u00a330/pm",
     description:
       "Perfect for solo properties handling orders, reviews, and basic requests in one clean flow.",
     features: [
@@ -30,7 +30,7 @@ const plans = [
   },
   {
     name: "Growth",
-    price: "\u00a350/m",
+    price: "\u00a350/pm",
     description:
       "For ambitious venues and hotels layering in upsells, live chat, and smarter fulfilment.",
     features: [
@@ -45,7 +45,7 @@ const plans = [
   },
   {
     name: "Pro",
-    price: "\u00a3175/m",
+    price: "\u00a3175/pm",
     description:
       "Best for high-volume properties that want full power, zero limits, and total flexibility.",
     features: [
