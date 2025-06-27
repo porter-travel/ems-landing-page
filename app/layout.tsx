@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   icons: [
     {
       rel: "icon",
-      url: "/favicon.ico",
+      url: "/favicon-32x32.png",
     },
     {
       rel: "apple-touch-icon",
