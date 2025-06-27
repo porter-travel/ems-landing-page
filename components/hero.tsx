@@ -5,7 +5,7 @@ import LogoCloud from "./logo-cloud";
 
 const Hero = () => {
   return (
-    <div className="min-h-[calc(100vh-6rem)] flex flex-col items-center py-20 px-6">
+    <div className="min-h-[calc(100vh-6rem)] flex flex-col items-center py-20 px-6 bg-accent">
       <div className="md:mt-6 flex items-center justify-center">
         <div className="text-center max-w-2xl">
           <h1 className="max-w-[20ch] mt-6 text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.2] tracking-tight">
