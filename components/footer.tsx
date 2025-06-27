@@ -10,31 +10,22 @@ import {
 import Link from "next/link";
 
 const footerLinks = [
-  {
-    title: "Features",
-    href: "#features",
-  },
-  {
-    title: "Pricing",
-    href: "#pricing",
-  },
-  {
-    title: "FAQ",
-    href: "#faq",
-  },
-  {
-    title: "Testimonials",
-    href: "#testimonials",
-  },
-  {
-    title: "Privacy",
-    href: "#privacy",
-  },
+  { title: "EMS Serve", href: "/ems-serve" },
+  { title: "EMS Send", href: "/ems-send" },
+  { title: "EMS Rate", href: "/ems-rate" },
+  { title: "Hotels", href: "/industries/hotels" },
+  { title: "Restaurants", href: "/industries/restaurants" },
+  { title: "Venues", href: "/industries/venues" },
+  { title: "Airbnbs", href: "/industries/airbnbs" },
+  { title: "Contact Us", href: "/contact-us" },
+  { title: "About Us", href: "/about-us" },
+  { title: "Privacy Policy", href: "/privacy-policy" },
+  { title: "Terms of Service", href: "/terms-of-service" },
 ];
 
 const Footer = () => {
   return (
-    <footer className="dark:border-t mt-40 bg-[#1a1a1a] text-foreground">
+    <footer className="dark:border-t mt-40 bg-[#1a1a1a] text-white">
       <div className="max-w-screen-xl mx-auto px-6">
         <div className="py-12 flex flex-col sm:flex-row items-start justify-between gap-x-8 gap-y-10">
           <div>
@@ -62,7 +53,7 @@ const Footer = () => {
                 <li key={title}>
                   <Link
                     href={href}
-                    className="text-muted-foreground hover:text-foreground"
+                    className="text-white hover:text-white"
                   >
                     {title}
                   </Link>
@@ -83,15 +74,11 @@ const Footer = () => {
         <Separator />
         <div className="py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5">
           {/* Copyright */}
-          <span className="text-muted-foreground text-center sm:text-start">
-            &copy; {new Date().getFullYear()}{" "}
-            <Link href="/" target="_blank">
-              Shadcn UI Blocks
-            </Link>
-            . All rights reserved.
+          <span className="text-white text-center sm:text-start">
+            &copy; 2025 Travel Global Limited. All rights reserved.
           </span>
 
-          <div className="flex items-center gap-5 text-muted-foreground">
+          <div className="flex items-center gap-5 text-white">
             <Link href="#" target="_blank">
               <TwitterIcon className="h-5 w-5" />
             </Link>
