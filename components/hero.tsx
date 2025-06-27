@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="md:mt-6 flex items-center justify-center">
         <div className="text-center max-w-2xl">
           <h1 className="max-w-[20ch] mt-6 text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.2] tracking-tight">
-            EMS — The Guest Experience Engine, Unchained
+            The Guest Experience Engine
           </h1>
           <p className="mt-6 max-w-[60ch] xs:text-lg">
             Tired of missed room-service calls, endless follow-ups and generic feedback forms? EMS puts every guest touchpoint—ordering, service requests, live chat and in-moment reviews—into a single, white-label mobile interface. No apps to download, no software to master. Just scan, serve, sell and scale.
