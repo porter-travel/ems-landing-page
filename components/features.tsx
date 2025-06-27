@@ -1,57 +1,52 @@
 import {
-  Blocks,
-  Bot,
-  ChartPie,
-  Film,
-  MessageCircle,
-  Settings2,
+  ConciergeBell,
+  Send,
+  Star,
+  Workflow,
+  ChartBar,
+  Palette,
 } from "lucide-react";
 import React from "react";
 
 const features = [
   {
-    icon: Settings2,
-    title: "Customizable Layouts",
-    description:
-      "Design your space with drag-and-drop simplicity—create grids, lists, or galleries in seconds.",
+    icon: ConciergeBell,
+    title: "EMS Serve",
+    description: "One-tap ordering & on-demand requests—zero phone calls.",
   },
   {
-    icon: Blocks,
-    title: "Interactive Widgets",
-    description:
-      "Embed polls, quizzes, or forms to keep your audience engaged.",
+    icon: Send,
+    title: "EMS Send",
+    description: "Your branded info hub: hours, menus, guides & push nudges.",
   },
   {
-    icon: Bot,
-    title: "AI-Powered Tools",
-    description:
-      "Generate summaries, auto-format content, or translate into multiple languages seamlessly.",
+    icon: Star,
+    title: "EMS Rate",
+    description: "Contextual review prompts drive 80%+ completion.",
   },
   {
-    icon: Film,
-    title: "Media Integrations",
-    description:
-      "Connect with Spotify, Instagram, or your own media library for dynamic visuals and sound.",
+    icon: Workflow,
+    title: "Workflows",
+    description: "Auto-assign, remind & escalate in real time.",
   },
   {
-    icon: ChartPie,
-    title: "Advanced Analytics",
-    description:
-      "Track engagement, clicks, and user activity with intuitive charts and reports.",
+    icon: ChartBar,
+    title: "Insights",
+    description: "Live dashboards track revenue, response times & NPS.",
   },
   {
-    icon: MessageCircle,
-    title: "Seamless Collaboration",
-    description:
-      "Comment, tag, and assign tasks directly within your documents.",
+    icon: Palette,
+    title: "Brand First",
+    description: "Fonts, colors, URL—fully white-label.",
   },
 ];
 
 const Features = () => {
   return (
     <div id="features" className="w-full py-12 xs:py-20 px-6">
-      <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
-        Unleash Your Creativity
+      <p className="text-center font-medium text-primary">All-In-One Guest Toolkit</p>
+      <h2 className="mt-2 text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
+        Six Pillars of a Seamless Stay
       </h2>
       <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature) => (

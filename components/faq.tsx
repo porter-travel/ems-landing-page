@@ -9,40 +9,37 @@ import {
 
 const faq = [
   {
-    icon: Undo2,
-    question: "What is your return policy?",
-    answer:
-      "You can return unused items in their original packaging within 30 days for a refund or exchange. Contact support for assistance.",
-  },
-  {
-    icon: Route,
-    question: "How do I track my order?",
-    answer:
-      "Track your order using the link provided in your confirmation email, or log into your account to view tracking details.",
-  },
-  {
-    icon: Truck,
-    question: "Do you ship internationally?",
-    answer:
-      "Yes, we ship worldwide. Shipping fees and delivery times vary by location, and customs duties may apply for some countries.",
+    icon: UserRoundCheck,
+    question: "Do I need a developer to get started?",
+    answer: "Nope. EMS is turnkey—QR codes, no-code CMS, and 24–48 hour launch.",
   },
   {
     icon: BadgeDollarSign,
-    question: "What payment methods do you accept?",
+    question: "How does the token model work?",
+    answer: "Each scan, order, request or review prompt = 1 token.",
+  },
+  {
+    icon: Route,
+    question: "Can I integrate with my PMS or POS?",
     answer:
-      "We accept Visa, MasterCard, American Express, PayPal, Apple Pay, and Google Pay, ensuring secure payment options for all customers.",
+      "Absolutely—built-in connectors for all major systems plus a robust REST API.",
   },
   {
     icon: ShieldCheck,
-    question: "What if I receive a damaged item?",
-    answer:
-      "Please contact our support team within 48 hours of delivery with photos of the damaged item. We’ll arrange a replacement or refund.",
+    question: "Is EMS truly white-label?",
+    answer: "Yes: your domain, your branding, your data—always.",
   },
   {
-    icon: UserRoundCheck,
-    question: "How can I contact customer support?",
+    icon: Truck,
+    question: "What support do you offer?",
     answer:
-      "Reach out via email at support@example.com or call us at 1-800-123-4567 for assistance with any inquiries.",
+      "24/7 email, live chat and dedicated onboarding for Growth & Enterprise plans.",
+  },
+  {
+    icon: Undo2,
+    question: "How secure is guest data?",
+    answer:
+      "SOC 2 compliant, end-to-end encryption, GDPR & PCI-DSS standards.",
   },
 ];
 
