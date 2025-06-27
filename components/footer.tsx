@@ -34,9 +34,9 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer className="dark:border-t mt-40 dark bg-accent text-foreground">
-      <div className="max-w-screen-xl mx-auto">
-        <div className="py-12 flex flex-col sm:flex-row items-start justify-between gap-x-8 gap-y-10 px-6 xl:px-0">
+    <footer className="dark:border-t mt-40 bg-[#1a1a1a] text-foreground">
+      <div className="max-w-screen-xl mx-auto px-6">
+        <div className="py-12 flex flex-col sm:flex-row items-start justify-between gap-x-8 gap-y-10">
           <div>
             {/* Logo */}
             <svg
@@ -81,7 +81,7 @@ const Footer = () => {
           </div>
         </div>
         <Separator />
-        <div className="py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6 xl:px-0">
+        <div className="py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5">
           {/* Copyright */}
           <span className="text-muted-foreground text-center sm:text-start">
             &copy; {new Date().getFullYear()}{" "}

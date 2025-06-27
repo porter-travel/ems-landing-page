@@ -10,36 +10,39 @@ import {
 const faq = [
   {
     icon: UserRoundCheck,
-    question: "Do I need a developer to get started?",
-    answer: "Nope. EMS is turnkey—QR codes, no-code CMS, and 24–48 hour launch.",
-  },
-  {
-    icon: BadgeDollarSign,
-    question: "How does the token model work?",
-    answer: "Each scan, order, request or review prompt = 1 token.",
-  },
-  {
-    icon: Route,
-    question: "Can I integrate with my PMS or POS?",
+    question: "Is this just for hotels?",
     answer:
-      "Absolutely—built-in connectors for all major systems plus a robust REST API.",
-  },
-  {
-    icon: ShieldCheck,
-    question: "Is EMS truly white-label?",
-    answer: "Yes: your domain, your branding, your data—always.",
+      "Nope. We work with restaurants, venues, airbnbs - anywhere guests hang out.",
   },
   {
     icon: Truck,
-    question: "What support do you offer?",
+    question: "Do I need to buy any new hardware?",
     answer:
-      "24/7 email, live chat and dedicated onboarding for Growth & Enterprise plans.",
+      "No, guests just scan a QR code on their phone. Staff can use their phones, tablets or laptops.",
+  },
+  {
+    icon: ShieldCheck,
+    question: "Can we custom brand the experience?",
+    answer:
+      "Hell yes. Your vibe, your voice, your rules. The whole EMS platform can be completely white-labelled.",
+  },
+  {
+    icon: Route,
+    question: "How long does setup take?",
+    answer:
+      "You can start using EMS in minutes. Full customisation with products, requests, branding and live chat can take a couple of hours, depending on how complex you go.",
+  },
+  {
+    icon: BadgeDollarSign,
+    question: "Is there a free trial or something?",
+    answer:
+      "Yes! Get started today and enjoy 14 days free to test the platform.",
   },
   {
     icon: Undo2,
-    question: "How secure is guest data?",
+    question: "I don’t have a tech team. Is that a problem?",
     answer:
-      "SOC 2 compliant, end-to-end encryption, GDPR & PCI-DSS standards.",
+      "Not at all! We built EMS so anyone can set it up and benefit from offering a more digital guest experience.",
   },
 ];
 
