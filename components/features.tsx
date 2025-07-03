@@ -7,6 +7,7 @@ import {
   Palette,
 } from "lucide-react";
 import React from "react";
+import FeatureCard from "./feature-card";
 
 const features = [
   {
@@ -56,18 +57,12 @@ const Features = () => {
       </h2>
       <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature) => (
-          <div
+          <FeatureCard
             key={feature.title}
-            className="flex flex-col bg-background border rounded-xl py-6 px-5"
-          >
-            <div className="mb-3 h-10 w-10 flex items-center justify-center bg-muted rounded-full">
-              <feature.icon className="h-6 w-6" />
-            </div>
-            <span className="text-lg font-semibold">{feature.title}</span>
-            <p className="mt-1 text-foreground/80 text-[15px]">
-              {feature.description}
-            </p>
-          </div>
+            icon={feature.icon}
+            title={feature.title}
+            description={feature.description}
+          />
         ))}
       </div>
     </div>
