@@ -2,6 +2,29 @@ import PageHero from "@/components/page-hero";
 import Footer from "@/components/footer";
 import CTABanner from "@/components/cta-banner";
 import { Navbar } from "@/components/navbar";
+import FeatureCard from "@/components/feature-card";
+import {
+  Ticket,
+  Beer,
+  Bell,
+  Smile,
+  Wallet,
+  MessageCircle,
+  BarChartBig,
+} from "lucide-react";
+
+const features = [
+  { icon: Ticket, title: "Quick integrations", description: "Connect Ticketmaster, Eventbrite and Shopify in minutes." },
+  { icon: Beer, title: "Mobile bars", description: "Guests order from seats and pick up when ready." },
+  { icon: Bell, title: "Set-time alerts", description: "Keep crowds flowing and revenue climbing." },
+  { icon: Smile, title: "Post-event surveys", description: "Feedback feeds promoter dashboards for re-bookings." },
+];
+
+const uplifts = [
+  { icon: Wallet, title: "Higher spend", description: "+27% per head when mobile ordering enabled." },
+  { icon: MessageCircle, title: "Review boost", description: "4.6★ → 4.9★ average score after 90 days." },
+  { icon: BarChartBig, title: "Time saved", description: "12 hours weekly saved thanks to automated alerts." },
+];
 
 export default function Page() {
   return (
@@ -13,12 +36,16 @@ export default function Page() {
           subtitle=""
         />
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
-          <ul className="list-disc pl-5 space-y-2">
-            <li>Integrate with Ticketmaster, Eventbrite, and Shopify in minutes.</li>
-            <li>Queue-busting mobile bars: guests order from seats, pick up when ready.</li>
-            <li>Automated set-time notifications keep crowds flowing and F&B revenue climbing.</li>
-            <li>Post-event surveys feed straight into promoter dashboards to secure re-bookings.</li>
-          </ul>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {features.map((item) => (
+              <FeatureCard
+                key={item.title}
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
+          </div>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
           <h2 className="text-2xl font-semibold">End-to-End Event Flow</h2>
@@ -56,11 +83,16 @@ export default function Page() {
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
           <h2 className="text-2xl font-semibold">Proven Revenue Uplifts</h2>
-          <ul className="list-disc pl-5 space-y-2">
-            <li>+27 % average spend per head when mobile bar ordering is enabled.</li>
-            <li>4.6★ → 4.9★ average review score for venues after 90 days on EMS.</li>
-            <li>12 hours saved weekly by ops teams thanks to automated set-time notifications.</li>
-          </ul>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {uplifts.map((item) => (
+              <FeatureCard
+                key={item.title}
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
+          </div>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto text-center">
           <p className="text-lg font-semibold">See how EMS turns events into encores →</p>
