@@ -20,7 +20,7 @@ const features = [
     icon: Send,
     title: "EMS Send",
     description:
-      "Automate pre-arrival upsells to help your guests personalise their stay before they check-in.",
+      "Effortlessly schedule guest-ready messages - before, during, or after each booking",
   },
   {
     icon: Star,
