@@ -28,7 +28,7 @@ const Hero = () => {
       </div>
       <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
         <img
-          src="/EMSHeroImage.png"
+          src="/EMSHeroImage.gif"
           alt="Hero image"
           className="max-w-full h-auto rounded-xl"
         />
