@@ -18,7 +18,7 @@ const plans = [
   },
   {
     name: "Basic",
-    price: 30,
+    price: 45,
     description:
       "Perfect for solo properties handling orders, reviews, and basic requests in one clean flow.",
     features: [
@@ -32,7 +32,7 @@ const plans = [
   },
   {
     name: "Growth",
-    price: 50,
+    price: 75,
     popular: true,
     description:
       "For ambitious venues and hotels layering in upsells, live chat, and smarter fulfilment.",
@@ -106,7 +106,7 @@ export default function Pricing() {
       <p className="mt-8 text-center text-sm text-muted-foreground max-w-[65ch]">
         All plans also include a 3.5% processing fee on any payments made through the platform
         <br />
-        Start with a core plan for your main property, then run multiple sites by adding each additional location for just £25/month.
+        Choose a core plan for your main property—every additional property enjoys a 10 % discount.
       </p>
     </div>
   );

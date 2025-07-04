@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="min-h-[calc(100vh-6rem)] flex flex-col md:flex-row items-center justify-between gap-8 py-20 px-10 bg-accent">
       <div className="md:w-1/2 text-center md:text-left max-w-2xl">
-        <h1 className="max-w-[20ch] mt-6 text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.2] tracking-tight">
+        <h1 className="max-w-[20ch] mt-6 text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.1] tracking-tight">
           Ordering, Requests, Reviews
           <br className="hidden md:block" /> <span style={{ color: "#F65053" }}>Reimagined</span>
         </h1>
