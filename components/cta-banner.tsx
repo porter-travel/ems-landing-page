@@ -35,7 +35,7 @@ export default function CTABanner() {
         </div>
         <div className="relative z-0 mt-14 flex flex-col sm:flex-row gap-4">
           <Button size="lg">
-            Start Your Free Trial <ArrowUpRight className="!h-5 !w-5" />
+            Get Started Free <ArrowUpRight className="!h-5 !w-5" />
           </Button>
           <Button size="lg" variant="outline">
             Book a Demo <Forward className="!h-5 !w-5" />

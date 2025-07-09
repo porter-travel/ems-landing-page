@@ -15,7 +15,7 @@ const Hero = () => {
         </p>
         <div className="mt-12 flex flex-col sm:flex-row items-center sm:justify-start md:justify-start gap-4">
           <Button size="lg" className="w-full sm:w-auto rounded-full text-base">
-            Start Your Free Trial <ArrowUpRight className="!h-5 !w-5" />
+            Get Started Free <ArrowUpRight className="!h-5 !w-5" />
           </Button>
           <Button
             variant="outline"
