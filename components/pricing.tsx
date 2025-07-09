@@ -103,7 +103,7 @@ export default function Pricing() {
           </div>
         ))}
       </div>
-      <p className="mt-8 text-center text-sm text-muted-foreground max-w-[65ch]">
+      <p className="mt-8 text-center text-sm text-muted-foreground max-w-[80ch]">
         All plans also include a 3.5% processing fee on any payments made through the platform
         <br />
         Choose a core plan for your main property—every additional property enjoys a 10 % discount.
