@@ -114,7 +114,7 @@ export default function Page() {
       <Navbar />
       <main className="pt-16 xs:pt-20 sm:pt-24">
         <PageHero
-          title="Reach, resonate, and revenue follows."
+          title="Automated Messages That Boost Revenue."
           subtitle="Automatically engage every guest before, during, and after each booking with perfectly timed, custom-branded messages—no complex integrations required."
         >
           <Button
