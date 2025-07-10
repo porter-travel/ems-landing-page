@@ -109,9 +109,7 @@ export default function Page() {
           </Button>
         </PageHero>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
-          <h2 className="text-2xl font-semibold" style={{ color: "#F65053" }}>
-            Why Guests Love It
-          </h2>
+          <h2 className="text-2xl font-semibold">Why Guests Love It</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {guestLove.map((item) => (
               <div
@@ -139,9 +137,7 @@ export default function Page() {
           </div>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
-          <h2 className="text-2xl font-semibold" style={{ color: "#F65053" }}>
-            Built to simplify operations
-          </h2>
+          <h2 className="text-2xl font-semibold">Built to simplify operations</h2>
           <img
             src="/EMSFulfilment.png"
             alt="Fulfilment"

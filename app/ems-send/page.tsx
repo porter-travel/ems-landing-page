@@ -6,13 +6,16 @@ import FeatureCard from "@/components/feature-card";
 import { Button } from "@/components/ui/button";
 import {
   Inbox,
-  ShieldCheck,
   MailCheck,
   ArrowUpRight,
   CalendarDays,
   Upload,
   Layout,
   BarChart2,
+  Repeat,
+  MousePointerClick,
+  Send,
+  MessageCircle,
 } from "lucide-react";
 
 
@@ -27,10 +30,63 @@ const compliance = [
     title: "Responsive templates",
     description: "Auto-apply your fonts, colours, and logo.",
   },
+];
+
+const reasons = [
   {
-    icon: ShieldCheck,
-    title: "Granular consent",
-    description: "GDPR/CCPA compliant preference centre out of the box.",
+    icon: Repeat,
+    title: "Lifecycle Triggers",
+    description:
+      "Pre-arrival teasers, in-stay nudges, post-stay win-backs. Put upgrades, add-ons, and reviews in front of guests when they’re most likely to act",
+  },
+  {
+    icon: MousePointerClick,
+    title: "Drag-&-Drop Journeys",
+    description: "Build or adjust flows in minutes—no code, no agency fees",
+  },
+  {
+    icon: Upload,
+    title: "CSV Upload or One-Click Sync",
+    description: "Import a list today, plug in your PMS tomorrow—your choice",
+  },
+  {
+    icon: Send,
+    title: "Own-Domain Sending",
+    description:
+      "Boost open rates and brand trust with your hotel@yourdomain.com address",
+  },
+  {
+    icon: MessageCircle,
+    title: "Multi-Channel Ready",
+    description: "Start with email; add SMS or WhatsApp when you’re ready",
+  },
+  {
+    icon: BarChart2,
+    title: "Real-Time Reporting",
+    description: "See opens, clicks, and conversion £ in one revenue dashboard",
+  },
+];
+
+const touchpoints = [
+  {
+    time: "T – 7 days",
+    text: "\u201CAdd a late checkout for 20% off.\u201D – Average 14% take-rate",
+  },
+  {
+    time: "Check-in morning",
+    text: "\u201CFancy a welcome cocktail? Order now, skip the queue.\u201D",
+  },
+  {
+    time: "Mid-stay",
+    text: "Quick CSAT pulse; low scores route to the duty manager in real time.",
+  },
+  {
+    time: "Checkout +1 hour",
+    text: "\u201CRate your stay & save 10% on your next booking.\u201D",
+  },
+  {
+    time: "D + 30",
+    text: "Personalised offer based on spend tier or last-ordered service.",
   },
 ];
 
@@ -77,59 +133,28 @@ export default function Page() {
         </PageHero>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
           <h2 className="text-2xl font-semibold">Why Operators Choose EMS Send</h2>
-          <div className="overflow-x-auto">
-            <table className="min-w-full text-left border-collapse">
-              <thead>
-                <tr>
-                  <th className="p-2 border">What it does</th>
-                  <th className="p-2 border">How it helps you earn more</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="p-2 border font-semibold">
-                    Lifecycle Triggers
-                    <div className="font-normal">
-                      Pre-arrival teasers, in-stay nudges, post-stay win-backs
-                    </div>
-                  </td>
-                  <td className="p-2 border">
-                    Put upgrades, add-ons, and reviews in front of guests when they’re most likely to act
-                  </td>
-                </tr>
-                <tr>
-                  <td className="p-2 border font-semibold">Drag-&-Drop Journeys</td>
-                  <td className="p-2 border">Build or adjust flows in minutes—no code, no agency fees</td>
-                </tr>
-                <tr>
-                  <td className="p-2 border font-semibold">CSV Upload or One-Click Sync</td>
-                  <td className="p-2 border">Import a list today, plug in your PMS tomorrow—your choice</td>
-                </tr>
-                <tr>
-                  <td className="p-2 border font-semibold">Own-Domain Sending</td>
-                  <td className="p-2 border">Boost open rates and brand trust with your hotel@yourdomain.com address</td>
-                </tr>
-                <tr>
-                  <td className="p-2 border font-semibold">Multi-Channel Ready</td>
-                  <td className="p-2 border">Start with email; add SMS or WhatsApp when you’re ready</td>
-                </tr>
-                <tr>
-                  <td className="p-2 border font-semibold">Real-Time Reporting</td>
-                  <td className="p-2 border">See opens, clicks, and conversion £ in one revenue dashboard</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {reasons.map((item) => (
+              <FeatureCard
+                key={item.title}
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
           </div>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
           <h2 className="text-2xl font-semibold">High-Impact Touchpoints (Examples)</h2>
-          <ul className="space-y-2 list-disc list-inside">
-            <li>T – 7 days · “Add a late checkout for 20 % off.” – Average 14 % take-rate</li>
-            <li>Check-in morning · “Fancy a welcome cocktail? Order now, skip the queue.”</li>
-            <li>Mid-stay · Quick CSAT pulse; low scores route to the duty manager in real time.</li>
-            <li>Checkout +1 hour · “Rate your stay & save 10 % on your next booking.”</li>
-            <li>D + 30 · Personalised offer based on spend tier or last-ordered service.</li>
-          </ul>
+          <ol className="relative border-l border-border pl-6 space-y-6">
+            {touchpoints.map((item) => (
+              <li key={item.time} className="relative">
+                <span className="absolute -left-3 top-1.5 h-2 w-2 rounded-full bg-primary" />
+                <p className="text-sm font-semibold">{item.time}</p>
+                <p className="text-sm text-foreground/80">{item.text}</p>
+              </li>
+            ))}
+          </ol>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
           <h2 className="text-2xl font-semibold">Built-In Deliverability & Branding</h2>
@@ -146,7 +171,7 @@ export default function Page() {
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
           <h2 className="text-2xl font-semibold">Set-Up in Three Steps</h2>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-3 gap-4">
             {steps.map((item) => (
               <FeatureCard
                 key={item.title}
