@@ -12,25 +12,33 @@ import {
   Bell,
   CalendarDays,
   ArrowUpRight,
+  Utensils,
+  ConciergeBell,
+  MessageCircle,
+  Info,
 } from "lucide-react";
 
 const guestLove = [
   {
+    icon: Utensils,
     feature: "Digital Ordering",
     examples: "Room-service, poolside F&B, table orders",
     benefit: "Scan, customise, pay in <30 s",
   },
   {
+    icon: ConciergeBell,
     feature: "Service Requests",
     examples: "Extra towels, maintenance, late checkout",
     benefit: "One tap—no phone calls",
   },
   {
+    icon: MessageCircle,
     feature: "Live Chat",
     examples: "Concierge questions, event updates",
     benefit: "Real-time answers, routed to the right team",
   },
   {
+    icon: Info,
     feature: "Info Pages",
     examples: "Hotel guide, local eats, FAQs",
     benefit: "Everything they need in one link",
@@ -111,16 +119,22 @@ export default function Page() {
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
           <h2 className="text-2xl font-semibold">Why Guests Love It</h2>
           <div className="grid sm:grid-cols-2 gap-4">
-            {guestLove.map((item) => (
-              <div
-                key={item.feature}
-                className="bg-background border rounded-xl p-5"
-              >
-                <span className="text-lg font-semibold">{item.feature}</span>
-                <p className="text-sm text-foreground/80">{item.examples}</p>
-                <p className="mt-1 text-foreground/80">{item.benefit}</p>
-              </div>
-            ))}
+            {guestLove.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.feature}
+                  className="bg-background border rounded-xl p-5 flex flex-col"
+                >
+                  <div className="mb-3 h-10 w-10 flex items-center justify-center bg-muted rounded-full">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <span className="text-lg font-semibold">{item.feature}</span>
+                  <p className="text-sm text-foreground/80">{item.examples}</p>
+                  <p className="mt-1 text-foreground/80">{item.benefit}</p>
+                </div>
+              );
+            })}
           </div>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
