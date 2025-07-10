@@ -3,74 +3,52 @@ import Footer from "@/components/footer";
 import CTABanner from "@/components/cta-banner";
 import { Navbar } from "@/components/navbar";
 import FeatureCard from "@/components/feature-card";
+import { Button } from "@/components/ui/button";
 import {
-  Send,
-  Users,
-  Mail,
   Inbox,
-  Gauge,
   ShieldCheck,
   MailCheck,
-  ListChecks,
-  FileText,
+  ArrowUpRight,
+  CalendarDays,
+  Upload,
+  Layout,
+  BarChart2,
 } from "lucide-react";
 
-const features = [
-  {
-    icon: Send,
-    title: "Automated journeys",
-    description:
-      "Welcome flows, mid-stay check-ins and abandoned-cart nudges built in.",
-  },
-  {
-    icon: Users,
-    title: "Smart segmentation",
-    description:
-      "Target by visit history, spend tier or onsite behaviour with ease.",
-  },
-  {
-    icon: Mail,
-    title: "Two-way messaging",
-    description:
-      "Guests can reply in-channel; your team manages it in one shared inbox.",
-  },
-  {
-    icon: Inbox,
-    title: "Drag-and-drop builder",
-    description:
-      "Beautiful templates render perfectly on every device—no HTML needed.",
-  },
-  {
-    icon: Gauge,
-    title: "A/B testing & AI",
-    description:
-      "Find the subject lines, send-times and offers that convert best.",
-  },
-];
 
 const compliance = [
   {
-    icon: ShieldCheck,
-    title: "GDPR & CCPA ready",
-    description:
-      "Automatic consent capture, granular preferences and double opt-in.",
-  },
-  {
     icon: MailCheck,
-    title: "Enterprise deliverability",
-    description: "Dedicated IP pools and list hygiene for top inbox placement.",
+    title: "Dedicated sending reputation",
+    description: "Your own domain, DKIM/SPF pre-configured.",
   },
   {
-    icon: ListChecks,
-    title: "Preference centre",
-    description:
-      "Guests manage channels and frequency themselves—churn stays low.",
+    icon: Inbox,
+    title: "Responsive templates",
+    description: "Auto-apply your fonts, colours, and logo.",
   },
   {
-    icon: FileText,
-    title: "Audit trail",
-    description:
-      "Every send, open and unsubscribe logged and exportable for regulators.",
+    icon: ShieldCheck,
+    title: "Granular consent",
+    description: "GDPR/CCPA compliant preference centre out of the box.",
+  },
+];
+
+const steps = [
+  {
+    icon: Upload,
+    title: "Upload or Sync Contacts",
+    description: "Drag in a CSV or connect your booking system.",
+  },
+  {
+    icon: Layout,
+    title: "Pick a Journey Template",
+    description: "Choose “Pre-stay Upsell”, “Abandoned Checkout”, or build from scratch.",
+  },
+  {
+    icon: BarChart2,
+    title: "Go Live & Track Revenue",
+    description: "Real-time dashboard shows sales, ROI, and best-performing messages.",
   },
 ];
 
@@ -80,66 +58,81 @@ export default function Page() {
       <Navbar />
       <main className="pt-16 xs:pt-20 sm:pt-24">
         <PageHero
-          title="Send the right message at the perfect moment."
-          subtitle="Omni-channel guest engagement—email, SMS, WhatsApp, and push—driven by real-time data from EMS Serve."
-        />
+          title="Reach, resonate, and revenue follows."
+          subtitle="Automatically engage every guest before, during, and after each booking with perfectly timed, custom-branded messages—no complex integrations required."
+        >
+          <Button
+            size="lg"
+            className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
+          >
+            Start Free <ArrowUpRight className="h-5 w-5" />
+          </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
+          >
+            <CalendarDays className="h-5 w-5" /> Book a Demo
+          </Button>
+        </PageHero>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
-          <p>Stop blasting one-size-fits-all emails and start meaningful conversations:</p>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {features.map((item) => (
-              <FeatureCard
-                key={item.title}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-              />
-            ))}
-          </div>
-          <p className="font-semibold">Clients see an average 42 % lift in direct bookings within 90 days.</p>
-        </section>
-        <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
-          <h2 className="text-2xl font-semibold">Lifecycle Journey Examples</h2>
+          <h2 className="text-2xl font-semibold">Why Operators Choose EMS Send</h2>
           <div className="overflow-x-auto">
             <table className="min-w-full text-left border-collapse">
               <thead>
                 <tr>
-                  <th className="p-2 border">Trigger</th>
-                  <th className="p-2 border">Channel</th>
-                  <th className="p-2 border">Example Message</th>
-                  <th className="p-2 border">Goal</th>
+                  <th className="p-2 border">What it does</th>
+                  <th className="p-2 border">How it helps you earn more</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="p-2 border">Booking confirmed</td>
-                  <td className="p-2 border">Email</td>
-                  <td className="p-2 border">“We can’t wait to host you—upgrade to a harbour-view room for 20 % off.”</td>
-                  <td className="p-2 border">Upsell</td>
+                  <td className="p-2 border font-semibold">
+                    Lifecycle Triggers
+                    <div className="font-normal">
+                      Pre-arrival teasers, in-stay nudges, post-stay win-backs
+                    </div>
+                  </td>
+                  <td className="p-2 border">
+                    Put upgrades, add-ons, and reviews in front of guests when they’re most likely to act
+                  </td>
                 </tr>
                 <tr>
-                  <td className="p-2 border">Mid-stay day 2</td>
-                  <td className="p-2 border">WhatsApp</td>
-                  <td className="p-2 border">“How’s your stay so far? Reply 1-5.”</td>
-                  <td className="p-2 border">Real-time feedback</td>
+                  <td className="p-2 border font-semibold">Drag-&-Drop Journeys</td>
+                  <td className="p-2 border">Build or adjust flows in minutes—no code, no agency fees</td>
                 </tr>
                 <tr>
-                  <td className="p-2 border">Abandoned checkout</td>
-                  <td className="p-2 border">SMS</td>
-                  <td className="p-2 border">“Still thinking it over? Here’s a 10 % code that expires tonight.”</td>
-                  <td className="p-2 border">Conversion</td>
+                  <td className="p-2 border font-semibold">CSV Upload or One-Click Sync</td>
+                  <td className="p-2 border">Import a list today, plug in your PMS tomorrow—your choice</td>
                 </tr>
                 <tr>
-                  <td className="p-2 border">30 days post-stay</td>
-                  <td className="p-2 border">Email</td>
-                  <td className="p-2 border">“We miss you! Enjoy a complimentary dessert on your next visit.”</td>
-                  <td className="p-2 border">Repeat visit</td>
+                  <td className="p-2 border font-semibold">Own-Domain Sending</td>
+                  <td className="p-2 border">Boost open rates and brand trust with your hotel@yourdomain.com address</td>
+                </tr>
+                <tr>
+                  <td className="p-2 border font-semibold">Multi-Channel Ready</td>
+                  <td className="p-2 border">Start with email; add SMS or WhatsApp when you’re ready</td>
+                </tr>
+                <tr>
+                  <td className="p-2 border font-semibold">Real-Time Reporting</td>
+                  <td className="p-2 border">See opens, clicks, and conversion £ in one revenue dashboard</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
-          <h2 className="text-2xl font-semibold">Compliance & Deliverability</h2>
+          <h2 className="text-2xl font-semibold">High-Impact Touchpoints (Examples)</h2>
+          <ul className="space-y-2 list-disc list-inside">
+            <li>T – 7 days · “Add a late checkout for 20 % off.” – Average 14 % take-rate</li>
+            <li>Check-in morning · “Fancy a welcome cocktail? Order now, skip the queue.”</li>
+            <li>Mid-stay · Quick CSAT pulse; low scores route to the duty manager in real time.</li>
+            <li>Checkout +1 hour · “Rate your stay & save 10 % on your next booking.”</li>
+            <li>D + 30 · Personalised offer based on spend tier or last-ordered service.</li>
+          </ul>
+        </section>
+        <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
+          <h2 className="text-2xl font-semibold">Built-In Deliverability & Branding</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {compliance.map((item) => (
               <FeatureCard
@@ -151,8 +144,21 @@ export default function Page() {
             ))}
           </div>
         </section>
+        <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
+          <h2 className="text-2xl font-semibold">Set-Up in Three Steps</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {steps.map((item) => (
+              <FeatureCard
+                key={item.title}
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
+          </div>
+        </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto text-center">
-          <p className="text-lg font-semibold">Turn every message into revenue: Start your free EMS Send trial →</p>
+          <p className="text-lg font-semibold">Teams typically launch their first revenue-generating flow in &lt;30 minutes.</p>
         </section>
         <CTABanner />
         <Footer />
