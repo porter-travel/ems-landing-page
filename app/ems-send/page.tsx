@@ -69,7 +69,7 @@ const reasons = [
 
 const touchpoints = [
   {
-    time: "T – 7 days",
+    time: "7 days before arrival",
     text: "\u201CAdd a late checkout for 20% off.\u201D – Average 14% take-rate",
   },
   {
@@ -85,7 +85,7 @@ const touchpoints = [
     text: "\u201CRate your stay & save 10% on your next booking.\u201D",
   },
   {
-    time: "D + 30",
+    time: "30 days post booking",
     text: "Personalised offer based on spend tier or last-ordered service.",
   },
 ];
@@ -149,9 +149,11 @@ export default function Page() {
           <ol className="relative border-l border-border pl-6 space-y-6">
             {touchpoints.map((item) => (
               <li key={item.time} className="relative">
-                <span className="absolute -left-3 top-1.5 h-2 w-2 rounded-full bg-primary" />
-                <p className="text-sm font-semibold">{item.time}</p>
-                <p className="text-sm text-foreground/80">{item.text}</p>
+                <span className="absolute -left-3 top-4 h-2 w-2 rounded-full bg-primary" />
+                <div className="bg-background border rounded-xl p-4 ml-2">
+                  <p className="text-sm font-semibold">{item.time}</p>
+                  <p className="text-sm text-foreground/80">{item.text}</p>
+                </div>
               </li>
             ))}
           </ol>
