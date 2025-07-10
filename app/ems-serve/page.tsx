@@ -3,14 +3,15 @@ import Footer from "@/components/footer";
 import CTABanner from "@/components/cta-banner";
 import { Navbar } from "@/components/navbar";
 import FeatureCard from "@/components/feature-card";
+import { Button } from "@/components/ui/button";
 import {
   Shuffle,
   BarChart2,
   QrCode,
   LayoutGrid,
   Bell,
-  Plug,
   CalendarDays,
+  ArrowUpRight,
 } from "lucide-react";
 
 const guestLove = [
@@ -33,11 +34,6 @@ const guestLove = [
     feature: "Info Pages",
     examples: "Hotel guide, local eats, FAQs",
     benefit: "Everything they need in one link",
-  },
-  {
-    feature: "Instant Reviews (EMS Rate)",
-    examples: "2-click feedback after any interaction",
-    benefit: "Happy guests post publicly; issues stay private",
   },
 ];
 
@@ -87,12 +83,6 @@ const operatorFeatures = [
     description:
       "Perfect for spa slots, equipment hire, or event bookings.",
   },
-  {
-    icon: Plug,
-    title: "No integrations needed",
-    description:
-      "Works out of the box; connect POS or PMS later via open API if you like.",
-  },
 ];
 
 export default function Page() {
@@ -101,38 +91,43 @@ export default function Page() {
       <Navbar />
       <main className="pt-16 xs:pt-20 sm:pt-24">
         <PageHero
-          title="Serve every guest, every time—seamlessly."
+          title="Serve every guest, every time - seamlessly."
           subtitle="Custom-branded QR journeys that handle ordering, service requests, live chat, and info pages in one hub."
-        />
+        >
+          <Button
+            size="lg"
+            className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
+          >
+            Get Started Free <ArrowUpRight className="h-5 w-5" />
+          </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
+          >
+            <CalendarDays className="h-5 w-5" /> Book a Demo
+          </Button>
+        </PageHero>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
-          <h2 className="text-2xl font-semibold">Why Guests Love It</h2>
-          <div className="overflow-x-auto">
-            <table className="w-full text-left">
-              <thead>
-                <tr className="border-b">
-                  <th className="py-2 pr-4">Feature</th>
-                  <th className="py-2 pr-4">Example Uses</th>
-                  <th className="py-2">Guest Benefit</th>
-                </tr>
-              </thead>
-              <tbody>
-                {guestLove.map((item) => (
-                  <tr key={item.feature} className="border-b last:border-0">
-                    <td className="py-2 pr-4 font-medium">{item.feature}</td>
-                    <td className="py-2 pr-4">{item.examples}</td>
-                    <td className="py-2">{item.benefit}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <h2 className="text-2xl font-semibold" style={{ color: "#F65053" }}>
+            Why Guests Love It
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {guestLove.map((item) => (
+              <div
+                key={item.feature}
+                className="bg-background border rounded-xl p-5"
+              >
+                <span className="text-lg font-semibold">{item.feature}</span>
+                <p className="text-sm text-foreground/80">{item.examples}</p>
+                <p className="mt-1 text-foreground/80">{item.benefit}</p>
+              </div>
+            ))}
           </div>
-          <p className="font-semibold">
-            Average properties cut wait-times 38 % and lift spend 19 % within 60 days.
-          </p>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
           <h2 className="text-2xl font-semibold">How EMS Serve Works</h2>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {workflow.map((item) => (
               <FeatureCard
                 key={item.title}
@@ -144,7 +139,14 @@ export default function Page() {
           </div>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
-          <h2 className="text-2xl font-semibold">Built for Operators</h2>
+          <h2 className="text-2xl font-semibold" style={{ color: "#F65053" }}>
+            Built to simplify operations
+          </h2>
+          <img
+            src="/EMSFulfilment.png"
+            alt="Fulfilment"
+            className="w-full rounded-xl"
+          />
           <div className="grid sm:grid-cols-2 gap-4">
             {operatorFeatures.map((item) => (
               <FeatureCard
@@ -155,9 +157,6 @@ export default function Page() {
               />
             ))}
           </div>
-        </section>
-        <section className="px-6 py-10 max-w-screen-md mx-auto text-center">
-          <p className="text-lg font-semibold">Ready to raise the bar? Book a live demo of EMS Serve →</p>
         </section>
         <CTABanner />
         <Footer />
