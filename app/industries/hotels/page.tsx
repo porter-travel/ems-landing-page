@@ -120,24 +120,25 @@ export default function Page() {
           <h2 className="text-2xl font-semibold">Why Hoteliers Choose EMS</h2>
           <div className="grid md:grid-cols-2 bg-background rounded-xl overflow-hidden outline outline-[1px] outline-border outline-offset-[-1px]">
             {challenges.map((row) => (
-              <div key={row.challenge} className="border p-6 -mt-px -ml-px">
-                <div className="font-semibold text-sm text-[#FF5E57]">
-                  Challenge - {row.challenge}
-                </div>
-                <p className="mt-2 text-sm text-[#FF5E57]">EMS Fix - {row.fix}</p>
+              <div key={row.challenge} className="border p-6 -mt-px -ml-px space-y-1">
+                <p className="text-[#F65053] text-xs font-semibold">Challenge</p>
+                <p className="font-semibold">{row.challenge}</p>
+                <p className="mt-3 text-[#F65053] text-xs font-semibold">EMS Fix</p>
+                <p className="text-sm">{row.fix}</p>
               </div>
             ))}
           </div>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
           <h2 className="text-2xl font-semibold">“Pick & Mix” Your Perfect Guest Journey</h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             {modules.map((item) => (
               <FeatureCard
                 key={item.title}
                 icon={item.icon}
                 title={item.title}
                 description={item.description}
+                className="w-full sm:w-1/2 md:w-1/3"
               />
             ))}
           </div>
