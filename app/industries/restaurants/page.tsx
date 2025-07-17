@@ -88,7 +88,7 @@ export default function Page() {
       <Navbar />
       <main className="pt-16 xs:pt-20 sm:pt-24">
         <PageHero
-          title="Scan. Savour. Spend. Turn every table into a revenue engine—no extra hardware."
+          title="Turn every table into a revenue engine."
           subtitle="Give guests friction-free ordering, rich storytelling, and irresistible pre-arrival upsells while your team stays in full control."
         >
           <Button
