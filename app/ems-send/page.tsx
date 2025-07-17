@@ -70,11 +70,11 @@ const reasons = [
 const touchpoints = [
   {
     time: "7 days before arrival",
-    text: "\u201CAdd a late checkout for 20% off.\u201D – Average 14% take-rate",
+    text: "“Add a late checkout for 20% off.” – Average 14% take-rate",
   },
   {
     time: "Check-in morning",
-    text: "\u201CFancy a welcome cocktail? Order now, skip the queue.\u201D",
+    text: "“Fancy a welcome cocktail? Order now, skip the queue.”",
   },
   {
     time: "Mid-stay",
@@ -82,7 +82,7 @@ const touchpoints = [
   },
   {
     time: "Checkout +1 hour",
-    text: "\u201CRate your stay & save 10% on your next booking.\u201D",
+    text: "“Rate your stay & save 10% on your next booking.”",
   },
   {
     time: "30 days post booking",
