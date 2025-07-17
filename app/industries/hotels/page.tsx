@@ -40,14 +40,9 @@ const modules = [
   {
     icon: Utensils,
     title: "Digital Ordering",
-    description: "Room service, poolside drinks, minibar restocks.",
+    description: "Room service, poolside drinks, restaurant table ordering.",
   },
-  {
-    icon: UtensilsCrossed,
-    title: "Table Ordering",
-    description: "Guests scan at the restaurant, customise, pay, and relax.",
-  },
-  {
+    {
     icon: ConciergeBell,
     title: "Service Requests",
     description: "Extra pillow, maintenance, airport transfer—logged & tracked.",
