@@ -69,7 +69,7 @@ export default function Page() {
       <Navbar />
       <main className="pt-16 xs:pt-20 sm:pt-24">
         <PageHero
-          title="Craft seamless guest experiences—no matter the venue."
+          title="Craft seamless guest experiences."
           subtitle="Stadiums, theatres, arenas, festivals, even private hospitals—EMS puts ticketing, on-site ordering, and follow-up revenue under one roof."
         >
           <Button
