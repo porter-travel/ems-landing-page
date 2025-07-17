@@ -128,18 +128,18 @@ export default function Page() {
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
           <h2 className="text-2xl font-semibold">“Booking-to-Rebooking” Guest Journey</h2>
-          <div className="grid md:grid-cols-2 bg-background rounded-xl overflow-hidden outline outline-[1px] outline-border outline-offset-[-1px]">
+          <ol className="relative border-l border-border pl-6 space-y-6">
             {journey.map((row) => (
-              <div key={row.moment} className="border p-6 -mt-px -ml-px space-y-1">
-                <p className="text-[#F65053] text-xs font-semibold">Moment</p>
-                <p className="font-semibold">{row.moment}</p>
-                <p className="mt-3 text-[#F65053] text-xs font-semibold">EMS Touchpoint</p>
-                <p className="text-sm">{row.touch}</p>
-                <p className="mt-3 text-[#F65053] text-xs font-semibold">Value</p>
-                <p className="text-sm">{row.value}</p>
-              </div>
+              <li key={row.moment} className="relative">
+                <span className="absolute -left-3 top-4 h-2 w-2 rounded-full bg-primary" />
+                <div className="bg-background border rounded-xl p-4 ml-2">
+                  <p className="text-sm font-semibold">{row.moment}</p>
+                  <p className="text-sm text-foreground/80">{row.touch}</p>
+                  <p className="text-sm text-foreground/80">{row.value}</p>
+                </div>
+              </li>
             ))}
-          </div>
+          </ol>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
           <h2 className="text-2xl font-semibold">Tools That Keep Hosts Happy</h2>
