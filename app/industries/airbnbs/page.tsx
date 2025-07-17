@@ -96,7 +96,7 @@ export default function Page() {
       <Navbar />
       <main className="pt-16 xs:pt-20 sm:pt-24">
         <PageHero
-          title="Turn every booking into a bigger payout—no tech skills required."
+          title="Turn every booking into a bigger payout."
           subtitle="From one spare room to 500+ units, EMS lets hosts and property managers upsell extras, answer questions with QR codes, and collect rave reviews on autopilot."
 >
           <Button
