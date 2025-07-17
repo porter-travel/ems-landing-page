@@ -13,7 +13,6 @@ import {
   Send,
   Star,
   MessageCircle,
-  BarChartBig,
   Image,
   Globe,
   Mail,
