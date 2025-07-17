@@ -3,95 +3,108 @@ import Footer from "@/components/footer";
 import CTABanner from "@/components/cta-banner";
 import { Navbar } from "@/components/navbar";
 import FeatureCard from "@/components/feature-card";
+import { Button } from "@/components/ui/button";
 import {
-  ClipboardList,
-  ThumbsUp,
+  ShieldCheck,
+  Layout,
+  Search,
   Brain,
-  MessageCircle,
-  RotateCcw,
   Activity,
-  CheckCircle2,
-  Languages,
+  Send,
+  Star,
+  MessageCircle,
   BarChartBig,
+  Image,
+  Globe,
+  Mail,
+  ArrowUpRight,
+  CalendarDays,
 } from "lucide-react";
 
-const benefits = [
+const reasons = [
   {
-    icon: ClipboardList,
-    title: "In-service micro-surveys",
+    icon: ShieldCheck,
+    title: "Verified-only reviews",
     description:
-      "Catch issues before checkout with quick ratings embedded in Wi-Fi portals or EMS Serve.",
+      "Every comment comes from a guest who scanned a QR code, ordered, chatted, or checked-in — no bots, no fakes, no trolls.",
   },
   {
-    icon: ThumbsUp,
-    title: "Post-visit review booster",
+    icon: Layout,
+    title: "Embeddable widgets",
     description:
-      "Automatically invite happy guests to share their experience on top review sites.",
+      "Drop our responsive widget on your site or link-in-bio to showcase live, verified reviews and boost conversion.",
+  },
+  {
+    icon: Search,
+    title: "Public search portal (emsrate.com)",
+    description:
+      "Prospects can discover your business and read all your EMS reviews in one trusted place.",
   },
   {
     icon: Brain,
-    title: "AI sentiment & themes",
+    title: "AI sentiment & predictive alerts",
     description:
-      "Dashboards surface trends behind your scores—cleanliness, service and more.",
-  },
-  {
-    icon: MessageCircle,
-    title: "Reputation reply hub",
-    description:
-      "Respond to every public review from one screen with suggested replies.",
-  },
-  {
-    icon: RotateCcw,
-    title: "Service recovery workflows",
-    description:
-      "Route low scores to managers and trigger vouchers or follow-ups automatically.",
+      "Dashboards highlight emerging themes (\u201Cslow breakfast\u201D, \u201Cspotless rooms\u201D) and flag score dips before they snowball.",
   },
 ];
 
 const workflow = [
   {
     icon: Activity,
-    title: "Real-time pulse",
+    title: "Interaction captured",
     description:
-      "Micro-surveys fire during the stay and issues create tasks in EMS Serve.",
+      "A guest places an order, submits a request, or chats via EMS Serve.",
   },
   {
-    icon: CheckCircle2,
-    title: "Review routing",
+    icon: Send,
+    title: "Seamless prompt",
     description:
-      "Happy guests get branded prompts; unhappy ones see a private form.",
+      "EMS automatically follows up at the optimal time — no apps, no log-ins.",
   },
   {
-    icon: RotateCcw,
-    title: "Service recovery",
+    icon: Star,
+    title: "Verified review posted",
     description:
-      "Action plans auto-assign with SLA timers and escalation rules.",
-  },
-];
-
-const advantages = [
-  {
-    icon: ClipboardList,
-    title: "Designed for hospitality",
-    description:
-      "Room, table and ticket IDs link feedback to exact staff and shift.",
+      "Feedback goes live instantly on your EMS widget and emsrate.com.",
   },
   {
-    icon: Activity,
-    title: "Predictive alerts",
+    icon: MessageCircle,
+    title: "Respond",
     description:
-      "AI flags at-risk guests before they leave the property.",
-  },
-  {
-    icon: Languages,
-    title: "Omni-language",
-    description: "Surveys localise to over 30 languages automatically.",
+      "Reply directly, or use our AI-suggested response in the Reputation Hub.",
   },
   {
     icon: BarChartBig,
-    title: "Revenue reporting",
+    title: "Analyse & improve",
     description:
-      "See how even a small rating lift correlates to ADR or per-cover spend.",
+      "AI groups comments by theme and reveals revenue impact (e.g. \u201C+0.2\u2605 = +\u00A34.60 ADR\u201D).",
+  },
+];
+
+const showcase = [
+  {
+    icon: Layout,
+    title: "Website widgets",
+    description:
+      "Paste one line of code to stream fresh reviews onto any page.",
+  },
+  {
+    icon: Image,
+    title: "Social-ready graphics",
+    description:
+      "Auto-generate branded review cards for Instagram, LinkedIn, or Stories in a click.",
+  },
+  {
+    icon: Globe,
+    title: "Public profile",
+    description:
+      "Your emsrate.com page acts as a living testimonial wall and SEO booster.",
+  },
+  {
+    icon: Mail,
+    title: "Email signatures & QR flyers",
+    description:
+      "Add a dynamic star badge that updates in real time.",
   },
 ];
 
@@ -101,13 +114,27 @@ export default function Page() {
       <Navbar />
       <main className="pt-16 xs:pt-20 sm:pt-24">
         <PageHero
-          title="Capture feedback, grow loyalty, protect your reputation."
-          subtitle="Instant surveys, automated review requests, and AI-powered sentiment analysis—built for hospitality."
-        />
+          title="Verified Feedback That Drives Revenue"
+          subtitle="Capture in-moment feedback, publish only verified reviews, and surface AI insights that lift bookings and loyalty — all from one plug-and-play hub."
+        >
+          <Button
+            size="lg"
+            className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
+          >
+            Get Started Free <ArrowUpRight className="h-5 w-5" />
+          </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
+          >
+            <CalendarDays className="h-5 w-5" /> Book a Demo
+          </Button>
+        </PageHero>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
-          <p>What you don’t know can hurt your brand. EMS Rate closes the loop fast:</p>
+          <h2 className="text-2xl font-semibold">Why EMS Rate Beats Generic Review Sites</h2>
           <div className="grid sm:grid-cols-2 gap-4">
-            {benefits.map((item) => (
+            {reasons.map((item) => (
               <FeatureCard
                 key={item.title}
                 icon={item.icon}
@@ -116,7 +143,6 @@ export default function Page() {
               />
             ))}
           </div>
-          <p className="font-semibold">Properties using EMS Rate increase average review score by 0.7 stars in six months.</p>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
           <h2 className="text-2xl font-semibold">Close-the-Loop Workflow</h2>
@@ -132,9 +158,9 @@ export default function Page() {
           </div>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
-          <h2 className="text-2xl font-semibold">Why EMS Rate Beats Generic Survey Tools</h2>
+          <h2 className="text-2xl font-semibold">Show Off Your Stars Everywhere</h2>
           <div className="grid sm:grid-cols-2 gap-4">
-            {advantages.map((item) => (
+            {showcase.map((item) => (
               <FeatureCard
                 key={item.title}
                 icon={item.icon}
