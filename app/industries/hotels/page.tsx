@@ -8,7 +8,6 @@ import {
   ArrowUpRight,
   CalendarDays,
   Utensils,
-  UtensilsCrossed,
   ConciergeBell,
   Info,
   MessageCircle,
