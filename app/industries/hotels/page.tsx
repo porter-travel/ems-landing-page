@@ -118,26 +118,18 @@ export default function Page() {
         </PageHero>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
           <h2 className="text-2xl font-semibold">Why Hoteliers Choose EMS</h2>
-          <table className="min-w-full text-left border-collapse">
-            <thead>
-              <tr>
-                <th className="p-2 border">Challenge</th>
-                <th className="p-2 border">EMS Fix</th>
-              </tr>
-            </thead>
-            <tbody>
-              {challenges.map((row) => (
-                <tr key={row.challenge}>
-                  <td className="p-2 border align-top">{row.challenge}</td>
-                  <td className="p-2 border">{row.fix}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <div className="grid md:grid-cols-2 bg-background rounded-xl overflow-hidden outline outline-[1px] outline-border outline-offset-[-1px]">
+            {challenges.map((row) => (
+              <div key={row.challenge} className="border p-6 -mt-px -ml-px">
+                <div className="font-semibold">{row.challenge}</div>
+                <p className="mt-2 text-sm xs:text-base">{row.fix}</p>
+              </div>
+            ))}
+          </div>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
           <h2 className="text-2xl font-semibold">“Pick & Mix” Your Perfect Guest Journey</h2>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {modules.map((item) => (
               <FeatureCard
                 key={item.title}
@@ -164,22 +156,14 @@ export default function Page() {
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
           <h2 className="text-2xl font-semibold">Guest Journey Touchpoints</h2>
-          <table className="min-w-full text-left border-collapse">
-            <thead>
-              <tr>
-                <th className="p-2 border">Stage</th>
-                <th className="p-2 border">Digital Experience</th>
-              </tr>
-            </thead>
-            <tbody>
-              {touchpoints.map((row) => (
-                <tr key={row.stage}>
-                  <td className="p-2 border align-top">{row.stage}</td>
-                  <td className="p-2 border">{row.exp}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 bg-background rounded-xl overflow-hidden outline outline-[1px] outline-border outline-offset-[-1px]">
+            {touchpoints.map((row) => (
+              <div key={row.stage} className="border p-6 -mt-px -ml-px">
+                <div className="font-semibold">{row.stage}</div>
+                <p className="mt-2 text-sm xs:text-base">{row.exp}</p>
+              </div>
+            ))}
+          </div>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto text-center">
           <p className="text-lg font-semibold">
