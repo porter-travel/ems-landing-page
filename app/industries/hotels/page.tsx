@@ -121,8 +121,10 @@ export default function Page() {
           <div className="grid md:grid-cols-2 bg-background rounded-xl overflow-hidden outline outline-[1px] outline-border outline-offset-[-1px]">
             {challenges.map((row) => (
               <div key={row.challenge} className="border p-6 -mt-px -ml-px">
-                <div className="font-semibold">{row.challenge}</div>
-                <p className="mt-2 text-sm xs:text-base">{row.fix}</p>
+                <div className="font-semibold text-sm text-[#FF5E57]">
+                  Challenge - {row.challenge}
+                </div>
+                <p className="mt-2 text-sm text-[#FF5E57]">EMS Fix - {row.fix}</p>
               </div>
             ))}
           </div>
