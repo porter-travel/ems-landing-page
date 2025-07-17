@@ -3,27 +3,64 @@ import Footer from "@/components/footer";
 import CTABanner from "@/components/cta-banner";
 import { Navbar } from "@/components/navbar";
 import FeatureCard from "@/components/feature-card";
+import { Button } from "@/components/ui/button";
 import {
-  Ticket,
-  Beer,
-  Bell,
-  Smile,
-  Wallet,
-  MessageCircle,
-  BarChartBig,
+  ArrowUpRight,
+  CalendarDays,
+  LayoutGrid,
+  Pause,
+  Filter,
+  BookOpen,
 } from "lucide-react";
 
-const features = [
-  { icon: Ticket, title: "Quick integrations", description: "Connect Ticketmaster, Eventbrite and Shopify in minutes." },
-  { icon: Beer, title: "Mobile bars", description: "Guests order from seats and pick up when ready." },
-  { icon: Bell, title: "Set-time alerts", description: "Keep crowds flowing and revenue climbing." },
-  { icon: Smile, title: "Post-event surveys", description: "Feedback feeds promoter dashboards for re-bookings." },
+const challenges = [
+  {
+    challenge: "Pre-event upsells",
+    fix: "EMS Send emails upselling VIP parking, seat upgrades, or pre-ordered drinks.",
+  },
+  {
+    challenge: "Concession queues",
+    fix: "Seat & Collect QRs let guests order on their phone—either delivered to seats or prepped for fast pickup.",
+  },
+  {
+    challenge: "Info overload",
+    fix: "Info QRs surface set times, maps, allergen lists, or ward visiting hours instantly.",
+  },
+  {
+    challenge: "Missed merch sales",
+    fix: "Post-event EMS Send nudges fans who didn’t buy on-site with a “Missed the merch?” link.",
+  },
 ];
 
-const uplifts = [
-  { icon: Wallet, title: "Higher spend", description: "+27% per head when mobile ordering enabled." },
-  { icon: MessageCircle, title: "Review boost", description: "4.6★ → 4.9★ average score after 90 days." },
-  { icon: BarChartBig, title: "Time saved", description: "12 hours weekly saved thanks to automated alerts." },
+const journey = [
+  { stage: "Ticket purchase", exp: "Auto-welcome email with FAQ & VIP add-ons" },
+  { stage: "In-seat", exp: "QR ordering (delivery or collect)" },
+  { stage: "Set-time alert", exp: "Push: “Bar closes in 15 min—last orders now”" },
+  { stage: "Exit", exp: "Feedback & merch discount" },
+  { stage: "Day +1", exp: "Follow-up email: missed-merch, season tickets" },
+];
+
+const tools = [
+  {
+    icon: LayoutGrid,
+    title: "Live fulfilment screens",
+    description: "Colour-coded timers flag ageing orders and help staff pace volume.",
+  },
+  {
+    icon: Pause,
+    title: "Pause / Resume menu items",
+    description: "Run out of nachos? Hide them in two taps—auto-message explains to guests.",
+  },
+  {
+    icon: Filter,
+    title: "Segmented EMS Send",
+    description: "Target by seat block, membership tier, or day-patient ward.",
+  },
+  {
+    icon: BookOpen,
+    title: "QR story cards",
+    description: "Showcase provenance of craft beers, artist bios, or post-op recovery advice.",
+  },
 ];
 
 export default function Page() {
@@ -32,59 +69,51 @@ export default function Page() {
       <Navbar />
       <main className="pt-16 xs:pt-20 sm:pt-24">
         <PageHero
-          title="Run flawless events—from ticket scan to last-call review."
-          subtitle=""
-        />
+          title="Craft seamless guest experiences—no matter the venue."
+          subtitle="Stadiums, theatres, arenas, festivals, even private hospitals—EMS puts ticketing, on-site ordering, and follow-up revenue under one roof."
+        >
+          <Button
+            size="lg"
+            className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
+          >
+            Get Started Free <ArrowUpRight className="h-5 w-5" />
+          </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
+          >
+            <CalendarDays className="h-5 w-5" /> Book a Demo
+          </Button>
+        </PageHero>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
-          <div className="grid sm:grid-cols-2 gap-4">
-            {features.map((item) => (
-              <FeatureCard
-                key={item.title}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-              />
+          <h2 className="text-2xl font-semibold">Why Operators Choose EMS</h2>
+          <div className="grid md:grid-cols-2 bg-background rounded-xl overflow-hidden outline outline-[1px] outline-border outline-offset-[-1px]">
+            {challenges.map((row) => (
+              <div key={row.challenge} className="border p-6 -mt-px -ml-px space-y-1">
+                <p className="text-[#F65053] text-xs font-semibold">Challenge</p>
+                <p className="font-semibold">{row.challenge}</p>
+                <p className="mt-3 text-[#F65053] text-xs font-semibold">EMS Fix</p>
+                <p className="text-sm">{row.fix}</p>
+              </div>
             ))}
           </div>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
-          <h2 className="text-2xl font-semibold">End-to-End Event Flow</h2>
-          <table className="min-w-full text-left border-collapse">
-            <thead>
-              <tr>
-                <th className="p-2 border">Stage</th>
-                <th className="p-2 border">EMS Touchpoint</th>
-                <th className="p-2 border">Outcome</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="p-2 border">Ticket purchased</td>
-                <td className="p-2 border">Auto-welcome email with FAQ & cashless wallet link</td>
-                <td className="p-2 border">Fewer “what time do doors open?” calls</td>
-              </tr>
-              <tr>
-                <td className="p-2 border">On arrival</td>
-                <td className="p-2 border">Mobile wallet scan → instant entry</td>
-                <td className="p-2 border">35 % faster gate throughput</td>
-              </tr>
-              <tr>
-                <td className="p-2 border">During show</td>
-                <td className="p-2 border">Push alert: “Bar closed in 15 min—last orders now”</td>
-                <td className="p-2 border">+18 % F&B sales final hour</td>
-              </tr>
-              <tr>
-                <td className="p-2 border">Exit</td>
-                <td className="p-2 border">One-tap survey & merch discount</td>
-                <td className="p-2 border">Higher NPS & incremental revenue</td>
-              </tr>
-            </tbody>
-          </table>
+          <h2 className="text-2xl font-semibold">“Door-to-Encore” Journey</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 bg-background rounded-xl overflow-hidden outline outline-[1px] outline-border outline-offset-[-1px]">
+            {journey.map((row) => (
+              <div key={row.stage} className="border p-6 -mt-px -ml-px">
+                <div className="font-semibold">{row.stage}</div>
+                <p className="mt-2 text-sm xs:text-base">{row.exp}</p>
+              </div>
+            ))}
+          </div>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
-          <h2 className="text-2xl font-semibold">Proven Revenue Uplifts</h2>
+          <h2 className="text-2xl font-semibold">Tools That Keep Crowds Happy and Ops Calm</h2>
           <div className="grid sm:grid-cols-2 gap-4">
-            {uplifts.map((item) => (
+            {tools.map((item) => (
               <FeatureCard
                 key={item.title}
                 icon={item.icon}
@@ -95,7 +124,8 @@ export default function Page() {
           </div>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto text-center">
-          <p className="text-lg font-semibold">See how EMS turns events into encores →</p>
+          <p className="text-lg font-semibold">“Queues vanished, bar sales soared, and fans loved the control.”</p>
+          <p className="mt-2">— F&B Manager, Midlands Arena</p>
         </section>
         <CTABanner />
         <Footer />
