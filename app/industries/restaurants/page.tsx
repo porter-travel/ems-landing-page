@@ -109,9 +109,11 @@ export default function Page() {
           <h2 className="text-2xl font-semibold">Why Operators Love EMS</h2>
           <div className="grid md:grid-cols-2 bg-background rounded-xl overflow-hidden outline outline-[1px] outline-border outline-offset-[-1px]">
             {challenges.map((row) => (
-              <div key={row.challenge} className="border p-6 -mt-px -ml-px">
-                <div className="font-semibold">{row.challenge}</div>
-                <p className="mt-2 text-sm xs:text-base">{row.fix}</p>
+              <div key={row.challenge} className="border p-6 -mt-px -ml-px space-y-1">
+                <p className="text-[#F65053] text-xs font-semibold">Challenge</p>
+                <p className="font-semibold">{row.challenge}</p>
+                <p className="mt-3 text-[#F65053] text-xs font-semibold">EMS Fix</p>
+                <p className="text-sm">{row.fix}</p>
               </div>
             ))}
           </div>
