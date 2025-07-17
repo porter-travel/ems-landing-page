@@ -8,7 +8,6 @@ import {
   ArrowUpRight,
   CalendarDays,
   Utensils,
-  UtensilsCrossed,
   ConciergeBell,
   Info,
   MessageCircle,
@@ -138,28 +137,16 @@ export default function Page() {
               />
             ))}
           </div>
-          {/* Desktop layout: 3 cards then 2 cards */}
-          <div className="hidden md:block">
-            <div className="grid grid-cols-3 gap-4">
-              {modules.slice(0, 3).map((item) => (
-                <FeatureCard
-                  key={item.title}
-                  icon={item.icon}
-                  title={item.title}
-                  description={item.description}
-                />
-              ))}
-            </div>
-            <div className="grid grid-cols-2 gap-4 mt-4">
-              {modules.slice(3).map((item) => (
-                <FeatureCard
-                  key={item.title}
-                  icon={item.icon}
-                  title={item.title}
-                  description={item.description}
-                />
-              ))}
-            </div>
+          {/* Desktop layout: two rows of two cards */}
+          <div className="hidden md:grid grid-cols-2 gap-4">
+            {modules.map((item) => (
+              <FeatureCard
+                key={item.title}
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
           </div>
           <p>Activate only the modules you need today; add more anytime with one click.</p>
         </section>
