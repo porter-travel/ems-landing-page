@@ -3,36 +3,94 @@ import Footer from "@/components/footer";
 import CTABanner from "@/components/cta-banner";
 import { Navbar } from "@/components/navbar";
 import FeatureCard from "@/components/feature-card";
+import { Button } from "@/components/ui/button";
 import {
-  KeyRound,
-  ConciergeBell,
-  Brush,
-  Star,
-  CalendarCheck2,
-  DoorOpen,
+  ArrowUpRight,
+  CalendarDays,
+  Utensils,
   UtensilsCrossed,
-  CreditCard,
-  Smile,
+  ConciergeBell,
+  Info,
+  MessageCircle,
+  LayoutGrid,
+  Shuffle,
+  BarChart2,
 } from "lucide-react";
 
-const benefits = [
-  { icon: KeyRound, title: "Mobile check-in", description: "Keyless entry codes sent via EMS Send." },
-  { icon: ConciergeBell, title: "Contextual upsells", description: "Late checkout, spa and dining offers delivered in-app." },
-  { icon: Brush, title: "Housekeeping updates", description: "Real-time room status reduces delays by 25%." },
-  { icon: Star, title: "Automated reviews", description: "EMS Rate invites boost direct booking credibility." },
+const challenges = [
+  {
+    challenge: "Disjointed upsells",
+    fix: "Pre-arrival emails offer stay personalisation, spa slots, parking and more.",
+  },
+  {
+    challenge: "Room-service delays",
+    fix: "QR ordering routes tickets straight to kitchen/bar with throttling.",
+  },
+  {
+    challenge: "Missed guest requests",
+    fix: "One-tap service tickets auto-assign to housekeeping or engineering.",
+  },
+  {
+    challenge: "OTA review pressure",
+    fix: "Verified EMS Rate reviews lift scores & drive direct bookings.",
+  },
+];
+
+const modules = [
+  {
+    icon: Utensils,
+    title: "Digital Ordering",
+    description: "Room service, poolside drinks, minibar restocks.",
+  },
+  {
+    icon: UtensilsCrossed,
+    title: "Table Ordering",
+    description: "Guests scan at the restaurant, customise, pay, and relax.",
+  },
+  {
+    icon: ConciergeBell,
+    title: "Service Requests",
+    description: "Extra pillow, maintenance, airport transfer—logged & tracked.",
+  },
+  {
+    icon: Info,
+    title: "Info Pages",
+    description: "Local guides, spa menus, Wi-Fi codes—all branded to you.",
+  },
+  {
+    icon: MessageCircle,
+    title: "Live Chat",
+    description: "Real-time concierge routed to the right team.",
+  },
+];
+
+const staffFeatures = [
+  {
+    icon: LayoutGrid,
+    title: "Live fulfilment boards",
+    description: "Colour-coded cards by team, priority, and SLA.",
+  },
+  {
+    icon: Shuffle,
+    title: "Auto-routing rules",
+    description: "“Broken AC” ➜ Engineering · “Extra towels” ➜ Housekeeping.",
+  },
+  {
+    icon: BarChart2,
+    title: "Exportable revenue reports",
+    description: "CSV or scheduled PDFs for finance & owners.",
+  },
+  {
+    icon: CalendarDays,
+    title: "Calendar view",
+    description: "Spa appointments, meeting-room bookings, equipment loans.",
+  },
 ];
 
 const touchpoints = [
-  { icon: CalendarCheck2, title: "Pre-arrival", description: "Upsell emails for upgrades, spa or parking." },
-  { icon: DoorOpen, title: "Check-in", description: "Mobile key and digital registration in minutes." },
-  { icon: UtensilsCrossed, title: "In-stay", description: "One-tap room-service ordering via EMS Serve." },
-  { icon: CreditCard, title: "Checkout", description: "Express bill review and instant review invite." },
-];
-
-const results = [
-  { icon: Smile, title: "Reduced queues", description: "28% shorter front-desk lines within 60 days." },
-  { icon: ConciergeBell, title: "Higher spend", description: "19% lift in ancillaries like late checkout and F&B." },
-  { icon: Star, title: "Reputation boost", description: "0.6-star lift in average OTA rating by month four." },
+  { stage: "Pre-arrival", exp: "Upgrade & add-on email" },
+  { stage: "In-stay", exp: "QR room-service + live chat" },
+  { stage: "Checkout", exp: "Automated review prompt" },
 ];
 
 export default function Page() {
@@ -41,17 +99,46 @@ export default function Page() {
       <Navbar />
       <main className="pt-16 xs:pt-20 sm:pt-24">
         <PageHero
-          title="From lobby to late checkout, craft stays guests rave about."
-          subtitle=""
-        />
+          title="Digitise Every Stay, Your Way"
+          subtitle="Give guests mobile-first options for check-in, room-service, chat, and upsells while staff handle it all from one easy dashboard."
+        >
+          <Button
+            size="lg"
+            className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
+          >
+            Get Started Free <ArrowUpRight className="h-5 w-5" />
+          </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
+          >
+            <CalendarDays className="h-5 w-5" /> Book a Demo
+          </Button>
+        </PageHero>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
-          <p className="font-semibold">Pain points</p>
-          <p>Long queues at reception, fragmented comms, OTA dependency, negative reviews.</p>
-          <p className="font-semibold">Solution narrative</p>
-          <p>EMS unifies operations and guest engagement, so front-desk teams spend less time clicking screens and more time creating memorable moments.</p>
-          <h2 className="text-2xl font-semibold">Key benefits</h2>
+          <h2 className="text-2xl font-semibold">Why Hoteliers Choose EMS</h2>
+          <table className="min-w-full text-left border-collapse">
+            <thead>
+              <tr>
+                <th className="p-2 border">Challenge</th>
+                <th className="p-2 border">EMS Fix</th>
+              </tr>
+            </thead>
+            <tbody>
+              {challenges.map((row) => (
+                <tr key={row.challenge}>
+                  <td className="p-2 border align-top">{row.challenge}</td>
+                  <td className="p-2 border">{row.fix}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+        <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
+          <h2 className="text-2xl font-semibold">“Pick & Mix” Your Perfect Guest Journey</h2>
           <div className="grid sm:grid-cols-2 gap-4">
-            {benefits.map((item) => (
+            {modules.map((item) => (
               <FeatureCard
                 key={item.title}
                 icon={item.icon}
@@ -60,36 +147,45 @@ export default function Page() {
               />
             ))}
           </div>
-          <p className="italic">“Within 90 days we saw a 15 % uplift in direct bookings and a dramatic fall in reception wait times.” — General Manager, The London Harbour Hotel</p>
+          <p>Activate only the modules you need today; add more anytime with one click.</p>
+        </section>
+        <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
+          <h2 className="text-2xl font-semibold">Effortless for Staff</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {staffFeatures.map((item) => (
+              <FeatureCard
+                key={item.title}
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
+          </div>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
           <h2 className="text-2xl font-semibold">Guest Journey Touchpoints</h2>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {touchpoints.map((item) => (
-              <FeatureCard
-                key={item.title}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-              />
-            ))}
-          </div>
-        </section>
-        <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
-          <h2 className="text-2xl font-semibold">Results You Can Count On</h2>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {results.map((item) => (
-              <FeatureCard
-                key={item.title}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-              />
-            ))}
-          </div>
+          <table className="min-w-full text-left border-collapse">
+            <thead>
+              <tr>
+                <th className="p-2 border">Stage</th>
+                <th className="p-2 border">Digital Experience</th>
+              </tr>
+            </thead>
+            <tbody>
+              {touchpoints.map((row) => (
+                <tr key={row.stage}>
+                  <td className="p-2 border align-top">{row.stage}</td>
+                  <td className="p-2 border">{row.exp}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </section>
         <section className="px-6 py-10 max-w-screen-md mx-auto text-center">
-          <p className="text-lg font-semibold">Unlock next-level guest satisfaction → Talk to our hotel specialists</p>
+          <p className="text-lg font-semibold">
+            “Guests love the control, staff love the simplicity—and revenues speak for themselves.”
+          </p>
+          <p className="mt-2">— GM, London Hotel Chain</p>
         </section>
         <CTABanner />
         <Footer />
