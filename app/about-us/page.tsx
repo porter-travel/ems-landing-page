@@ -1,6 +1,9 @@
 import PageHero from "@/components/page-hero";
 import Footer from "@/components/footer";
+import CTABanner from "@/components/cta-banner";
 import { Navbar } from "@/components/navbar";
+import { Button } from "@/components/ui/button";
+import { ArrowUpRight, CalendarDays } from "lucide-react";
 
 export default function Page() {
   return (
@@ -9,8 +12,22 @@ export default function Page() {
       <main className="pt-16 xs:pt-20 sm:pt-24">
         <PageHero
           title="The Team Behind EMS"
-          subtitle="\u201CEvery guest. Every touchpoint. Elevated.\u201D We build pick-and-mix tech that helps hotels, restaurants, venues, clinics, and short-stay hosts turn routine interactions into unforgettable (and profitable) moments."
-        />
+          subtitle="“Every guest. Every touchpoint. Elevated.” We build pick-and-mix tech that helps hotels, restaurants, venues, clinics, and short-stay hosts turn routine interactions into unforgettable (and profitable) moments."
+        >
+          <Button
+            size="lg"
+            className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
+          >
+            Get Started Free <ArrowUpRight className="h-5 w-5" />
+          </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
+          >
+            <CalendarDays className="h-5 w-5" /> Book a Demo
+          </Button>
+        </PageHero>
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
           <h2 className="text-2xl font-semibold">Our Story</h2>
           <p>
@@ -80,6 +97,8 @@ export default function Page() {
           <p>Ready to swap clipboard chaos for connected guests and new profit lines?</p>
           <p>Let’s enhance every guest experience—together.</p>
         </section>
+
+        <CTABanner />
 
         <Footer />
       </main>

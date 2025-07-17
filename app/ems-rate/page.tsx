@@ -43,7 +43,7 @@ const reasons = [
     icon: Brain,
     title: "AI sentiment & predictive alerts",
     description:
-      "Dashboards highlight emerging themes (\u201Cslow breakfast\u201D, \u201Cspotless rooms\u201D) and flag score dips before they snowball.",
+      "Dashboards highlight emerging themes (“slow breakfast”, “spotless rooms”) and flag score dips before they snowball.",
   },
 ];
 
