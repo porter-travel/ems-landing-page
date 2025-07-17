@@ -73,12 +73,6 @@ const workflow = [
     description:
       "Reply directly, or use our AI-suggested response in the Reputation Hub.",
   },
-  {
-    icon: BarChartBig,
-    title: "Analyse & improve",
-    description:
-      "AI groups comments by theme and reveals revenue impact (e.g. \u201C+0.2\u2605 = +\u00A34.60 ADR\u201D).",
-  },
 ];
 
 const showcase = [
