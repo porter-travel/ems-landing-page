@@ -50,7 +50,7 @@ const journey = [
   {
     icon: Activity,
     title: "Pulse Feedback",
-    description: "Automated micro-survey drops after dessert; low scores ping the floor manager.",
+    description: "Automated EMS Rate email drops after dessert, capturing key verified feedback",
   },
   {
     icon: Repeat,
