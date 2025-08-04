@@ -4,7 +4,7 @@ import React from "react";
 interface FeatureCardProps {
   icon: LucideIcon;
   title: string;
-  description: string;
+  description: React.ReactNode;
   className?: string;
 }
 
@@ -22,7 +22,11 @@ export default function FeatureCard({
         <Icon className="h-6 w-6" />
       </div>
       <span className="text-lg font-semibold">{title}</span>
-      <p className="mt-1 text-foreground/80 text-[15px]">{description}</p>
+      {typeof description === "string" ? (
+        <p className="mt-1 text-foreground/80 text-[15px]">{description}</p>
+      ) : (
+        <div className="mt-1 text-foreground/80 text-[15px]">{description}</div>
+      )}
     </div>
   );
 }

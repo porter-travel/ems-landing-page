@@ -7,6 +7,7 @@ import {
   LineChart,
   Upload,
   Send,
+  ClipboardList,
 } from "lucide-react";
 import React from "react";
 import FeatureCard from "./feature-card";
@@ -76,6 +77,48 @@ const howItWorks = [
   },
 ];
 
+const coreFeatures = [
+  {
+    icon: Send,
+    title: "EMS Send",
+    description: (
+      <ul className="list-disc ml-4 space-y-1">
+        <li>Automated, pre-timed upsell emails</li>
+        <li>CSV upload or one-click PMS sync</li>
+        <li>Custom-branded upsell ecommerce pages</li>
+        <li>Property guides, welcome messages & local recommendations</li>
+      </ul>
+    ),
+  },
+  {
+    icon: ClipboardList,
+    title: "Fulfilment Tools",
+    description: (
+      <ul className="list-disc ml-4 space-y-1">
+        <li>Department-specific order & request dashboards</li>
+        <li>Automated routing to F&B, housekeeping, concierge</li>
+        <li>Track stock levels and blackout dates in one place</li>
+        <li>
+          Configure automatic reminders or escalations if requests aren’t
+          fulfilled within your target time
+        </li>
+      </ul>
+    ),
+  },
+  {
+    icon: LineChart,
+    title: "Insights Dashboard",
+    description: (
+      <ul className="list-disc ml-4 space-y-1">
+        <li>Live revenue tracking & take-rates</li>
+        <li>Popular offers and average order value</li>
+        <li>Download CSV reports for stakeholders</li>
+        <li>Identify key trends to optimise performance</li>
+      </ul>
+    ),
+  },
+];
+
 const Features = () => {
   return (
     <div id="features" className="w-full py-12 xs:py-20 px-6">
@@ -97,6 +140,19 @@ const Features = () => {
       </h2>
       <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {howItWorks.map((item) => (
+          <FeatureCard
+            key={item.title}
+            icon={item.icon}
+            title={item.title}
+            description={item.description}
+          />
+        ))}
+      </div>
+      <h2 className="mt-20 text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
+        Core Features
+      </h2>
+      <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {coreFeatures.map((item) => (
           <FeatureCard
             key={item.title}
             icon={item.icon}
