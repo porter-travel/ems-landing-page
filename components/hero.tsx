@@ -45,8 +45,8 @@ const Hero = () => {
           <Lottie
             animationData={heroAnimation}
             loop
-            className="w-full h-full object-fill rounded-3xl"
-            rendererSettings={{ preserveAspectRatio: "xMidYMid slice" }}
+            className="w-full h-full object-contain rounded-3xl"
+            rendererSettings={{ preserveAspectRatio: "xMidYMid meet" }}
           />
         </div>
       </div>
