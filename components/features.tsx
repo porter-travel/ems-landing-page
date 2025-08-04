@@ -14,7 +14,7 @@ const features = [
     icon: Workflow,
     title: "Effortless Automation",
     description:
-      "Pre-built, perfectly timed automated upsell journeys",
+      "Pre-built, perfectly timed automated upsell journeys.",
   },
   {
     icon: Link,
