@@ -1,6 +1,5 @@
 import { TooltipProvider } from "@/components/ui/tooltip";
 import type { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -94,11 +93,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body className="antialiased">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <TooltipProvider>{children}</TooltipProvider>
-        </ThemeProvider>
+        <TooltipProvider>{children}</TooltipProvider>
       </body>
     </html>
   );
