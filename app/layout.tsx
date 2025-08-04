@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "PureLanding - Beautiful Shadcn UI Landing Page",
   description:
-    "A beautiful landing page built with Shadcn UI, Next.js 15, Tailwind CSS, and Shadcn UI Blocks.",
+    "Enhance My Stay | Automate upsell emails pre-, in-, and post-stay, embed your custom-branded upsell store link, and streamline guest guides - no extra apps, just more revenue and happier guests.",
   keywords: [
     "PureLanding",
     "PureLanding Landing Page",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     url: "https://shadcn-landing-page.vercel.app",
     title: "PureLanding - Beautiful Shadcn UI Landing Page",
     description:
-      "A beautiful landing page built with Shadcn UI, Next.js 15, Tailwind CSS, and Shadcn UI Blocks.",
+      "Enhance My Stay | Automate upsell emails pre-, in-, and post-stay, embed your custom-branded upsell store link, and streamline guest guides - no extra apps, just more revenue and happier guests.",
     images: [
       {
         url: "/og-image.jpg",
