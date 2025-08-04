@@ -32,11 +32,11 @@ const Hero = () => {
       <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
         <div
           className="
-            w-[300px]
+            w-[260px]
             h-[600px]
             box-border
             rounded-3xl
-            border-4
+            border-6
             border-black
             overflow-hidden
             shadow-xl
