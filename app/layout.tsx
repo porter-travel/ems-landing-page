@@ -3,31 +3,31 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "PureLanding - Beautiful Shadcn UI Landing Page",
+  title: "Enhance My Stay | Automated upsells and guest engagement",
   description:
     "Enhance My Stay | Automate upsell emails pre-, in-, and post-stay, embed your custom-branded upsell store link, and streamline guest guides - no extra apps, just more revenue and happier guests.",
   keywords: [
-    "PureLanding",
-    "PureLanding Landing Page",
-    "PureLanding Landing Page Template",
-    "PureLanding Page",
-    "Shadcn UI Landing Page",
-    "Shadcn UI Blocks",
-    "Shadcn UI",
-    "Landing Page",
-    "Tailwind CSS Landing Page",
-    "Beautiful Shadcn UI Landing Page",
-    "Next.js 15 Landing Page",
-    "Simple Landing Page",
-    "Landing Page Template",
-    "Landing Page Design",
+    "Hotel Upsells",
+    "Upselling",
+    "Hospitality",
+    "Hotel Tech",
+    "Hotel Revenue",
+    "Upsell Tech",
+    "Upsell Solution",
+    "Guest Engagement",
+    "Enhance My Stay",
+    "Hotel Experience",
+    "Hotels",
+    "Hotel Saas",
+    "Hospitality Upsell",
+    "Hospitality Revenue",
   ],
   openGraph: {
     type: "website",
-    siteName: "PureLanding",
-    locale: "en_US",
-    url: "https://shadcn-landing-page.vercel.app",
-    title: "PureLanding - Beautiful Shadcn UI Landing Page",
+    siteName: "Enhance My Sgtak",
+    locale: "en_GB",
+    url: "https://emsgrow.com",
+    title: "Enhance My Stay | Automated upsells and guest engagement",
     description:
       "Enhance My Stay | Automate upsell emails pre-, in-, and post-stay, embed your custom-branded upsell store link, and streamline guest guides - no extra apps, just more revenue and happier guests.",
     images: [
@@ -35,17 +35,10 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "PureLanding Preview",
+        alt: "EMS Logo",
       },
     ],
   },
-  authors: [
-    {
-      name: "Akash Moradiya",
-      url: "https://shadcnui-blocks.com",
-    },
-  ],
-  creator: "Akash Moradiya",
   icons: [
     {
       rel: "icon",
