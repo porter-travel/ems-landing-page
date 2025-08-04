@@ -1,59 +1,57 @@
 import {
-  ConciergeBell,
-  Send,
-  Star,
   Workflow,
-  ChartBar,
-  Palette,
+  Link,
+  Store,
+  Map,
+  Handshake,
+  LineChart,
 } from "lucide-react";
 import React from "react";
 import FeatureCard from "./feature-card";
 
 const features = [
   {
-    icon: ConciergeBell,
-    title: "EMS Serve",
-    description:
-      "QR-code linked ordering, requests, information and live chat - zero phone calls.",
-  },
-  {
-    icon: Send,
-    title: "EMS Send",
-    description:
-      "Effortlessly schedule guest-ready messages - before, during, or after each booking",
-  },
-  {
-    icon: Star,
-    title: "EMS Rate",
-    description:
-      "Send contextual review prompts when guests interact with your services for higher review rates.",
-  },
-  {
     icon: Workflow,
-    title: "Fulfilment",
+    title: "Effortless Automation",
     description:
-      "Dedicated fulfilment screens by department to easily manage orders and requests.",
+      "Pre-built, perfectly timed automated upsell journeys",
   },
   {
-    icon: ChartBar,
-    title: "Insights",
+    icon: Link,
+    title: "Seamless Embeds",
     description:
-      "Live dashboards to track revenue, average order value, popular products and more.",
+      "Drop your branded upsell microsite link into any email, SMS, or guest-platform message.",
   },
   {
-    icon: Palette,
-    title: "Brand First",
+    icon: Store,
+    title: "White-Label Upsell Store",
     description:
-      "Guest experience with your fonts, colours and logo - fully white-labelled.",
+      "Your logo, colours, and fonts on a high-converting ecommerce page.",
+  },
+  {
+    icon: Map,
+    title: "Guest Guides & Local Info",
+    description:
+      "Link to property guides, welcome messages, and curated recommendations",
+  },
+  {
+    icon: Handshake,
+    title: "Bespoke Onboarding",
+    description:
+      "Hands-on setup, custom strategy sessions, and ongoing check-ins from our dynamic team.",
+  },
+  {
+    icon: LineChart,
+    title: "Real-Time Insights",
+    description: "Monitor campaign performance with live dashboards.",
   },
 ];
 
 const Features = () => {
   return (
     <div id="features" className="w-full py-12 xs:py-20 px-6">
-      <p className="text-center font-medium text-primary">All-In-One Guest Experience Toolkit</p>
-      <h2 className="mt-2 text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
-        The Guest Happiness Blueprint
+      <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
+        What Sets Enhance My Stay Apart
       </h2>
       <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature) => (
