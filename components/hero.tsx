@@ -46,6 +46,7 @@ const Hero = () => {
             animationData={heroAnimation}
             loop
             className="w-full h-full object-fill rounded-3xl"
+            rendererSettings={{ preserveAspectRatio: "xMidYMid slice" }}
           />
         </div>
       </div>
