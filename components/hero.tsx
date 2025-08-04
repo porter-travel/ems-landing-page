@@ -33,10 +33,10 @@ const Hero = () => {
         <div
           className="
             w-[260px]
-            h-[600px]
+            h-[580px]
             box-border
             rounded-3xl
-            border-6
+            border-4
             border-black
             overflow-hidden
             shadow-xl
