@@ -7,11 +7,10 @@ const Hero = () => {
     <div className="min-h-[calc(100vh-6rem)] flex flex-col md:flex-row items-center justify-between gap-8 py-20 px-10 bg-accent">
       <div className="md:w-1/2 text-center md:text-left max-w-2xl">
         <h1 className="max-w-[20ch] mt-6 text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold !leading-[1.1] tracking-tight">
-          Ordering, Requests, Reviews
-          <br className="hidden md:block" /> <span style={{ color: "#F65053" }}>Reimagined</span>
+          Automated Upsells & Guest Engagement
         </h1>
         <p className="mt-6 max-w-[60ch] xs:text-lg">
-          EMS brings ordering, requests, live chat, and real-time feedback together—no clunky apps, no friction. Just faster service, more upsells, and happier guests.
+          Automatically email guests before, during, and after their booking - or embed a link into your existing messages - to drive revenue and elevate the guest experience.
         </p>
         <div className="mt-12 flex flex-col sm:flex-row items-center sm:justify-start md:justify-start gap-4">
           <Button size="lg" className="w-full sm:w-auto rounded-full text-base">
