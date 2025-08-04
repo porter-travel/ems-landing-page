@@ -30,11 +30,13 @@ const Hero = () => {
         </div>
       </div>
       <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-        <Lottie
-          animationData={heroAnimation}
-          loop
-          className="max-w-full h-auto rounded-xl"
-        />
+        <div className="w-[300px] h-[600px] p-2 border border-black rounded-3xl overflow-hidden">
+          <Lottie
+            animationData={heroAnimation}
+            loop
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
     </div>
   );
