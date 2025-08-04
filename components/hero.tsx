@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, CalendarDays } from "lucide-react";
 import React from "react";
+import Lottie from "lottie-react";
+import heroAnimation from "@/public/EMSHeroImage.json";
 
 const Hero = () => {
   return (
@@ -26,9 +28,10 @@ const Hero = () => {
         </div>
       </div>
       <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-        <img
-          src="/EMSHeroImage.json"
-          alt="Hero image"
+        <Lottie
+          animationData={heroAnimation}
+          loop
+          autoplay
           className="max-w-full h-auto rounded-xl"
         />
       </div>
