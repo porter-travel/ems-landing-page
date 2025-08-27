@@ -4,6 +4,7 @@ import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import Section from "@/components/section";
+import BottomCta from "@/components/cta/BottomCta";
 import type { Metadata } from "next";
 import {
   ArrowUpRight,
@@ -158,9 +159,9 @@ export default function Page() {
             Get Started Free <ArrowUpRight className="h-5 w-5" />
           </Button>
           <Button
-            variant="outline"
+            variant="contrast"
             size="lg"
-            className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
+            className="w-full sm:w-auto rounded-full text-base"
           >
             <CalendarDays className="h-5 w-5" /> Book a Demo
           </Button>
@@ -230,35 +231,10 @@ export default function Page() {
           </div>
         </Section>
 
-        <Section>
-          <div className="max-w-screen-md mx-auto text-center space-y-4">
-            <blockquote className="border-l-4 pl-4 italic text-left">
-              “Pre-arrival emails now do the selling for us. Upgrades, parking,
-              late checkout—+17% ancillary within a month.”
-              <br />— GM, 74-room Boutique Hotel, Bath
-            </blockquote>
-            <p>
-              Automated Engagement is the foundation of modern guest experience.
-              <br />Inform them, inspire them, upsell them—without lifting a
-              finger.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-              <Button
-                size="lg"
-                className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
-              >
-                Get Started Free <ArrowUpRight className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
-              >
-                <CalendarDays className="h-5 w-5" /> Book a Demo
-              </Button>
-            </div>
-          </div>
-        </Section>
+        <BottomCta
+          title="The guest experience is evolving. Are you?"
+          subtext="Drop the clunky workflows. EMS automates perfectly timed emails, property guides, and upsells—without lifting a finger."
+        />
 
         <Footer />
       </main>

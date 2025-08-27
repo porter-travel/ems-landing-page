@@ -21,7 +21,7 @@ const Hero = () => {
             Get Started Free <ArrowUpRight className="!h-5 !w-5" />
           </Button>
           <Button
-            variant="outline"
+            variant="contrast"
             size="lg"
             className="w-full sm:w-auto rounded-full text-base shadow-none"
           >

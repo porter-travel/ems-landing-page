@@ -1,4 +1,4 @@
-import CTABanner from "@/components/cta-banner";
+import BottomCta from "@/components/cta/BottomCta";
 import FAQ from "@/components/faq";
 import Features from "@/components/features";
 import Footer from "@/components/footer";
@@ -17,7 +17,10 @@ export default function Home() {
         <Pricing />
         <FAQ />
         <Testimonials />
-        <CTABanner />
+        <BottomCta
+          title="The guest experience is evolving. Are you?"
+          subtext="Drop the clunky workflows. EMS brings ordering, requests, chat, and upsells into one streamlined system."
+        />
         <Footer />
       </main>
     </>

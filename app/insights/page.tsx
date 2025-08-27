@@ -4,6 +4,7 @@ import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import Section from "@/components/section";
+import BottomCta from "@/components/cta/BottomCta";
 import type { Metadata } from "next";
 import {
   ArrowUpRight,
@@ -149,9 +150,9 @@ export default function Page() {
             Get Started Free <ArrowUpRight className="h-5 w-5" />
           </Button>
           <Button
-            variant="outline"
+            variant="contrast"
             size="lg"
-            className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
+            className="w-full sm:w-auto rounded-full text-base"
           >
             <CalendarDays className="h-5 w-5" /> Book a Demo
           </Button>
@@ -221,34 +222,10 @@ export default function Page() {
           </div>
         </Section>
 
-        <Section>
-          <div className="max-w-screen-md mx-auto text-center space-y-4">
-            <p>
-              Insights isn&apos;t just dashboards. It’s your feedback loop. Every
-              email you send feeds data back into EMS, giving you a constantly
-              improving revenue engine.
-            </p>
-            <p>
-              If you can measure it, you can grow it. EMS Insights makes sure you
-              do both.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-              <Button
-                size="lg"
-                className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
-              >
-                Get Started Free <ArrowUpRight className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
-              >
-                <CalendarDays className="h-5 w-5" /> Book a Demo
-              </Button>
-            </div>
-          </div>
-        </Section>
+        <BottomCta
+          title="If you can measure it, you can grow it."
+          subtext="Real-time dashboards show revenue, open rates, and top products—so every send gets smarter."
+        />
 
         <Footer />
       </main>
