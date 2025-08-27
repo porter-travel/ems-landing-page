@@ -3,6 +3,8 @@ import FeatureCard from "@/components/feature-card";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
+import Section from "@/components/section";
+import type { Metadata } from "next";
 import {
   ArrowUpRight,
   CalendarDays,
@@ -22,6 +24,12 @@ import {
   BedDouble,
   UtensilsCrossed,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Insights | EMS",
+  description:
+    "Live dashboards that show revenue, engagement and product performance so you can optimise every campaign.",
+};
 
 export default function Page() {
   const why = [
@@ -149,7 +157,7 @@ export default function Page() {
           </Button>
         </PageHero>
 
-        <section className="w-full py-12 xs:py-20 px-6">
+        <Section>
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             Why Insights Matter
           </h2>
@@ -163,9 +171,9 @@ export default function Page() {
               />
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="w-full py-12 xs:py-20 px-6">
+        <Section>
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             What You&apos;ll See
           </h2>
@@ -179,9 +187,9 @@ export default function Page() {
               />
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="w-full py-12 xs:py-20 px-6">
+        <Section>
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             How Teams Use Insights
           </h2>
@@ -195,9 +203,9 @@ export default function Page() {
               />
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="w-full py-12 xs:py-20 px-6">
+        <Section>
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             Real Use Cases
           </h2>
@@ -211,34 +219,36 @@ export default function Page() {
               />
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="px-6 py-12 max-w-screen-md mx-auto text-center space-y-4">
-          <p>
-            Insights isn&apos;t just dashboards. It’s your feedback loop. Every
-            email you send feeds data back into EMS, giving you a constantly
-            improving revenue engine.
-          </p>
-          <p>
-            If you can measure it, you can grow it. EMS Insights makes sure you
-            do both.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-            <Button
-              size="lg"
-              className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
-            >
-              Get Started Free <ArrowUpRight className="h-5 w-5" />
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
-            >
-              <CalendarDays className="h-5 w-5" /> Book a Demo
-            </Button>
+        <Section>
+          <div className="max-w-screen-md mx-auto text-center space-y-4">
+            <p>
+              Insights isn&apos;t just dashboards. It’s your feedback loop. Every
+              email you send feeds data back into EMS, giving you a constantly
+              improving revenue engine.
+            </p>
+            <p>
+              If you can measure it, you can grow it. EMS Insights makes sure you
+              do both.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+              <Button
+                size="lg"
+                className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
+              >
+                Get Started Free <ArrowUpRight className="h-5 w-5" />
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
+              >
+                <CalendarDays className="h-5 w-5" /> Book a Demo
+              </Button>
+            </div>
           </div>
-        </section>
+        </Section>
 
         <Footer />
       </main>

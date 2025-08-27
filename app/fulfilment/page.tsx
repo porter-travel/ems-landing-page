@@ -3,6 +3,8 @@ import FeatureCard from "@/components/feature-card";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
+import Section from "@/components/section";
+import type { Metadata } from "next";
 import {
   ArrowUpRight,
   CalendarDays,
@@ -26,6 +28,12 @@ import {
   ListChecks,
   TrendingUp,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Fulfilment | EMS",
+  description:
+    "Route upsell requests to the right team, track progress with SLAs and keep every promise to guests.",
+};
 
 export default function Page() {
   const why = [
@@ -180,7 +188,7 @@ export default function Page() {
           </Button>
         </PageHero>
 
-        <section className="w-full py-12 xs:py-20 px-6">
+        <Section>
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             Why Fulfilment Matters
           </h2>
@@ -194,9 +202,9 @@ export default function Page() {
               />
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="w-full py-12 xs:py-20 px-6">
+        <Section>
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             What Fulfilment Covers
           </h2>
@@ -210,9 +218,9 @@ export default function Page() {
               />
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="w-full py-12 xs:py-20 px-6">
+        <Section>
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             Real Use Cases
           </h2>
@@ -226,9 +234,9 @@ export default function Page() {
               />
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="w-full py-12 xs:py-20 px-6">
+        <Section>
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             Staff View Benefits
           </h2>
@@ -242,9 +250,9 @@ export default function Page() {
               />
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="w-full py-12 xs:py-20 px-6">
+        <Section>
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             Manager View Benefits
           </h2>
@@ -258,31 +266,33 @@ export default function Page() {
               />
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="px-6 py-12 max-w-screen-md mx-auto text-center space-y-4">
-          <blockquote className="border-l-4 pl-4 italic text-left">
-            “Guests love the tone; ops loves the quiet inbox. The guide email
-            cut questions by half.”
-            <br />— Ops Manager, Countryside Hotel
-          </blockquote>
-          <p>Fulfilment is where promises meet reality. EMS makes sure you deliver.</p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-            <Button
-              size="lg"
-              className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
-            >
-              Get Started Free <ArrowUpRight className="h-5 w-5" />
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
-            >
-              <CalendarDays className="h-5 w-5" /> Book a Demo
-            </Button>
+        <Section>
+          <div className="max-w-screen-md mx-auto text-center space-y-4">
+            <blockquote className="border-l-4 pl-4 italic text-left">
+              “Guests love the tone; ops loves the quiet inbox. The guide email
+              cut questions by half.”
+              <br />— Ops Manager, Countryside Hotel
+            </blockquote>
+            <p>Fulfilment is where promises meet reality. EMS makes sure you deliver.</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+              <Button
+                size="lg"
+                className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
+              >
+                Get Started Free <ArrowUpRight className="h-5 w-5" />
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
+              >
+                <CalendarDays className="h-5 w-5" /> Book a Demo
+              </Button>
+            </div>
           </div>
-        </section>
+        </Section>
 
         <Footer />
       </main>

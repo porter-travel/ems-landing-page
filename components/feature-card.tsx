@@ -1,5 +1,7 @@
 import { LucideIcon } from "lucide-react";
 import React from "react";
+import { Card } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 interface FeatureCardProps {
   icon: LucideIcon;
@@ -15,9 +17,7 @@ export default function FeatureCard({
   className,
 }: FeatureCardProps) {
   return (
-    <div
-      className={`flex flex-col bg-background border rounded-xl py-6 px-5 ${className || ""}`}
-    >
+    <Card className={cn("flex flex-col p-6", className)}>
       <div className="mb-3 h-10 w-10 flex items-center justify-center bg-muted rounded-full">
         <Icon className="h-6 w-6" />
       </div>
@@ -27,6 +27,6 @@ export default function FeatureCard({
       ) : (
         <div className="mt-1 text-foreground/80 text-[15px]">{description}</div>
       )}
-    </div>
+    </Card>
   );
 }
