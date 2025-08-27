@@ -151,7 +151,7 @@ const Features = () => {
       <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
         Overview
       </h2>
-      <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {overview.map((item) => (
           <Link key={item.title} href={item.href} className="h-full">
             <FeatureCard icon={item.icon} title={item.title} className="h-full">
@@ -163,7 +163,7 @@ const Features = () => {
       <h2 className="mt-20 text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
         Upsells Unleashed
       </h2>
-      <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature) => (
           <FeatureCard key={feature.title} icon={feature.icon} title={feature.title}>
             {feature.description}
@@ -173,7 +173,7 @@ const Features = () => {
       <h2 className="mt-20 text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
         How It Works
       </h2>
-      <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {howItWorks.map((item) => (
           <FeatureCard key={item.title} icon={item.icon} title={item.title}>
             {item.description}
@@ -183,7 +183,7 @@ const Features = () => {
       <h2 className="mt-20 text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
         Core Features
       </h2>
-      <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {coreFeatures.map((item) => (
           <FeatureCard key={item.title} icon={item.icon} title={item.title}>
             {item.description}

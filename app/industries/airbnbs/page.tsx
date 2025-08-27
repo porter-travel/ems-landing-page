@@ -3,7 +3,7 @@ import { Navbar } from "@/components/navbar";
 import PatternedCta from "@/components/cta/PatternedCta";
 import PageScaffold from "@/components/layout/PageScaffold";
 import Section from "@/components/layout/Section";
-import PatternedHero from "@/components/hero/PatternedHero";
+import Hero from "@/components/hero/Hero";
 import FeatureCard from "@/components/cards/FeatureCard";
 import type { Metadata } from "next";
 import { Mail, Calendar, TrendingUp, Users, FileText, BarChart3, Inbox, Settings, Clock } from "lucide-react";
@@ -91,16 +91,16 @@ export default function Page() {
     <>
       <Navbar />
       <PageScaffold>
-        <PatternedHero
+        <Hero
           title="Turn Every Booking Into a Bigger Payout"
           subtext="Automate pre-arrival communication, upsell extras, and capture reviews—hands-free."
           showCtas
         />
         {/* Why Hosts & Managers Choose EMS */}
         <section className="py-12 md:py-16">
-          <Section className="space-y-6">
+          <Section className="max-w-screen-md space-y-6">
             <h2 className="text-3xl md:text-4xl font-heading font-semibold">Why Hosts &amp; Managers Choose EMS</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-4">
               {why.map((item) => (
                 <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                   {item.description}
@@ -112,9 +112,9 @@ export default function Page() {
 
         {/* Guest Journey */}
         <section className="py-12 md:py-16">
-          <Section className="space-y-4">
+          <Section className="max-w-screen-md space-y-4">
             <h2 className="text-3xl md:text-4xl font-heading font-semibold">Booking-to-Rebooking Guest Journey</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-4">
               {journey.map((item) => (
                 <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                   {item.description}
@@ -126,9 +126,9 @@ export default function Page() {
 
         {/* Tools */}
         <section className="py-12 md:py-16">
-          <Section className="space-y-4">
+          <Section className="max-w-screen-md space-y-4">
             <h2 className="text-3xl md:text-4xl font-heading font-semibold">Tools That Keep Hosts Happy</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 gap-4">
               {tools.map((item) => (
                 <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                   {item.description}
@@ -140,7 +140,7 @@ export default function Page() {
 
         {/* Testimonial */}
         <section className="py-12 md:py-16">
-          <Section>
+          <Section className="max-w-screen-md">
             <div className="rounded-2xl border bg-background/60 backdrop-blur p-6 md:p-7 text-center space-y-4">
               <p className="text-lg font-semibold">
                 “EMS turned endless questions into smooth self-service—and new revenue streams we never thought to try.”

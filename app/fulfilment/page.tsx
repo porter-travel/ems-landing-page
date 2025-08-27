@@ -1,11 +1,14 @@
-import PatternedHero from "@/components/hero/PatternedHero";
+import PageHero from "@/components/page-hero";
 import FeatureCard from "@/components/cards/FeatureCard";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
+import { Button } from "@/components/ui/button";
 import Section from "@/components/section";
 import PatternedCta from "@/components/cta/PatternedCta";
 import type { Metadata } from "next";
 import {
+  ArrowUpRight,
+  CalendarDays,
   UserCheck,
   Users,
   AlertTriangle,
@@ -167,17 +170,30 @@ export default function Page() {
     <>
       <Navbar />
       <main className="pt-16 xs:pt-20 sm:pt-24">
-        <PatternedHero
+        <PageHero
           title="From Click to Completion—Seamlessly"
-          subtext="When a guest books a product or requests something, EMS makes sure your team delivers without bottlenecks."
-          showCtas
-        />
+          subtitle="When a guest books a product or requests something, EMS makes sure your team delivers without bottlenecks."
+        >
+          <Button
+            size="lg"
+            className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
+          >
+            Get Started Free <ArrowUpRight className="h-5 w-5" />
+          </Button>
+          <Button
+            variant="contrast"
+            size="lg"
+            className="w-full sm:w-auto rounded-full text-base"
+          >
+            <CalendarDays className="h-5 w-5" /> Book a Demo
+          </Button>
+        </PageHero>
 
         <Section>
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             Why Fulfilment Matters
           </h2>
-          <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {why.map((item) => (
               <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                 {item.description}
@@ -190,7 +206,7 @@ export default function Page() {
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             What Fulfilment Covers
           </h2>
-          <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {covers.map((item) => (
               <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                 {item.description}
@@ -203,7 +219,7 @@ export default function Page() {
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             Real Use Cases
           </h2>
-          <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((item) => (
               <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                 {item.description}
@@ -216,7 +232,7 @@ export default function Page() {
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             Staff View Benefits
           </h2>
-          <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {staffBenefits.map((item) => (
               <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                 {item.description}
@@ -229,7 +245,7 @@ export default function Page() {
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             Manager View Benefits
           </h2>
-          <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {managerBenefits.map((item) => (
               <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                 {item.description}
