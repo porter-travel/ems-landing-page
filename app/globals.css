@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-@import url('https://api.fontshare.com/v2/css?f[]=clash-display@700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@700&f[]=inter@400,500,600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -58,7 +57,9 @@
 
     --chart-5: 27 87% 67%;
 
-    --radius: 0.5rem
+    --radius: 0.5rem;
+    --font-heading: 'Clash Display', sans-serif;
+    --font-sans: 'Inter', sans-serif;
   }
 }
 
@@ -72,12 +73,9 @@
     @apply scroll-smooth scroll-pt-12;
   }
   body {
-    @apply text-foreground;
-    font-family: 'Poppins', sans-serif;
+    @apply text-foreground font-sans;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Clash Display', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
+    @apply font-heading font-bold uppercase;
   }
 }

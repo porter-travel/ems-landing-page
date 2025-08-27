@@ -3,6 +3,8 @@ import FeatureCard from "@/components/feature-card";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
+import Section from "@/components/section";
+import type { Metadata } from "next";
 import {
   ArrowUpRight,
   CalendarDays,
@@ -20,6 +22,12 @@ import {
   Timer,
   Layers,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Automated Engagement | EMS",
+  description:
+    "Pre-timed, branded email flows that guide guests and drive upsells before, during and after their stay.",
+};
 
 export default function Page() {
   const benefits = [
@@ -158,7 +166,7 @@ export default function Page() {
           </Button>
         </PageHero>
 
-        <section className="w-full py-12 xs:py-20 px-6">
+        <Section>
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             Why Automated Engagement Matters
           </h2>
@@ -172,9 +180,9 @@ export default function Page() {
               />
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="w-full py-12 xs:py-20 px-6">
+        <Section>
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             What You Can Automate
           </h2>
@@ -188,9 +196,9 @@ export default function Page() {
               />
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="w-full py-12 xs:py-20 px-6">
+        <Section>
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             How It Works
           </h2>
@@ -204,9 +212,9 @@ export default function Page() {
               />
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="w-full py-12 xs:py-20 px-6">
+        <Section>
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             Why Teams Love It
           </h2>
@@ -220,35 +228,37 @@ export default function Page() {
               />
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="px-6 py-12 max-w-screen-md mx-auto text-center space-y-4">
-          <blockquote className="border-l-4 pl-4 italic text-left">
-            “Pre-arrival emails now do the selling for us. Upgrades, parking,
-            late checkout—+17% ancillary within a month.”
-            <br />— GM, 74-room Boutique Hotel, Bath
-          </blockquote>
-          <p>
-            Automated Engagement is the foundation of modern guest experience.
-            <br />Inform them, inspire them, upsell them—without lifting a
-            finger.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-            <Button
-              size="lg"
-              className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
-            >
-              Get Started Free <ArrowUpRight className="h-5 w-5" />
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
-            >
-              <CalendarDays className="h-5 w-5" /> Book a Demo
-            </Button>
+        <Section>
+          <div className="max-w-screen-md mx-auto text-center space-y-4">
+            <blockquote className="border-l-4 pl-4 italic text-left">
+              “Pre-arrival emails now do the selling for us. Upgrades, parking,
+              late checkout—+17% ancillary within a month.”
+              <br />— GM, 74-room Boutique Hotel, Bath
+            </blockquote>
+            <p>
+              Automated Engagement is the foundation of modern guest experience.
+              <br />Inform them, inspire them, upsell them—without lifting a
+              finger.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+              <Button
+                size="lg"
+                className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
+              >
+                Get Started Free <ArrowUpRight className="h-5 w-5" />
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
+              >
+                <CalendarDays className="h-5 w-5" /> Book a Demo
+              </Button>
+            </div>
           </div>
-        </section>
+        </Section>
 
         <Footer />
       </main>

@@ -46,7 +46,7 @@ export default function Page() {
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6 text-center">
           <h2 className="text-2xl font-semibold">Book a 30-Minute Demo</h2>
           <p>
-            See EMS in action—pre-arrival upsells, QR ordering, verified reviews, and real-time dashboards—all in one call.
+            See EMS in action—pre-arrival upsells, guest guides, fulfilment tools and real-time dashboards—all in one call.
           </p>
           <div className="border rounded-lg p-2">
             <div

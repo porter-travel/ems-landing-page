@@ -1,6 +1,6 @@
 import {
   Workflow,
-  Link,
+  Link as LinkIcon,
   Store,
   Map,
   Handshake,
@@ -8,9 +8,35 @@ import {
   Upload,
   Send,
   ClipboardList,
+  Mail,
+  ClipboardCheck,
+  BarChart3,
 } from "lucide-react";
 import React from "react";
 import FeatureCard from "./feature-card";
+import Section from "./section";
+import Link from "next/link";
+
+const overview = [
+  {
+    icon: Mail,
+    title: "Automated Engagement",
+    description: "Pre-timed emails that guide and upsell.",
+    href: "/emails",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Fulfilment",
+    description: "Route orders with clear SLAs.",
+    href: "/fulfilment",
+  },
+  {
+    icon: BarChart3,
+    title: "Insights",
+    description: "See what converts and optimise.",
+    href: "/insights",
+  },
+];
 
 const features = [
   {
@@ -20,7 +46,7 @@ const features = [
       "Pre-built, perfectly timed automated upsell journeys.",
   },
   {
-    icon: Link,
+    icon: LinkIcon,
     title: "Seamless Embeds",
     description:
       "Drop your branded upsell microsite link into any email, SMS, or guest-platform message.",
@@ -121,8 +147,23 @@ const coreFeatures = [
 
 const Features = () => {
   return (
-    <div id="features" className="w-full py-12 xs:py-20 px-6">
+    <Section id="features">
       <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
+        Overview
+      </h2>
+      <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {overview.map((item) => (
+          <Link key={item.title} href={item.href} className="h-full">
+            <FeatureCard
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
+              className="h-full"
+            />
+          </Link>
+        ))}
+      </div>
+      <h2 className="mt-20 text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
         Upsells Unleashed
       </h2>
       <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -161,7 +202,7 @@ const Features = () => {
           />
         ))}
       </div>
-    </div>
+    </Section>
   );
 };
 

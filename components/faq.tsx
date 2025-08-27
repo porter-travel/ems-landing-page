@@ -18,7 +18,7 @@ const faq = [
     icon: Truck,
     question: "Do I need to buy any new hardware?",
     answer:
-      "No, guests just scan a QR code on their phone. Staff can use their phones, tablets or laptops.",
+      "No. It's all browser-based, so staff can use their phones, tablets or laptops.",
   },
   {
     icon: ShieldCheck,
@@ -30,7 +30,7 @@ const faq = [
     icon: Route,
     question: "How long does setup take?",
     answer:
-      "You can start using EMS in minutes. Full customisation with products, requests, branding and live chat can take a couple of hours, depending on how complex you go.",
+      "You can start using EMS in minutes. Full customisation with products, requests and branding can take a couple of hours, depending on how complex you go.",
   },
   {
     icon: BadgeDollarSign,
