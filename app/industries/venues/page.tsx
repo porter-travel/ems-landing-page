@@ -1,65 +1,72 @@
 import PageHero from "@/components/page-hero";
 import Footer from "@/components/footer";
-import CTABanner from "@/components/cta-banner";
 import { Navbar } from "@/components/navbar";
 import FeatureCard from "@/components/feature-card";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import {
   ArrowUpRight,
   CalendarDays,
-  LayoutGrid,
-  Pause,
-  Filter,
-  BookOpen,
+  Mail,
+  Calendar,
+  TrendingUp,
+  Users,
 } from "lucide-react";
 
 const challenges = [
   {
-    challenge: "Pre-event upsells",
-    fix: "EMS Send emails upselling VIP parking, seat upgrades, or pre-ordered drinks.",
+    challenge: "Missed pre-event sales",
+    fix: "Emails upsell VIP upgrades, parking passes, drink tokens, or meal deals before guests even arrive.",
   },
   {
-    challenge: "Concession queues",
-    fix: "Seat & Collect QRs let guests order on their phone—either delivered to seats or prepped for fast pickup.",
+    challenge: "Confused attendees",
+    fix: "Automated info packs cover set times, maps, travel advice, and FAQs in one click.",
   },
   {
-    challenge: "Info overload",
-    fix: "Info QRs surface set times, maps, allergen lists, or ward visiting hours instantly.",
-  },
-  {
-    challenge: "Missed merch sales",
-    fix: "Post-event EMS Send nudges fans who didn’t buy on-site with a “Missed the merch?” link.",
+    challenge: "Weak post-event conversion",
+    fix: "Follow-up emails with merch, future event offers, or memberships lock in extra revenue.",
   },
 ];
 
 const journey = [
-  { stage: "Ticket purchase", exp: "Auto-welcome email with FAQ & VIP add-ons" },
-  { stage: "In-seat", exp: "QR ordering (delivery or collect)" },
-  { stage: "Set-time alert", exp: "Push: “Bar closes in 15 min—last orders now”" },
-  { stage: "Exit", exp: "Feedback & merch discount" },
-  { stage: "Day +1", exp: "Follow-up email: missed-merch, season tickets" },
+  {
+    stage: "Ticket Purchase",
+    description: "Welcome email + optional VIP/product upsells.",
+  },
+  {
+    stage: "T-1 Week",
+    description: "Event info + transport details.",
+  },
+  {
+    stage: "Day Before",
+    description: "Reminder email upselling drink tokens or meal packages.",
+  },
+  {
+    stage: "Post-Event",
+    description: "Thank-you + review + “missed merch” follow-up.",
+  },
 ];
 
 const tools = [
   {
-    icon: LayoutGrid,
-    title: "Live fulfilment screens",
-    description: "Colour-coded timers flag ageing orders and help staff pace volume.",
+    icon: Users,
+    title: "Fulfilment dashboards",
+    description: "Manage pre-event product redemptions and orders.",
   },
   {
-    icon: Pause,
-    title: "Pause / Resume menu items",
-    description: "Run out of nachos? Hide them in two taps—auto-message explains to guests.",
+    icon: Calendar,
+    title: "Calendar-linked inventory",
+    description: "Limit ticketed upsells like VIP meet & greet or parking slots.",
   },
   {
-    icon: Filter,
-    title: "Segmented EMS Send",
-    description: "Target by seat block, membership tier, or day-patient ward.",
+    icon: Mail,
+    title: "Segmented sends",
+    description: "Target communications by ticket type, seating block, or membership level.",
   },
   {
-    icon: BookOpen,
-    title: "QR story cards",
-    description: "Showcase provenance of craft beers, artist bios, or post-op recovery advice.",
+    icon: TrendingUp,
+    title: "Insights dashboards",
+    description: "See take-rates, AOV, and campaign impact instantly.",
   },
 ];
 
@@ -69,8 +76,8 @@ export default function Page() {
       <Navbar />
       <main className="pt-16 xs:pt-20 sm:pt-24">
         <PageHero
-          title="Craft seamless guest experiences."
-          subtitle="Stadiums, theatres, arenas, festivals, even private hospitals—EMS puts ticketing, on-site ordering, and follow-up revenue under one roof."
+          title="Craft Seamless Guest Journeys"
+          subtitle="For arenas, theatres, stadiums, and events, EMS automates communication from ticket purchase through encore. Guests get clarity and offers; your team gets predictable pre-orders and revenue uplift."
         >
           <Button
             size="lg"
@@ -86,33 +93,33 @@ export default function Page() {
             <CalendarDays className="h-5 w-5" /> Book a Demo
           </Button>
         </PageHero>
+
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
           <h2 className="text-2xl font-semibold">Why Operators Choose EMS</h2>
-          <div className="grid md:grid-cols-2 bg-background rounded-xl overflow-hidden outline outline-[1px] outline-border outline-offset-[-1px]">
+          <div className="grid md:grid-cols-2 gap-4">
             {challenges.map((row) => (
-              <div key={row.challenge} className="border p-6 -mt-px -ml-px space-y-1">
+              <Card key={row.challenge} className="p-6 space-y-1">
                 <p className="text-[#F65053] text-xs font-semibold">Challenge</p>
                 <p className="font-semibold">{row.challenge}</p>
                 <p className="mt-3 text-[#F65053] text-xs font-semibold">EMS Fix</p>
                 <p className="text-sm">{row.fix}</p>
-              </div>
+              </Card>
             ))}
           </div>
         </section>
+
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
-          <h2 className="text-2xl font-semibold">“Door-to-Encore” Journey</h2>
-          <ol className="relative border-l border-border pl-6 space-y-6">
-            {journey.map((row) => (
-              <li key={row.stage} className="relative">
-                <span className="absolute -left-3 top-4 h-2 w-2 rounded-full bg-primary" />
-                <div className="bg-background border rounded-xl p-4 ml-2">
-                  <p className="text-sm font-semibold">{row.stage}</p>
-                  <p className="text-sm text-foreground/80">{row.exp}</p>
-                </div>
-              </li>
+          <h2 className="text-2xl font-semibold">Door-to-Encore Guest Journey</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+            {journey.map((item) => (
+              <Card key={item.stage} className="p-6 text-center space-y-2">
+                <p className="text-lg font-semibold">{item.stage}</p>
+                <p className="text-sm text-foreground/80">{item.description}</p>
+              </Card>
             ))}
-          </ol>
+          </div>
         </section>
+
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
           <h2 className="text-2xl font-semibold">Tools That Keep Crowds Happy and Ops Calm</h2>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -126,11 +133,33 @@ export default function Page() {
             ))}
           </div>
         </section>
-        <section className="px-6 py-10 max-w-screen-md mx-auto text-center">
-          <p className="text-lg font-semibold">“Queues vanished, bar sales soared, and fans loved the control.”</p>
-          <p className="mt-2">— F&B Manager, Midlands Arena</p>
+
+        <section className="px-6 py-10 max-w-screen-md mx-auto text-center space-y-4">
+          <p className="text-lg font-semibold">
+            “Queues fell, per-head spend rose, and we’ve built repeatable revenue into every event.”
+          </p>
+          <p>— F&B Manager, Midlands Arena</p>
         </section>
-        <CTABanner />
+
+        <section className="px-6 py-10 max-w-screen-md mx-auto text-center space-y-4">
+          <h2 className="text-2xl font-semibold">The guest experience is evolving. Are you?</h2>
+          <p>Upgrade every touchpoint, not just the stage.</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+            <Button
+              size="lg"
+              className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
+            >
+              Get Started Free <ArrowUpRight className="h-5 w-5" />
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
+            >
+              <CalendarDays className="h-5 w-5" /> Book a Demo
+            </Button>
+          </div>
+        </section>
         <Footer />
       </main>
     </>

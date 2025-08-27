@@ -1,10 +1,12 @@
 "use client";
 
-import { Card } from "@/components/ui/card";
 
+import { Card } from "@/components/ui/card";
+]
 export default function Pricing() {
   return (
     <div id="pricing" className="flex flex-col items-center justify-center py-12 xs:py-20 px-6">
+
       <h1 className="text-3xl xs:text-4xl md:text-5xl font-bold text-center tracking-tight">
         Simple pricing. One clear price.
       </h1>
@@ -12,7 +14,9 @@ export default function Pricing() {
         Everything you need to unlock pre-arrival upsells, guest guides and fulfilment.
       </p>
       <div className="mt-8 w-full max-w-screen-md">
+
         <Card className="bg-accent p-8 shadow flex flex-col items-center">
+
           <div className="flex items-baseline justify-center gap-2">
             <span className="text-5xl font-bold">£59</span>
             <span className="text-lg font-semibold">/ property / month + VAT</span>
@@ -41,11 +45,14 @@ export default function Pricing() {
               <li>Extra properties enjoy a 25% discount</li>
             </ul>
           </div>
+
         </Card>
+
       </div>
       <p className="mt-8 text-center text-sm text-muted-foreground max-w-[80ch]">
         Need volume pricing or enterprise terms? Contact us - we offer custom discounts for larger portfolios and dedicated support packages.
       </p>
+
     </div>
   );
 }
