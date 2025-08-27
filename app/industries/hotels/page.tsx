@@ -1,90 +1,78 @@
 import PageHero from "@/components/page-hero";
 import Footer from "@/components/footer";
-import CTABanner from "@/components/cta-banner";
 import { Navbar } from "@/components/navbar";
 import FeatureCard from "@/components/feature-card";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import {
   ArrowUpRight,
   CalendarDays,
-  Utensils,
-  ConciergeBell,
-  Info,
-  MessageCircle,
-  LayoutGrid,
-  Shuffle,
-  BarChart2,
+  Mail,
+  Calendar,
+  TrendingUp,
+  Users,
 } from "lucide-react";
 
 const challenges = [
   {
     challenge: "Disjointed upsells",
-    fix: "Pre-arrival emails offer stay personalisation, spa slots, parking and more.",
+    fix: "Pre-arrival emails present upgrades, parking, spa slots, and late checkout—automatically, no calls or manual chasing.",
   },
   {
-    challenge: "Room-service delays",
-    fix: "QR ordering routes tickets straight to kitchen/bar with throttling.",
+    challenge: "Guests asking the same questions",
+    fix: "Welcome messages and property guides arrive in guests’ inboxes before check-in, answering Wi-Fi, parking, spa hours, and more.",
   },
   {
-    challenge: "Missed guest requests",
-    fix: "One-tap service tickets auto-assign to housekeeping or engineering.",
+    challenge: "OTA dependency",
+    fix: "Post-stay thank-you emails with rebook links capture more direct bookings and verified reviews.",
   },
   {
-    challenge: "OTA review pressure",
-    fix: "Verified EMS Rate reviews lift scores & drive direct bookings.",
+    challenge: "Operational bottlenecks",
+    fix: "Orders route instantly to the right department via fulfilment dashboards and calendar-linked scheduling.",
   },
 ];
 
-const modules = [
+const journey = [
   {
-    icon: Utensils,
-    title: "Digital Ordering",
-    description: "Room service, poolside drinks, restaurant table ordering.",
-  },
-    {
-    icon: ConciergeBell,
-    title: "Service Requests",
-    description: "Extra pillow, maintenance, airport transfer—logged & tracked.",
+    stage: "Pre-Arrival",
+    description:
+      "A polished email introducing the stay, upselling add-ons, and linking to local guides.",
   },
   {
-    icon: Info,
-    title: "Info Pages",
-    description: "Local guides, spa menus, Wi-Fi codes—all branded to you.",
+    stage: "In-Stay",
+    description:
+      "Mid-stay touchpoints with local recs, dining reminders, or late checkout prompts.",
   },
   {
-    icon: MessageCircle,
-    title: "Live Chat",
-    description: "Real-time concierge routed to the right team.",
+    stage: "Post-Stay",
+    description:
+      "Thank-you emails that secure reviews and encourage direct rebooking.",
   },
 ];
 
 const staffFeatures = [
   {
-    icon: LayoutGrid,
-    title: "Live fulfilment boards",
-    description: "Colour-coded cards by team, priority, and SLA.",
+    icon: Users,
+    title: "Fulfilment dashboards",
+    description: "Track and assign upsell requests with clear SLAs.",
   },
   {
-    icon: Shuffle,
-    title: "Auto-routing rules",
-    description: "“Broken AC” ➜ Engineering · “Extra towels” ➜ Housekeeping.",
+    icon: Calendar,
+    title: "Calendar-linked products",
+    description:
+      "Manage bookable assets (spa slots, bike rentals, meeting rooms) without double-booking.",
   },
   {
-    icon: BarChart2,
-    title: "Exportable revenue reports",
-    description: "CSV or scheduled PDFs for finance & owners.",
+    icon: TrendingUp,
+    title: "Real-time insights",
+    description: "See revenue, take-rates, and product performance at a glance.",
   },
   {
-    icon: CalendarDays,
-    title: "Calendar view",
-    description: "Spa appointments, meeting-room bookings, equipment loans.",
+    icon: Mail,
+    title: "CSV/PMS sync",
+    description:
+      "Start small with spreadsheet uploads or connect your PMS for full automation.",
   },
-];
-
-const touchpoints = [
-  { stage: "Pre-arrival", exp: "Upgrade & add-on email" },
-  { stage: "In-stay", exp: "QR room-service + live chat" },
-  { stage: "Checkout", exp: "Automated review prompt" },
 ];
 
 export default function Page() {
@@ -94,7 +82,7 @@ export default function Page() {
       <main className="pt-16 xs:pt-20 sm:pt-24">
         <PageHero
           title="Digitise Every Stay, Your Way"
-          subtitle="Give guests mobile-first options for check-in, room-service, chat, and upsells while staff handle it all from one easy dashboard."
+          subtitle="Hospitality thrives on moments. EMS makes those moments easier to deliver by automating personalised emails before, during, and after each stay. Guests get clear info, tempting upgrades, and local recommendations—staff get a clean dashboard to fulfil, track, and measure everything."
         >
           <Button
             size="lg"
@@ -110,46 +98,33 @@ export default function Page() {
             <CalendarDays className="h-5 w-5" /> Book a Demo
           </Button>
         </PageHero>
+
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
           <h2 className="text-2xl font-semibold">Why Hoteliers Choose EMS</h2>
-          <div className="grid md:grid-cols-2 bg-background rounded-xl overflow-hidden outline outline-[1px] outline-border outline-offset-[-1px]">
+          <div className="grid md:grid-cols-2 gap-4">
             {challenges.map((row) => (
-              <div key={row.challenge} className="border p-6 -mt-px -ml-px space-y-1">
+              <Card key={row.challenge} className="p-6 space-y-1">
                 <p className="text-[#F65053] text-xs font-semibold">Challenge</p>
                 <p className="font-semibold">{row.challenge}</p>
                 <p className="mt-3 text-[#F65053] text-xs font-semibold">EMS Fix</p>
                 <p className="text-sm">{row.fix}</p>
-              </div>
+              </Card>
             ))}
           </div>
         </section>
+
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
-          <h2 className="text-2xl font-semibold">“Pick & Mix” Your Perfect Guest Journey</h2>
-          {/* Mobile/Tablet layout */}
-          <div className="flex flex-wrap justify-center gap-4 md:hidden">
-            {modules.map((item) => (
-              <FeatureCard
-                key={item.title}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-                className="w-full sm:w-1/2"
-              />
+          <h2 className="text-2xl font-semibold">Build the Guest Journey That Fits You</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {journey.map((item) => (
+              <Card key={item.stage} className="p-6 text-center space-y-2">
+                <p className="text-lg font-semibold">{item.stage}</p>
+                <p className="text-sm text-foreground/80">{item.description}</p>
+              </Card>
             ))}
           </div>
-          {/* Desktop layout: two rows of two cards */}
-          <div className="hidden md:grid grid-cols-2 gap-4">
-            {modules.map((item) => (
-              <FeatureCard
-                key={item.title}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-              />
-            ))}
-          </div>
-          <p>Activate only the modules you need today; add more anytime with one click.</p>
         </section>
+
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
           <h2 className="text-2xl font-semibold">Effortless for Staff</h2>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -163,24 +138,33 @@ export default function Page() {
             ))}
           </div>
         </section>
-        <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
-          <h2 className="text-2xl font-semibold">Guest Journey Touchpoints</h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 bg-background rounded-xl overflow-hidden outline outline-[1px] outline-border outline-offset-[-1px]">
-            {touchpoints.map((row) => (
-              <div key={row.stage} className="border p-6 -mt-px -ml-px">
-                <div className="font-semibold">{row.stage}</div>
-                <p className="mt-2 text-sm xs:text-base">{row.exp}</p>
-              </div>
-            ))}
+
+        <section className="px-6 py-10 max-w-screen-md mx-auto text-center space-y-4">
+          <p className="text-lg font-semibold">
+            “Guests love the personal touch, staff love the simplicity—and the bottom line loves the upsells.”
+          </p>
+          <p>— GM, London Hotel Chain</p>
+        </section>
+
+        <section className="px-6 py-10 max-w-screen-md mx-auto text-center space-y-4">
+          <h2 className="text-2xl font-semibold">The guest experience is evolving. Are you?</h2>
+          <p>Drop the manual upselling. EMS automates the journey and keeps it human.</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+            <Button
+              size="lg"
+              className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
+            >
+              Get Started Free <ArrowUpRight className="h-5 w-5" />
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
+            >
+              <CalendarDays className="h-5 w-5" /> Book a Demo
+            </Button>
           </div>
         </section>
-        <section className="px-6 py-10 max-w-screen-md mx-auto text-center">
-          <p className="text-lg font-semibold">
-            “Guests love the control, staff love the simplicity—and revenues speak for themselves.”
-          </p>
-          <p className="mt-2">— GM, London Hotel Chain</p>
-        </section>
-        <CTABanner />
         <Footer />
       </main>
     </>

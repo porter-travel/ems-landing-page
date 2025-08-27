@@ -1,104 +1,88 @@
 import PageHero from "@/components/page-hero";
 import Footer from "@/components/footer";
-import CTABanner from "@/components/cta-banner";
 import { Navbar } from "@/components/navbar";
 import FeatureCard from "@/components/feature-card";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import {
-  MailOpen,
-  QrCode,
-  LayoutGrid,
-  BarChartBig,
   ArrowUpRight,
-  CalendarDays
+  CalendarDays,
+  Mail,
+  Calendar,
+  TrendingUp,
+  Users,
 } from "lucide-react";
-
-
 
 const challenges = [
   {
-    challenge: "Guests ask the same questions",
-    fix:
-      "Info QRs link to digital house guides, Wi-Fi codes, local tips—no inbox ping-pong.",
+    challenge: "Guests asking the same questions",
+    fix: "Automated welcome emails with house guides, Wi-Fi codes, check-in details, and local tips.",
   },
   {
-    challenge: "Leaving money on the table",
-    fix:
-      "Pre-arrival upsell emails (early check-in, welcome hamper, firewood pack) convert before guests arrive.",
+    challenge: "Missed add-on opportunities",
+    fix: "Pre-arrival emails upsell early check-in, welcome hampers, firewood packs, or bike rentals.",
   },
   {
-    challenge: "After-hours messages",
-    fix: "One-tap service requests route issues to on-call or maintenance instantly.",
-  },
-  {
-    challenge: "Ratings make or break revenue",
-    fix: "EMS Rate prompts verified reviews and flags problems privately.",
+    challenge: "Rating pressure",
+    fix: "Post-stay thank-you emails capture reviews and encourage direct rebooking.",
   },
 ];
 
 const journey = [
   {
-    moment: "Booking confirmed",
-    touch: "Thank-you email + optional paid add-ons",
-    value: "New revenue before arrival",
+    stage: "Booking Confirmed",
+    description: "Personalised email + upsell add-ons.",
   },
   {
-    moment: "T-3 days",
-    touch: "Reminder email upsells early check-in or late checkout",
-    value: "Increases spend & staggered arrivals",
+    stage: "T-3 Days",
+    description: "Reminder email with extras and recommendations.",
   },
   {
-    moment: "Arrival",
-    touch: "QR welcome card opens guidebook & service request menu",
-    value: "Fewer calls, happier guests",
+    stage: "Arrival Day",
+    description: "Welcome email with property info and local guide links.",
   },
   {
-    moment: "Mid-stay",
-    touch: "Quick micro-survey + local experience offer",
-    value: "Real-time issue capture & upsell",
+    stage: "Mid-Stay",
+    description: "Optional targeted email with experience offers.",
   },
   {
-    moment: "Checkout",
-    touch: "Capture review & rebook discount",
-    value: "Higher star rating, direct repeat stays",
+    stage: "Checkout",
+    description: "Thank-you + review prompt + rebook discount.",
   },
 ];
 
 const tools = [
   {
-    icon: MailOpen,
-    title: "Pre-Arrival EMS Send",
-    description:
-      "Drag-and-drop emails timed to each stay; upsell extras in a click.",
+    icon: Users,
+    title: "Fulfilment dashboards",
+    description: "Track who booked what and whether it’s been delivered.",
   },
   {
-    icon: QrCode,
-    title: "In-House QRs",
-    description:
-      "Digital guidebooks, firewood orders, linen swaps—everything in guests’ pockets.",
+    icon: Calendar,
+    title: "Calendar-linked products",
+    description: "Sell assets like parking spots or equipment rentals without clashes.",
   },
   {
-    icon: LayoutGrid,
-    title: "Live Fulfilment Board",
-    description:
-      "See open requests, who’s on it, and SLA timers at a glance.",
+    icon: TrendingUp,
+    title: "Revenue insights",
+    description: "See what products convert and where to improve.",
   },
   {
-    icon: BarChartBig,
-    title: "Revenue Dashboards",
-    description:
-      "Track add-on sales and review scores per property or portfolio.",
+    icon: Mail,
+    title: "CSV/PMS sync",
+    description: "Upload bookings from a spreadsheet or connect your PMS.",
   },
 ];
+
 export default function Page() {
   return (
     <>
       <Navbar />
       <main className="pt-16 xs:pt-20 sm:pt-24">
         <PageHero
-          title="Turn every booking into a bigger payout."
-          subtitle="From one spare room to 500+ units, EMS lets hosts and property managers upsell extras, answer questions with QR codes, and collect rave reviews on autopilot."
->
+          title="Turn Every Booking Into a Bigger Payout"
+          subtitle="Whether you run one spare room or hundreds of units, EMS automates pre-arrival communication, upsells extras, and captures reviews without you lifting a finger."
+        >
           <Button
             size="lg"
             className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
@@ -113,34 +97,33 @@ export default function Page() {
             <CalendarDays className="h-5 w-5" /> Book a Demo
           </Button>
         </PageHero>
+
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-6">
-          <h2 className="text-2xl font-semibold">Why Hosts & Managers Choose EMS</h2>
-          <div className="grid md:grid-cols-2 bg-background rounded-xl overflow-hidden outline outline-[1px] outline-border outline-offset-[-1px]">
+          <h2 className="text-2xl font-semibold">Why Hosts &amp; Managers Choose EMS</h2>
+          <div className="grid md:grid-cols-2 gap-4">
             {challenges.map((row) => (
-              <div key={row.challenge} className="border p-6 -mt-px -ml-px space-y-1">
+              <Card key={row.challenge} className="p-6 space-y-1">
                 <p className="text-[#F65053] text-xs font-semibold">Challenge</p>
                 <p className="font-semibold">{row.challenge}</p>
                 <p className="mt-3 text-[#F65053] text-xs font-semibold">EMS Fix</p>
                 <p className="text-sm">{row.fix}</p>
-              </div>
+              </Card>
             ))}
           </div>
         </section>
+
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
-          <h2 className="text-2xl font-semibold">“Booking-to-Rebooking” Guest Journey</h2>
-          <ol className="relative border-l border-border pl-6 space-y-6">
-            {journey.map((row) => (
-              <li key={row.moment} className="relative">
-                <span className="absolute -left-3 top-4 h-2 w-2 rounded-full bg-primary" />
-                <div className="bg-background border rounded-xl p-4 ml-2">
-                  <p className="text-sm font-semibold">{row.moment}</p>
-                  <p className="text-sm text-foreground/80">{row.touch}</p>
-                  <p className="text-sm text-foreground/80">{row.value}</p>
-                </div>
-              </li>
+          <h2 className="text-2xl font-semibold">Booking-to-Rebooking Guest Journey</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-4">
+            {journey.map((item) => (
+              <Card key={item.stage} className="p-6 text-center space-y-2">
+                <p className="text-lg font-semibold">{item.stage}</p>
+                <p className="text-sm text-foreground/80">{item.description}</p>
+              </Card>
             ))}
-          </ol>
+          </div>
         </section>
+
         <section className="px-6 py-10 max-w-screen-md mx-auto space-y-4">
           <h2 className="text-2xl font-semibold">Tools That Keep Hosts Happy</h2>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -154,11 +137,33 @@ export default function Page() {
             ))}
           </div>
         </section>
-        <section className="px-6 py-10 max-w-screen-md mx-auto text-center">
-          <p className="text-lg font-semibold">“EMS turned guest questions into self-serve clicks and upsells I never thought to offer.”</p>
-          <p className="mt-2">— Anna Doyle, Superhost & Portfolio Manager</p>
+
+        <section className="px-6 py-10 max-w-screen-md mx-auto text-center space-y-4">
+          <p className="text-lg font-semibold">
+            “EMS turned endless questions into smooth self-service—and new revenue streams we never thought to try.”
+          </p>
+          <p>— Anna Doyle, Superhost</p>
         </section>
-        <CTABanner />
+
+        <section className="px-6 py-10 max-w-screen-md mx-auto text-center space-y-4">
+          <h2 className="text-2xl font-semibold">The guest experience is evolving. Are you?</h2>
+          <p>Get more revenue and fewer headaches—without hiring more staff.</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+            <Button
+              size="lg"
+              className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
+            >
+              Get Started Free <ArrowUpRight className="h-5 w-5" />
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
+            >
+              <CalendarDays className="h-5 w-5" /> Book a Demo
+            </Button>
+          </div>
+        </section>
         <Footer />
       </main>
     </>
