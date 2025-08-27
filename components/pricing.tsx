@@ -1,5 +1,4 @@
 "use client";
-
 export default function Pricing() {
   return (
     <div id="pricing" className="flex flex-col items-center justify-center py-12 xs:py-20 px-6">
