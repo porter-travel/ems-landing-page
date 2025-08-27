@@ -5,9 +5,9 @@ import { Linkedin } from "lucide-react";
 import Link from "next/link";
 
 const productLinks = [
-  { title: "EMS Serve", href: "/ems-serve" },
-  { title: "EMS Send", href: "/ems-send" },
-  { title: "EMS Rate", href: "/ems-rate" },
+  { title: "Emails", href: "/emails" },
+  { title: "Fulfilment", href: "/fulfilment" },
+  { title: "Insights", href: "/insights" },
 ];
 
 const industryLinks = [
