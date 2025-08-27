@@ -1,11 +1,14 @@
-import PatternedHero from "@/components/hero/PatternedHero";
+import PageHero from "@/components/page-hero";
 import FeatureCard from "@/components/cards/FeatureCard";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
+import { Button } from "@/components/ui/button";
 import Section from "@/components/section";
 import PatternedCta from "@/components/cta/PatternedCta";
 import type { Metadata } from "next";
 import {
+  ArrowUpRight,
+  CalendarDays,
   Mail,
   TrendingUp,
   Users,
@@ -145,17 +148,30 @@ export default function Page() {
     <>
       <Navbar />
       <main className="pt-16 xs:pt-20 sm:pt-24">
-        <PatternedHero
+        <PageHero
           title="Perfectly Timed, Effortlessly Branded"
-          subtext="Guests don’t want random newsletters—they want the right info at the right time. EMS turns your booking data into polished, branded email flows that guide, upsell, and delight."
-          showCtas
-        />
+          subtitle="Guests don’t want random newsletters—they want the right info at the right time. EMS turns your booking data into polished, branded email flows that guide, upsell, and delight."
+        >
+          <Button
+            size="lg"
+            className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
+          >
+            Get Started Free <ArrowUpRight className="h-5 w-5" />
+          </Button>
+          <Button
+            variant="contrast"
+            size="lg"
+            className="w-full sm:w-auto rounded-full text-base"
+          >
+            <CalendarDays className="h-5 w-5" /> Book a Demo
+          </Button>
+        </PageHero>
 
         <Section>
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             Why Automated Engagement Matters
           </h2>
-          <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((item) => (
               <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                 {item.description}
@@ -168,7 +184,7 @@ export default function Page() {
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             What You Can Automate
           </h2>
-          <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-1 lg:grid-cols-3 gap-6">
             {automation.map((item) => (
               <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                 {item.description}
@@ -181,7 +197,7 @@ export default function Page() {
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             How It Works
           </h2>
-          <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {steps.map((item) => (
               <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                 {item.description}
@@ -194,7 +210,7 @@ export default function Page() {
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             Why Teams Love It
           </h2>
-          <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="w-full max-w-screen-md mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {love.map((item) => (
               <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                 {item.description}

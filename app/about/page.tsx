@@ -3,7 +3,7 @@ import { Navbar } from "@/components/navbar";
 import PatternedCta from "@/components/cta/PatternedCta";
 import PageScaffold from "@/components/layout/PageScaffold";
 import Section from "@/components/layout/Section";
-import PatternedHero from "@/components/hero/PatternedHero";
+import Hero from "@/components/hero/Hero";
 import FeatureCard from "@/components/cards/FeatureCard";
 import { Users, Handshake, Rocket, BedDouble, UtensilsCrossed, Building2, Home } from "lucide-react";
 
@@ -53,14 +53,14 @@ export default function Page() {
     <>
       <Navbar />
       <PageScaffold>
-        <PatternedHero
+        <Hero
           title="The Team Behind EMS"
           subtext="Every guest. Every touchpoint. Elevated. We build pick-and-mix tools that turn routine interactions into unforgettable (and profitable) moments."
           showCtas
         />
         <section className="py-12 md:py-16">
-          <Section>
-            <div className="prose prose-lg max-w-none rounded-2xl border bg-background/60 backdrop-blur p-6 md:p-7">
+          <Section className="max-w-screen-md">
+            <div className="rounded-2xl border bg-background/60 backdrop-blur p-6 md:p-7 space-y-4">
               <h2 className="text-3xl md:text-4xl font-heading font-semibold">Our Story</h2>
               <p>It started with one question:</p>
               <p>Why do guests wade through noise when a simple email could do the work?</p>
@@ -76,9 +76,9 @@ export default function Page() {
           </Section>
         </section>
         <section className="py-12 md:py-16">
-          <Section className="space-y-6">
+          <Section className="max-w-screen-md space-y-6">
             <h2 className="text-3xl md:text-4xl font-heading font-semibold">What Drives Us</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
               {values.map((item) => (
                 <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                   {item.description}
@@ -88,8 +88,8 @@ export default function Page() {
           </Section>
         </section>
         <section className="py-12 md:py-16">
-          <Section>
-            <div className="prose prose-lg max-w-none rounded-2xl border bg-background/60 backdrop-blur p-6 md:p-7 text-center">
+          <Section className="max-w-screen-md">
+            <div className="rounded-2xl border bg-background/60 backdrop-blur p-6 md:p-7 space-y-4 text-center">
               <h2 className="text-3xl md:text-4xl font-heading font-semibold">Mission</h2>
               <p>
                 To democratise guest-experience tech. If you can upload a CSV, you can run EMS. No dev team, no six-month rollout.
@@ -99,9 +99,9 @@ export default function Page() {
           </Section>
         </section>
         <section className="py-12 md:py-16">
-          <Section className="space-y-6">
+          <Section className="max-w-screen-md space-y-6">
             <h2 className="text-3xl md:text-4xl font-heading font-semibold">Who We Serve</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
               {serve.map((item) => (
                 <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                   {item.description}
