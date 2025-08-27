@@ -1,19 +1,11 @@
-import PageHero from "@/components/page-hero";
 import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import FeatureCard from "@/components/feature-card";
-import { Button } from "@/components/ui/button";
+import PatternedCta from "@/components/cta/PatternedCta";
+import PageScaffold from "@/components/layout/PageScaffold";
+import Section from "@/components/layout/Section";
 import { Card } from "@/components/ui/card";
-import Section from "@/components/section";
 import type { Metadata } from "next";
-import {
-  ArrowUpRight,
-  CalendarDays,
-  Mail,
-  Calendar,
-  TrendingUp,
-  Users,
-} from "lucide-react";
+import { Mail, Calendar, TrendingUp, Users } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Restaurants | EMS",
@@ -85,32 +77,20 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <main className="pt-16 xs:pt-20 sm:pt-24">
-        <PageHero
-          title="Turn Every Reservation Into Revenue"
-          subtitle="From the moment a guest books, EMS can work in the background. Share menus, allergen info, chef’s notes, or upsell experiences like welcome cocktails or set menus. After the meal, EMS collects reviews and entices guests back for the next booking."
-        >
-          <Button
-            size="lg"
-            className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
-          >
-            Get Started Free <ArrowUpRight className="h-5 w-5" />
-          </Button>
-          <Button
-            variant="contrast"
-            size="lg"
-            className="w-full sm:w-auto rounded-full text-base"
-          >
-            <CalendarDays className="h-5 w-5" /> Book a Demo
-          </Button>
-        </PageHero>
-
-        <Section>
-          <div className="max-w-screen-md mx-auto space-y-6">
+      <PageScaffold
+        title="Turn Every Reservation Into Revenue"
+        intro="From the moment a guest books, EMS can work in the background. Share menus, allergen info, chef’s notes, or upsell experiences like welcome cocktails or set menus. After the meal, EMS collects reviews and entices guests back for the next booking."
+      >
+        {/* Why Operators Love EMS */}
+        <section className="py-16 sm:py-20 md:py-24">
+          <Section className="max-w-screen-md space-y-6">
             <h2 className="text-2xl font-semibold">Why Operators Love EMS</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {challenges.map((row) => (
-                <Card key={row.challenge} className="p-6 space-y-1">
+                <Card
+                  key={row.challenge}
+                  className="rounded-2xl border bg-background/60 backdrop-blur p-6 space-y-1"
+                >
                   <p className="text-[#F65053] text-xs font-semibold">Challenge</p>
                   <p className="font-semibold">{row.challenge}</p>
                   <p className="mt-3 text-[#F65053] text-xs font-semibold">EMS Fix</p>
@@ -118,71 +98,64 @@ export default function Page() {
                 </Card>
               ))}
             </div>
-          </div>
-        </Section>
+          </Section>
+        </section>
 
-        <Section>
-          <div className="max-w-screen-md mx-auto space-y-4">
+        {/* Seat-to-Repeat Guest Journey */}
+        <section className="py-16 sm:py-20 md:py-24">
+          <Section className="max-w-screen-md space-y-4">
             <h2 className="text-2xl font-semibold">Seat-to-Repeat Guest Journey</h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
               {journey.map((item) => (
-                <Card key={item.stage} className="p-6 space-y-2 text-center">
+                <Card
+                  key={item.stage}
+                  className="rounded-2xl border bg-background/60 backdrop-blur p-6 space-y-2 text-center"
+                >
                   <p className="text-lg font-semibold">{item.stage}</p>
                   <p className="text-sm text-foreground/80">{item.description}</p>
                 </Card>
               ))}
             </div>
-          </div>
-        </Section>
+          </Section>
+        </section>
 
-        <Section>
-          <div className="max-w-screen-md mx-auto space-y-4">
+        {/* Tools */}
+        <section className="py-16 sm:py-20 md:py-24">
+          <Section className="max-w-screen-md space-y-4">
             <h2 className="text-2xl font-semibold">Tools That Delight Guests and Staff</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {tools.map((item) => (
-                <FeatureCard
+                <Card
                   key={item.title}
-                  icon={item.icon}
-                  title={item.title}
-                  description={item.description}
-                />
+                  className="rounded-2xl border bg-background/60 backdrop-blur p-6 space-y-3"
+                >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-muted">
+                    <item.icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <p className="text-sm text-foreground/80">{item.description}</p>
+                </Card>
               ))}
             </div>
-          </div>
-        </Section>
+          </Section>
+        </section>
 
-        <Section>
-          <div className="max-w-screen-md mx-auto text-center space-y-4">
+        {/* Testimonial */}
+        <section className="py-16 sm:py-20 md:py-24">
+          <Section className="max-w-screen-md text-center space-y-4">
             <p className="text-lg font-semibold">
               “Guests arrive primed to spend more, and staff stay focused on service. Upsells now feel effortless.”
             </p>
             <p>— Ops Director, Warwickshire Bistro</p>
-          </div>
-        </Section>
+          </Section>
+        </section>
 
-        <Section>
-          <div className="max-w-screen-md mx-auto text-center space-y-4">
-            <h2 className="text-2xl font-semibold">The guest experience is evolving. Are you?</h2>
-            <p>Turn every cover into repeat business with automated flows.</p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-              <Button
-                size="lg"
-                className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
-              >
-                Get Started Free <ArrowUpRight className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="contrast"
-                size="lg"
-                className="w-full sm:w-auto rounded-full text-base"
-              >
-                <CalendarDays className="h-5 w-5" /> Book a Demo
-              </Button>
-            </div>
-          </div>
-        </Section>
+        <PatternedCta
+          title="The guest experience is evolving. Are you?"
+          subtext="Turn every cover into repeat business with automated flows."
+        />
         <Footer />
-      </main>
+      </PageScaffold>
     </>
   );
 }

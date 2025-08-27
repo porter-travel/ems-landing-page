@@ -4,7 +4,7 @@ import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import Section from "@/components/section";
-import BottomCta from "@/components/cta/BottomCta";
+import PatternedCta from "@/components/cta/PatternedCta";
 import type { Metadata } from "next";
 import {
   ArrowUpRight,
@@ -231,7 +231,7 @@ export default function Page() {
           </div>
         </Section>
 
-        <BottomCta
+        <PatternedCta
           title="The guest experience is evolving. Are you?"
           subtext="Drop the clunky workflows. EMS automates perfectly timed emails, property guides, and upsells—without lifting a finger."
         />
