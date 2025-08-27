@@ -97,9 +97,9 @@ export default function Page() {
             Get Started Free <ArrowUpRight className="h-5 w-5" />
           </Button>
           <Button
-            variant="outline"
+            variant="contrast"
             size="lg"
-            className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
+            className="w-full sm:w-auto rounded-full text-base"
           >
             <CalendarDays className="h-5 w-5" /> Book a Demo
           </Button>
@@ -172,9 +172,9 @@ export default function Page() {
                 Get Started Free <ArrowUpRight className="h-5 w-5" />
               </Button>
               <Button
-                variant="outline"
+                variant="contrast"
                 size="lg"
-                className="w-full sm:w-auto rounded-full text-base border-[#F65053] text-[#F65053]"
+                className="w-full sm:w-auto rounded-full text-base"
               >
                 <CalendarDays className="h-5 w-5" /> Book a Demo
               </Button>
