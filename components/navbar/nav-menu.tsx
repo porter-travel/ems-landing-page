@@ -15,16 +15,16 @@ export const NavMenu = ({ orientation, className, ...props }: NavigationMenuProp
     return (
       <div className={cn("space-y-6", className)} {...props}>
         <div>
-          <p className="font-semibold">Product</p>
+          <p className="font-semibold">Features</p>
           <ul className="mt-2 ml-4 flex flex-col gap-2">
             <li>
-              <Link href="/ems-serve">EMS Serve</Link>
+              <Link href="/emails">Emails</Link>
             </li>
             <li>
-              <Link href="/ems-send">EMS Send</Link>
+              <Link href="/fulfilment">Fulfilment</Link>
             </li>
             <li>
-              <Link href="/ems-rate">EMS Rate</Link>
+              <Link href="/insights">Insights</Link>
             </li>
           </ul>
         </div>
@@ -53,22 +53,22 @@ export const NavMenu = ({ orientation, className, ...props }: NavigationMenuProp
     <NavigationMenu orientation={orientation} className={className} {...props}>
       <NavigationMenuList className="gap-6 space-x-0">
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Product</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Features</NavigationMenuTrigger>
           <NavigationMenuContent className="min-w-56">
           <ul className="flex flex-col gap-2 p-3">
             <li>
               <NavigationMenuLink asChild>
-                <Link href="/ems-serve">EMS Serve</Link>
+                <Link href="/emails">Emails</Link>
               </NavigationMenuLink>
             </li>
             <li>
               <NavigationMenuLink asChild>
-                <Link href="/ems-send">EMS Send</Link>
+                <Link href="/fulfilment">Fulfilment</Link>
               </NavigationMenuLink>
             </li>
             <li>
               <NavigationMenuLink asChild>
-                <Link href="/ems-rate">EMS Rate</Link>
+                <Link href="/insights">Insights</Link>
               </NavigationMenuLink>
             </li>
           </ul>
