@@ -1,14 +1,11 @@
-import PageHero from "@/components/page-hero";
+import PatternedHero from "@/components/hero/PatternedHero";
 import FeatureCard from "@/components/cards/FeatureCard";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
-import { Button } from "@/components/ui/button";
 import Section from "@/components/section";
 import PatternedCta from "@/components/cta/PatternedCta";
 import type { Metadata } from "next";
 import {
-  ArrowUpRight,
-  CalendarDays,
   Search,
   DollarSign,
   Lightbulb,
@@ -139,30 +136,17 @@ export default function Page() {
     <>
       <Navbar />
       <main className="pt-16 xs:pt-20 sm:pt-24">
-        <PageHero
+        <PatternedHero
           title="Data That Pays for Itself"
-          subtitle="EMS Insights shows you in real-time what's working and what isn't so you can double down on what converts."
-        >
-          <Button
-            size="lg"
-            className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
-          >
-            Get Started Free <ArrowUpRight className="h-5 w-5" />
-          </Button>
-          <Button
-            variant="contrast"
-            size="lg"
-            className="w-full sm:w-auto rounded-full text-base"
-          >
-            <CalendarDays className="h-5 w-5" /> Book a Demo
-          </Button>
-        </PageHero>
+          subtext="EMS Insights shows you in real-time what's working and what isn't so you can double down on what converts."
+          showCtas
+        />
 
         <Section>
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             Why Insights Matter
           </h2>
-          <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {why.map((item) => (
               <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                 {item.description}
@@ -175,7 +159,7 @@ export default function Page() {
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             What You&apos;ll See
           </h2>
-          <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {see.map((item) => (
               <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                 {item.description}
@@ -188,7 +172,7 @@ export default function Page() {
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             How Teams Use Insights
           </h2>
-          <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {teams.map((item) => (
               <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                 {item.description}
@@ -201,7 +185,7 @@ export default function Page() {
           <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
             Real Use Cases
           </h2>
-          <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mt-10 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {cases.map((item) => (
               <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                 {item.description}
