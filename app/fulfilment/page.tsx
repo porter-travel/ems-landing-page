@@ -4,7 +4,7 @@ import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import Section from "@/components/section";
-import BottomCta from "@/components/cta/BottomCta";
+import PatternedCta from "@/components/cta/PatternedCta";
 import type { Metadata } from "next";
 import {
   ArrowUpRight,
@@ -269,7 +269,7 @@ export default function Page() {
           </div>
         </Section>
 
-        <BottomCta
+        <PatternedCta
           title="Fulfilment is where promises meet reality."
           subtext="EMS routes, tracks, and timestamps every order so nothing slips. Guests get what they paid for—on time."
         />
