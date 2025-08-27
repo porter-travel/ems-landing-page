@@ -3,7 +3,7 @@ import { Navbar } from "@/components/navbar";
 import PatternedCta from "@/components/cta/PatternedCta";
 import PageScaffold from "@/components/layout/PageScaffold";
 import Section from "@/components/layout/Section";
-import Hero from "@/components/hero/Hero";
+import PatternedHero from "@/components/hero/PatternedHero";
 import FeatureCard from "@/components/cards/FeatureCard";
 import type { Metadata } from "next";
 import { Mail, Calendar, TrendingUp, Users, FileText, BarChart3, Settings, Clock, Inbox } from "lucide-react";
@@ -92,16 +92,16 @@ export default function Page() {
     <>
       <Navbar />
       <PageScaffold>
-        <Hero
+        <PatternedHero
           title="Digitise Every Stay, Your Way"
           subtext="Automated guest emails before, during, and after the stay. Drive upgrades, reduce calls, and make guests feel looked after from the moment they book."
           showCtas
         />
         {/* Why Hoteliers Choose EMS */}
         <section className="py-12 md:py-16">
-          <Section className="max-w-screen-md space-y-6">
+          <Section className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-heading font-semibold">Why Hoteliers Choose EMS</h2>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {why.map((item) => (
                 <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                   {item.description}
@@ -113,9 +113,9 @@ export default function Page() {
 
         {/* Guest Journey */}
         <section className="py-12 md:py-16">
-          <Section className="max-w-screen-md space-y-6">
+          <Section className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-heading font-semibold">Build the Guest Journey That Fits You</h2>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {journey.map((item) => (
                 <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                   {item.description}
@@ -127,9 +127,9 @@ export default function Page() {
 
         {/* Staff Features */}
         <section className="py-12 md:py-16">
-          <Section className="max-w-screen-md space-y-6">
+          <Section className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-heading font-semibold">Effortless for Staff</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {staffFeatures.map((item) => (
                 <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                   {item.description}
@@ -141,7 +141,7 @@ export default function Page() {
 
         {/* Testimonial */}
         <section className="py-12 md:py-16">
-          <Section className="max-w-screen-md">
+          <Section>
             <div className="rounded-2xl border bg-background/60 backdrop-blur p-6 md:p-7 text-center space-y-4">
               <p className="text-lg font-semibold">
                 “Guests love the personal touch, staff love the simplicity—and the bottom line loves the upsells.”
