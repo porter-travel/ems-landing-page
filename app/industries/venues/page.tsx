@@ -3,9 +3,10 @@ import { Navbar } from "@/components/navbar";
 import PatternedCta from "@/components/cta/PatternedCta";
 import PageScaffold from "@/components/layout/PageScaffold";
 import Section from "@/components/layout/Section";
-import { Card } from "@/components/ui/card";
+import Hero from "@/components/hero/Hero";
+import FeatureCard from "@/components/cards/FeatureCard";
 import type { Metadata } from "next";
-import { Mail, Calendar, TrendingUp, Users } from "lucide-react";
+import { Mail, Calendar, TrendingUp, Users, FileText, BarChart3, Clock, Inbox } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Venues | EMS",
@@ -13,46 +14,68 @@ export const metadata: Metadata = {
     "Automate event comms, upsell VIP options and manage redemptions with fulfilment dashboards for venues.",
 };
 
-const challenges = [
+const why = [
   {
-    challenge: "Missed pre-event sales",
-    fix: "Emails upsell VIP upgrades, parking passes, drink tokens, or meal deals before guests even arrive.",
+    icon: <TrendingUp className="h-6 w-6" aria-hidden />,
+    title: "Missed pre-event sales",
+    description:
+      "Emails upsell VIP upgrades, parking passes, drink tokens, or meal deals before guests even arrive.",
   },
   {
-    challenge: "Confused attendees",
-    fix: "Automated info packs cover set times, maps, travel advice, and FAQs in one click.",
+    icon: <FileText className="h-6 w-6" aria-hidden />,
+    title: "Confused attendees",
+    description:
+      "Automated info packs cover set times, maps, travel advice, and FAQs in one click.",
   },
   {
-    challenge: "Weak post-event conversion",
-    fix: "Follow-up emails with merch, future event offers, or memberships lock in extra revenue.",
+    icon: <BarChart3 className="h-6 w-6" aria-hidden />,
+    title: "Weak post-event conversion",
+    description:
+      "Follow-up emails with merch, future event offers, or memberships lock in extra revenue.",
   },
 ];
 
 const journey = [
-  { stage: "Ticket Purchase", description: "Welcome email + optional VIP/product upsells." },
-  { stage: "T-1 Week", description: "Event info + transport details." },
-  { stage: "Day Before", description: "Reminder email upselling drink tokens or meal packages." },
-  { stage: "Post-Event", description: "Thank-you + review + “missed merch” follow-up." },
+  {
+    icon: <Mail className="h-6 w-6" aria-hidden />,
+    title: "Purchase",
+    description: "Welcome email + optional VIP/product upsells.",
+  },
+  {
+    icon: <Calendar className="h-6 w-6" aria-hidden />,
+    title: "T-1 week",
+    description: "Event info + transport details.",
+  },
+  {
+    icon: <Inbox className="h-6 w-6" aria-hidden />,
+    title: "Day before",
+    description: "Reminder email upselling drink tokens or meal packages.",
+  },
+  {
+    icon: <Clock className="h-6 w-6" aria-hidden />,
+    title: "Post-event",
+    description: "Thank-you + review + “missed merch” follow-up.",
+  },
 ];
 
 const tools = [
   {
-    icon: Users,
+    icon: <Users className="h-6 w-6" aria-hidden />,
     title: "Fulfilment dashboards",
     description: "Manage pre-event product redemptions and orders.",
   },
   {
-    icon: Calendar,
+    icon: <Calendar className="h-6 w-6" aria-hidden />,
     title: "Calendar-linked inventory",
     description: "Limit ticketed upsells like VIP meet & greet or parking slots.",
   },
   {
-    icon: Mail,
+    icon: <Mail className="h-6 w-6" aria-hidden />,
     title: "Segmented sends",
     description: "Target communications by ticket type, seating block, or membership level.",
   },
   {
-    icon: TrendingUp,
+    icon: <TrendingUp className="h-6 w-6" aria-hidden />,
     title: "Insights dashboards",
     description: "See take-rates, AOV, and campaign impact instantly.",
   },
@@ -62,76 +85,63 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <PageScaffold
-        title="Craft Seamless Guest Journeys"
-        intro="For arenas, theatres, stadiums, and events, EMS automates communication from ticket purchase through encore. Guests get clarity and offers; your team gets predictable pre-orders and revenue uplift."
-      >
+      <PageScaffold>
+        <Hero
+          title="Craft Seamless Guest Journeys"
+          subtext="Automate pre-event comms, drive add-on sales, and capture post-event revenue—without adding staff workload."
+          showCtas
+        />
         {/* Why Operators Choose EMS */}
-        <section className="py-16 sm:py-20 md:py-24">
+        <section className="py-12 md:py-16">
           <Section className="max-w-screen-md space-y-6">
-            <h2 className="text-2xl font-semibold">Why Operators Choose EMS</h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-semibold">Why Operators Choose EMS</h2>
             <div className="grid md:grid-cols-2 gap-4">
-              {challenges.map((row) => (
-                <Card
-                  key={row.challenge}
-                  className="rounded-2xl border bg-background/60 backdrop-blur p-6 space-y-1"
-                >
-                  <p className="text-[#F65053] text-xs font-semibold">Challenge</p>
-                  <p className="font-semibold">{row.challenge}</p>
-                  <p className="mt-3 text-[#F65053] text-xs font-semibold">EMS Fix</p>
-                  <p className="text-sm">{row.fix}</p>
-                </Card>
+              {why.map((item) => (
+                <FeatureCard key={item.title} icon={item.icon} title={item.title}>
+                  {item.description}
+                </FeatureCard>
               ))}
             </div>
           </Section>
         </section>
 
         {/* Door-to-Encore Guest Journey */}
-        <section className="py-16 sm:py-20 md:py-24">
+        <section className="py-12 md:py-16">
           <Section className="max-w-screen-md space-y-4">
-            <h2 className="text-2xl font-semibold">Door-to-Encore Guest Journey</h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-semibold">Door-to-Encore Guest Journey</h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
               {journey.map((item) => (
-                <Card
-                  key={item.stage}
-                  className="rounded-2xl border bg-background/60 backdrop-blur p-6 space-y-2 text-center"
-                >
-                  <p className="text-lg font-semibold">{item.stage}</p>
-                  <p className="text-sm text-foreground/80">{item.description}</p>
-                </Card>
+                <FeatureCard key={item.title} icon={item.icon} title={item.title}>
+                  {item.description}
+                </FeatureCard>
               ))}
             </div>
           </Section>
         </section>
 
         {/* Tools */}
-        <section className="py-16 sm:py-20 md:py-24">
+        <section className="py-12 md:py-16">
           <Section className="max-w-screen-md space-y-4">
-            <h2 className="text-2xl font-semibold">Tools That Keep Crowds Happy and Ops Calm</h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-semibold">Tools That Keep Ops Calm</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {tools.map((item) => (
-                <Card
-                  key={item.title}
-                  className="rounded-2xl border bg-background/60 backdrop-blur p-6 space-y-3"
-                >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-muted">
-                    <item.icon className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-lg font-semibold">{item.title}</h3>
-                  <p className="text-sm text-foreground/80">{item.description}</p>
-                </Card>
+                <FeatureCard key={item.title} icon={item.icon} title={item.title}>
+                  {item.description}
+                </FeatureCard>
               ))}
             </div>
           </Section>
         </section>
 
         {/* Testimonial */}
-        <section className="py-16 sm:py-20 md:py-24">
-          <Section className="max-w-screen-md text-center space-y-4">
-            <p className="text-lg font-semibold">
-              “Queues fell, per-head spend rose, and we’ve built repeatable revenue into every event.”
-            </p>
-            <p>— F&B Manager, Midlands Arena</p>
+        <section className="py-12 md:py-16">
+          <Section className="max-w-screen-md">
+            <div className="rounded-2xl border bg-background/60 backdrop-blur p-6 md:p-7 text-center space-y-4">
+              <p className="text-lg font-semibold">
+                “Queues fell, per-head spend rose, and we’ve built repeatable revenue into every event.”
+              </p>
+              <p>— F&B Manager, Midlands Arena</p>
+            </div>
           </Section>
         </section>
 
@@ -139,8 +149,8 @@ export default function Page() {
           title="The guest experience is evolving. Are you?"
           subtext="Upgrade every touchpoint, not just the stage."
         />
-        <Footer />
       </PageScaffold>
+      <Footer />
     </>
   );
 }

@@ -1,5 +1,5 @@
 import PageHero from "@/components/page-hero";
-import FeatureCard from "@/components/feature-card";
+import FeatureCard from "@/components/cards/FeatureCard";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -39,19 +39,19 @@ export const metadata: Metadata = {
 export default function Page() {
   const why = [
     {
-      icon: UserCheck,
+      icon: <UserCheck className="h-6 w-6" aria-hidden />,
       title: "Guest expectations",
       description:
         "If they pay for early check-in, it better be ready.",
     },
     {
-      icon: Users,
+      icon: <Users className="h-6 w-6" aria-hidden />,
       title: "Staff clarity",
       description:
         "Requests routed properly mean fewer mistakes.",
     },
     {
-      icon: AlertTriangle,
+      icon: <AlertTriangle className="h-6 w-6" aria-hidden />,
       title: "Reputation impact",
       description:
         "One missed order = one bad review.",
@@ -60,37 +60,37 @@ export default function Page() {
 
   const covers = [
     {
-      icon: LayoutDashboard,
+      icon: <LayoutDashboard className="h-6 w-6" aria-hidden />,
       title: "Dashboards",
       description:
         "Live screens show all open requests, colour-coded by department and urgency.",
     },
     {
-      icon: GitBranch,
+      icon: <GitBranch className="h-6 w-6" aria-hidden />,
       title: "Routing rules",
       description:
         "Requests automatically sent to the right team.",
     },
     {
-      icon: Mail,
+      icon: <Mail className="h-6 w-6" aria-hidden />,
       title: "Order emails",
       description:
         "Instant alerts sent directly to the responsible inbox.",
     },
     {
-      icon: CalendarClock,
+      icon: <CalendarClock className="h-6 w-6" aria-hidden />,
       title: "Calendar-linked",
       description:
         "Time-sensitive products are auto-scheduled.",
     },
     {
-      icon: ClipboardList,
+      icon: <ClipboardList className="h-6 w-6" aria-hidden />,
       title: "Audit trails",
       description:
         "Every request has a timestamp and completion log.",
     },
     {
-      icon: BellRing,
+      icon: <BellRing className="h-6 w-6" aria-hidden />,
       title: "Escalations",
       description:
         "Auto-reminders for overdue tasks.",
@@ -99,25 +99,25 @@ export default function Page() {
 
   const useCases = [
     {
-      icon: BedDouble,
+      icon: <BedDouble className="h-6 w-6" aria-hidden />,
       title: "Hotels",
       description:
         "Late checkout purchases automatically update housekeeping schedules.",
     },
     {
-      icon: UtensilsCrossed,
+      icon: <UtensilsCrossed className="h-6 w-6" aria-hidden />,
       title: "Restaurants",
       description:
         "Pre-ordered tasting menus logged for kitchen prep.",
     },
     {
-      icon: Building2,
+      icon: <Building2 className="h-6 w-6" aria-hidden />,
       title: "Venues",
       description:
         "Parking passes trigger front-of-house allocation.",
     },
     {
-      icon: Home,
+      icon: <Home className="h-6 w-6" aria-hidden />,
       title: "Airbnbs",
       description:
         "Firewood packs flagged for property managers on changeover day.",
@@ -126,22 +126,22 @@ export default function Page() {
 
   const staffBenefits = [
     {
-      icon: LayoutDashboard,
+      icon: <LayoutDashboard className="h-6 w-6" aria-hidden />,
       title: "Clear dashboards",
       description: "No endless emails or sticky notes.",
     },
     {
-      icon: Smartphone,
+      icon: <Smartphone className="h-6 w-6" aria-hidden />,
       title: "Mobile-friendly",
       description: "Works on phones, tablets, and laptops.",
     },
     {
-      icon: Timer,
+      icon: <Timer className="h-6 w-6" aria-hidden />,
       title: "Prioritised",
       description: "SLAs and timers highlight what needs action first.",
     },
     {
-      icon: BarChart3,
+      icon: <BarChart3 className="h-6 w-6" aria-hidden />,
       title: "Trackable",
       description:
         "Managers see bottlenecks and performance at a glance.",
@@ -150,17 +150,17 @@ export default function Page() {
 
   const managerBenefits = [
     {
-      icon: ShieldCheck,
+      icon: <ShieldCheck className="h-6 w-6" aria-hidden />,
       title: "Confidence",
       description: "Nothing gets lost.",
     },
     {
-      icon: ListChecks,
+      icon: <ListChecks className="h-6 w-6" aria-hidden />,
       title: "Accountability",
       description: "Timestamped logs for who handled what.",
     },
     {
-      icon: TrendingUp,
+      icon: <TrendingUp className="h-6 w-6" aria-hidden />,
       title: "Efficiency",
       description: "Optimise staff load based on order flow.",
     },
@@ -195,12 +195,9 @@ export default function Page() {
           </h2>
           <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {why.map((item) => (
-              <FeatureCard
-                key={item.title}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-              />
+              <FeatureCard key={item.title} icon={item.icon} title={item.title}>
+                {item.description}
+              </FeatureCard>
             ))}
           </div>
         </Section>
@@ -211,12 +208,9 @@ export default function Page() {
           </h2>
           <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {covers.map((item) => (
-              <FeatureCard
-                key={item.title}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-              />
+              <FeatureCard key={item.title} icon={item.icon} title={item.title}>
+                {item.description}
+              </FeatureCard>
             ))}
           </div>
         </Section>
@@ -227,12 +221,9 @@ export default function Page() {
           </h2>
           <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((item) => (
-              <FeatureCard
-                key={item.title}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-              />
+              <FeatureCard key={item.title} icon={item.icon} title={item.title}>
+                {item.description}
+              </FeatureCard>
             ))}
           </div>
         </Section>
@@ -243,12 +234,9 @@ export default function Page() {
           </h2>
           <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {staffBenefits.map((item) => (
-              <FeatureCard
-                key={item.title}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-              />
+              <FeatureCard key={item.title} icon={item.icon} title={item.title}>
+                {item.description}
+              </FeatureCard>
             ))}
           </div>
         </Section>
@@ -259,12 +247,9 @@ export default function Page() {
           </h2>
           <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {managerBenefits.map((item) => (
-              <FeatureCard
-                key={item.title}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-              />
+              <FeatureCard key={item.title} icon={item.icon} title={item.title}>
+                {item.description}
+              </FeatureCard>
             ))}
           </div>
         </Section>

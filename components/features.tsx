@@ -13,25 +13,25 @@ import {
   BarChart3,
 } from "lucide-react";
 import React from "react";
-import FeatureCard from "./feature-card";
+import FeatureCard from "@/components/cards/FeatureCard";
 import Section from "./section";
 import Link from "next/link";
 
 const overview = [
   {
-    icon: Mail,
+    icon: <Mail className="h-6 w-6" aria-hidden />,
     title: "Automated Engagement",
     description: "Pre-timed emails that guide and upsell.",
     href: "/emails",
   },
   {
-    icon: ClipboardCheck,
+    icon: <ClipboardCheck className="h-6 w-6" aria-hidden />,
     title: "Fulfilment",
     description: "Route orders with clear SLAs.",
     href: "/fulfilment",
   },
   {
-    icon: BarChart3,
+    icon: <BarChart3 className="h-6 w-6" aria-hidden />,
     title: "Insights",
     description: "See what converts and optimise.",
     href: "/insights",
@@ -40,37 +40,37 @@ const overview = [
 
 const features = [
   {
-    icon: Workflow,
+    icon: <Workflow className="h-6 w-6" aria-hidden />,
     title: "Effortless Automation",
     description:
       "Pre-built, perfectly timed automated upsell journeys.",
   },
   {
-    icon: LinkIcon,
+    icon: <LinkIcon className="h-6 w-6" aria-hidden />,
     title: "Seamless Embeds",
     description:
       "Drop your branded upsell microsite link into any email, SMS, or guest-platform message.",
   },
   {
-    icon: Store,
+    icon: <Store className="h-6 w-6" aria-hidden />,
     title: "White-Label Upsell Store",
     description:
       "Your logo, colours, and fonts on a high-converting ecommerce page.",
   },
   {
-    icon: Map,
+    icon: <Map className="h-6 w-6" aria-hidden />,
     title: "Guest Guides & Local Info",
     description:
       "Link to property guides, welcome messages, and curated recommendations",
   },
   {
-    icon: Handshake,
+    icon: <Handshake className="h-6 w-6" aria-hidden />,
     title: "Bespoke Onboarding",
     description:
       "Hands-on setup, custom strategy sessions, and ongoing check-ins from our dynamic team.",
   },
   {
-    icon: LineChart,
+    icon: <LineChart className="h-6 w-6" aria-hidden />,
     title: "Real-Time Insights",
     description: "Monitor campaign performance with live dashboards.",
   },
@@ -78,25 +78,25 @@ const features = [
 
 const howItWorks = [
   {
-    icon: Upload,
+    icon: <Upload className="h-6 w-6" aria-hidden />,
     title: "Upload or Connect",
     description:
       "Drag & drop a CSV of guest data - names, emails, stay dates - or connect your PMS/CRM.",
   },
   {
-    icon: Workflow,
+    icon: <Workflow className="h-6 w-6" aria-hidden />,
     title: "Create an Automation",
     description:
       "Build your own automations to target guests at key points pre, during or post-stay.",
   },
   {
-    icon: Send,
+    icon: <Send className="h-6 w-6" aria-hidden />,
     title: "Publish & Embed",
     description:
       "Publish your branded microsite in seconds and embed the link into your guest messages.",
   },
   {
-    icon: LineChart,
+    icon: <LineChart className="h-6 w-6" aria-hidden />,
     title: "Monitor & Optimise",
     description:
       "Watch opens, clicks, and incremental revenue populate your Insights Dashboard.",
@@ -105,7 +105,7 @@ const howItWorks = [
 
 const coreFeatures = [
   {
-    icon: Send,
+    icon: <Send className="h-6 w-6" aria-hidden />,
     title: "EMS Send",
     description: (
       <ul className="list-disc ml-4 space-y-1">
@@ -117,7 +117,7 @@ const coreFeatures = [
     ),
   },
   {
-    icon: ClipboardList,
+    icon: <ClipboardList className="h-6 w-6" aria-hidden />,
     title: "Fulfilment Tools",
     description: (
       <ul className="list-disc ml-4 space-y-1">
@@ -132,7 +132,7 @@ const coreFeatures = [
     ),
   },
   {
-    icon: LineChart,
+    icon: <LineChart className="h-6 w-6" aria-hidden />,
     title: "Insights Dashboard",
     description: (
       <ul className="list-disc ml-4 space-y-1">
@@ -154,12 +154,9 @@ const Features = () => {
       <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {overview.map((item) => (
           <Link key={item.title} href={item.href} className="h-full">
-            <FeatureCard
-              icon={item.icon}
-              title={item.title}
-              description={item.description}
-              className="h-full"
-            />
+            <FeatureCard icon={item.icon} title={item.title} className="h-full">
+              {item.description}
+            </FeatureCard>
           </Link>
         ))}
       </div>
@@ -168,12 +165,9 @@ const Features = () => {
       </h2>
       <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature) => (
-          <FeatureCard
-            key={feature.title}
-            icon={feature.icon}
-            title={feature.title}
-            description={feature.description}
-          />
+          <FeatureCard key={feature.title} icon={feature.icon} title={feature.title}>
+            {feature.description}
+          </FeatureCard>
         ))}
       </div>
       <h2 className="mt-20 text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
@@ -181,12 +175,9 @@ const Features = () => {
       </h2>
       <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {howItWorks.map((item) => (
-          <FeatureCard
-            key={item.title}
-            icon={item.icon}
-            title={item.title}
-            description={item.description}
-          />
+          <FeatureCard key={item.title} icon={item.icon} title={item.title}>
+            {item.description}
+          </FeatureCard>
         ))}
       </div>
       <h2 className="mt-20 text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
@@ -194,12 +185,9 @@ const Features = () => {
       </h2>
       <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {coreFeatures.map((item) => (
-          <FeatureCard
-            key={item.title}
-            icon={item.icon}
-            title={item.title}
-            description={item.description}
-          />
+          <FeatureCard key={item.title} icon={item.icon} title={item.title}>
+            {item.description}
+          </FeatureCard>
         ))}
       </div>
     </Section>
