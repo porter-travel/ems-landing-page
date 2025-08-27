@@ -1,5 +1,5 @@
 import PageHero from "@/components/page-hero";
-import FeatureCard from "@/components/feature-card";
+import FeatureCard from "@/components/cards/FeatureCard";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -33,19 +33,19 @@ export const metadata: Metadata = {
 export default function Page() {
   const benefits = [
     {
-      icon: Mail,
+      icon: <Mail className="h-6 w-6" aria-hidden />,
       title: "Guests expect it",
       description:
         "They live in their inbox. Timely communication is the difference between calm arrivals and chaos.",
     },
     {
-      icon: TrendingUp,
+      icon: <TrendingUp className="h-6 w-6" aria-hidden />,
       title: "Revenue depends on it",
       description:
         "Pre-arrival is the single highest-converting window for upsells.",
     },
     {
-      icon: Users,
+      icon: <Users className="h-6 w-6" aria-hidden />,
       title: "Your staff can't scale",
       description:
         "Automation handles FAQs and upsell prompts so your team doesn't have to.",
@@ -54,7 +54,7 @@ export default function Page() {
 
   const automation = [
     {
-      icon: CalendarClock,
+      icon: <CalendarClock className="h-6 w-6" aria-hidden />,
       title: "Pre-Arrival",
       description: (
         <ul className="list-disc ml-4 space-y-1">
@@ -66,7 +66,7 @@ export default function Page() {
       ),
     },
     {
-      icon: BedDouble,
+      icon: <BedDouble className="h-6 w-6" aria-hidden />,
       title: "In-Stay",
       description: (
         <ul className="list-disc ml-4 space-y-1">
@@ -77,7 +77,7 @@ export default function Page() {
       ),
     },
     {
-      icon: Gift,
+      icon: <Gift className="h-6 w-6" aria-hidden />,
       title: "Post-Stay",
       description: (
         <ul className="list-disc ml-4 space-y-1">
@@ -94,31 +94,31 @@ export default function Page() {
 
   const steps = [
     {
-      icon: Upload,
+      icon: <Upload className="h-6 w-6" aria-hidden />,
       title: "Upload or Connect",
       description:
         "Drag a CSV of guest data or sync your PMS/CRM.",
     },
     {
-      icon: Workflow,
+      icon: <Workflow className="h-6 w-6" aria-hidden />,
       title: "Create Flows",
       description:
         "Drag-and-drop builder for pre, during, and post-stay automations.",
     },
     {
-      icon: Palette,
+      icon: <Palette className="h-6 w-6" aria-hidden />,
       title: "Customise",
       description:
         "Add your logo, fonts, and colours—emails look 100% on-brand.",
     },
     {
-      icon: Send,
+      icon: <Send className="h-6 w-6" aria-hidden />,
       title: "Publish & Embed",
       description:
         "Send directly or drop upsell links into any message.",
     },
     {
-      icon: LineChart,
+      icon: <LineChart className="h-6 w-6" aria-hidden />,
       title: "Optimise",
       description:
         "Use Insights to track opens, clicks, and revenue.",
@@ -127,17 +127,17 @@ export default function Page() {
 
   const love = [
     {
-      icon: Users,
+      icon: <Users className="h-6 w-6" aria-hidden />,
       title: "No tech team needed",
       description: "Anyone can set it up.",
     },
     {
-      icon: Timer,
+      icon: <Timer className="h-6 w-6" aria-hidden />,
       title: "Fast launch",
       description: "Get your first upsell emails out in under an hour.",
     },
     {
-      icon: Layers,
+      icon: <Layers className="h-6 w-6" aria-hidden />,
       title: "Scalable",
       description:
         "Works for single properties or portfolios of hundreds.",
@@ -173,12 +173,9 @@ export default function Page() {
           </h2>
           <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((item) => (
-              <FeatureCard
-                key={item.title}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-              />
+              <FeatureCard key={item.title} icon={item.icon} title={item.title}>
+                {item.description}
+              </FeatureCard>
             ))}
           </div>
         </Section>
@@ -189,12 +186,9 @@ export default function Page() {
           </h2>
           <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-1 lg:grid-cols-3 gap-6">
             {automation.map((item) => (
-              <FeatureCard
-                key={item.title}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-              />
+              <FeatureCard key={item.title} icon={item.icon} title={item.title}>
+                {item.description}
+              </FeatureCard>
             ))}
           </div>
         </Section>
@@ -205,12 +199,9 @@ export default function Page() {
           </h2>
           <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {steps.map((item) => (
-              <FeatureCard
-                key={item.title}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-              />
+              <FeatureCard key={item.title} icon={item.icon} title={item.title}>
+                {item.description}
+              </FeatureCard>
             ))}
           </div>
         </Section>
@@ -221,12 +212,9 @@ export default function Page() {
           </h2>
           <div className="w-full max-w-screen-md mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {love.map((item) => (
-              <FeatureCard
-                key={item.title}
-                icon={item.icon}
-                title={item.title}
-                description={item.description}
-              />
+              <FeatureCard key={item.title} icon={item.icon} title={item.title}>
+                {item.description}
+              </FeatureCard>
             ))}
           </div>
         </Section>

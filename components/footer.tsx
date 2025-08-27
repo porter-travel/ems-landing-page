@@ -18,7 +18,7 @@ const industryLinks = [
 ];
 
 const companyLinks = [
-  { title: "About Us", href: "/about-us" },
+  { title: "About Us", href: "/about" },
   { title: "Contact Us", href: "/contact-us" },
   { title: "Privacy Policy", href: "/privacy-policy" },
   { title: "Terms of Service", href: "/terms-of-service" },
