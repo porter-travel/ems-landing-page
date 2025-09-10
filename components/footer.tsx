@@ -83,7 +83,7 @@ const Footer = () => {
           </span>
 
           <div className="flex items-center gap-5 text-white">
-            <Link href="https://www.linkedin.com/company/ems-core/" target="_blank">
+            <Link href="https://www.linkedin.com/company/emsgrow/" target="_blank">
               <Linkedin className="h-5 w-5" />
             </Link>
           </div>
