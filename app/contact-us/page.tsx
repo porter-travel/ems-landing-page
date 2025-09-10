@@ -51,7 +51,7 @@ export default function Page() {
           <div className="border rounded-lg p-2">
             <div
               className="calendly-inline-widget"
-              data-url="https://calendly.com/emsgrow"
+              data-url="https://calendly.com/emsgrow/30min"
               style={{ minWidth: "320px", height: "700px" }}
             />
           </div>

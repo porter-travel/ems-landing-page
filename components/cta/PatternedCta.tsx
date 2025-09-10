@@ -48,14 +48,14 @@ export default function PatternedCta({ title, subtext, className }: PatternedCta
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               {/* Primary */}
               <a
-                href="#get-started"
+                href="https://enhancemystay.com/register"
                 className="inline-flex h-11 items-center justify-center rounded-xl bg-primary px-5 text-primary-foreground hover:opacity-90 transition"
               >
                 Get Started Free
               </a>
               {/* Secondary */}
               <a
-                href="#demo"
+                href="https://calendly.com/emsgrow/30min"
                 className="inline-flex h-11 items-center justify-center rounded-xl border bg-white px-5 text-[#1A1A1A] hover:bg-white/90 transition"
               >
                 <span className="inline-flex items-center gap-2">

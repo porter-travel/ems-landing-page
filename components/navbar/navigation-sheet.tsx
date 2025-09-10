@@ -20,10 +20,12 @@ export const NavigationSheet = () => {
         <NavMenu orientation="vertical" className="mt-12" />
 
         <div className="mt-8 space-y-4">
-          <Button variant="outline" className="w-full sm:hidden">
-            Sign In
+          <Button asChild variant="outline" className="w-full sm:hidden">
+            <Link href="https://enhancemystay.com/login">Sign In</Link>
           </Button>
-          <Button className="w-full xs:hidden">Get Started</Button>
+          <Button asChild className="w-full xs:hidden">
+            <Link href="https://enhancemystay.com/register">Get Started</Link>
+          </Button>
         </div>
       </SheetContent>
     </Sheet>
