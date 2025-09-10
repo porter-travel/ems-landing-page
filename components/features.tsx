@@ -13,6 +13,7 @@ import {
   BarChart3,
 } from "lucide-react";
 import React from "react";
+import Image from "next/image";
 import FeatureCard from "@/components/cards/FeatureCard";
 import Section from "./section";
 import Link from "next/link";
@@ -62,6 +63,7 @@ const features = [
     title: "Guest Guides & Local Info",
     description:
       "Link to property guides, welcome messages, and curated recommendations",
+    badge: "Coming soon",
   },
   {
     icon: <Handshake className="h-6 w-6" aria-hidden />,
@@ -151,6 +153,10 @@ const Features = () => {
       <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
         Overview
       </h2>
+      <p className="mt-4 max-w-screen-md mx-auto text-center text-lg text-foreground/80">
+        EMS helps you delight guests and grow revenue at the same time - automating
+        engagement, upsells, and fulfilment so every interaction feels effortless.
+      </p>
       <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {overview.map((item) => (
           <Link key={item.title} href={item.href} className="h-full">
@@ -165,7 +171,12 @@ const Features = () => {
       </h2>
       <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature) => (
-          <FeatureCard key={feature.title} icon={feature.icon} title={feature.title}>
+          <FeatureCard
+            key={feature.title}
+            icon={feature.icon}
+            title={feature.title}
+            badge={feature.badge}
+          >
             {feature.description}
           </FeatureCard>
         ))}
@@ -173,12 +184,23 @@ const Features = () => {
       <h2 className="mt-20 text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
         How It Works
       </h2>
-      <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {howItWorks.map((item) => (
-          <FeatureCard key={item.title} icon={item.icon} title={item.title}>
-            {item.description}
-          </FeatureCard>
-        ))}
+      <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16">
+        <div className="grid md:grid-cols-2 gap-6 items-center">
+          <Image
+            src="/EMSUpsellSite.png"
+            alt="EMS Upsell Site"
+            width={800}
+            height={600}
+            className="w-full rounded-xl border"
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {howItWorks.map((item) => (
+              <FeatureCard key={item.title} icon={item.icon} title={item.title}>
+                {item.description}
+              </FeatureCard>
+            ))}
+          </div>
+        </div>
       </div>
       <h2 className="mt-20 text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
         Core Features

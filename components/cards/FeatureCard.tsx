@@ -6,6 +6,7 @@ interface FeatureCardProps {
   title: string;
   children: ReactNode;
   className?: string;
+  badge?: ReactNode;
 }
 
 export default function FeatureCard({
@@ -13,14 +14,20 @@ export default function FeatureCard({
   title,
   children,
   className,
+  badge,
 }: FeatureCardProps) {
   return (
     <div
       className={cn(
-        "rounded-2xl border bg-background/60 backdrop-blur p-6 md:p-7 hover:shadow-sm transition",
+        "relative rounded-2xl border bg-background/60 backdrop-blur p-6 md:p-7 hover:shadow-sm transition",
         className
       )}
     >
+      {badge && (
+        <span className="absolute top-4 right-4 rounded-full bg-secondary px-2 py-0.5 text-xs font-medium">
+          {badge}
+        </span>
+      )}
       <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-muted">
         {icon}
       </div>
