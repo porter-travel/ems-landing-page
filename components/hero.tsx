@@ -3,8 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, CalendarDays } from "lucide-react";
 import React from "react";
-import Lottie from "lottie-react";
-import heroAnimation from "@/public/EMSHeroImage.png";
+import Image from "next/image";
+import heroImage from "@/public/EMSHeroImage.png";
 
 const Hero = () => {
   return (
@@ -42,12 +42,12 @@ const Hero = () => {
             shadow-xl
           "
         >
-          <Lottie
-            animationData={heroAnimation}
-            loop
-            className="w-full h-full object-contain rounded-3xl"
-            rendererSettings={{ preserveAspectRatio: "xMidYMid meet" }}
-          />
+          <Image
+      src={heroImage}
+      alt="EMS Hero"
+      className="w-full h-full object-contain rounded-3xl"
+      priority
+    />
         </div>
       </div>
     </div>
