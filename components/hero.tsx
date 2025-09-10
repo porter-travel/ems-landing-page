@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight, CalendarDays } from "lucide-react";
 import React from "react";
 import Lottie from "lottie-react";
-import heroAnimation from "@/public/EMSHeroImage.json";
+import heroAnimation from "@/public/EMSHeroImage.png";
 
 const Hero = () => {
   return (
