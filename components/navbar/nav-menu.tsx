@@ -14,6 +14,9 @@ export const NavMenu = ({ orientation, className, ...props }: NavigationMenuProp
   if (orientation === "vertical") {
     return (
       <div className={cn("space-y-6", className)} {...props}>
+        <Link href="/blog" className="font-semibold">
+          Blog
+        </Link>
         <div>
           <p className="font-semibold">Features</p>
           <ul className="mt-2 ml-4 flex flex-col gap-2">
@@ -100,6 +103,11 @@ export const NavMenu = ({ orientation, className, ...props }: NavigationMenuProp
             </li>
           </ul>
         </NavigationMenuContent>
+      </NavigationMenuItem>
+      <NavigationMenuItem>
+        <NavigationMenuLink asChild>
+          <Link href="/blog">Blog</Link>
+        </NavigationMenuLink>
       </NavigationMenuItem>
     </NavigationMenuList>
     </NavigationMenu>
