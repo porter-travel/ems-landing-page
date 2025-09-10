@@ -30,19 +30,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-        <div
-          className="
-            w-[260px]
-            h-[560px]
-            box-border
-            rounded-3xl
-            border-4
-            border-black
-            overflow-hidden
-            shadow-xl
-          "
-        >
-          <Image
+        <Image
       src={heroImage}
       alt="EMS Hero"
       className="w-full h-full object-contain rounded-3xl"
