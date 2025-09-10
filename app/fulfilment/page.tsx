@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Section from "@/components/section";
 import PatternedCta from "@/components/cta/PatternedCta";
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   ArrowUpRight,
   CalendarDays,
@@ -175,17 +176,23 @@ export default function Page() {
           subtitle="When a guest books a product or requests something, EMS makes sure your team delivers without bottlenecks."
         >
           <Button
+            asChild
             size="lg"
             className="w-full sm:w-auto rounded-full text-base bg-[#F65053] hover:bg-[#F65053]/90"
           >
-            Get Started Free <ArrowUpRight className="h-5 w-5" />
+            <Link href="https://enhancemystay.com/register">
+              Get Started Free <ArrowUpRight className="h-5 w-5" />
+            </Link>
           </Button>
           <Button
+            asChild
             variant="contrast"
             size="lg"
             className="w-full sm:w-auto rounded-full text-base"
           >
-            <CalendarDays className="h-5 w-5" /> Book a Demo
+            <Link href="https://calendly.com/emsgrow/30min">
+              <CalendarDays className="h-5 w-5" /> Book a Demo
+            </Link>
           </Button>
         </PageHero>
 

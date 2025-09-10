@@ -5,7 +5,9 @@ import { ArrowUpRight, CalendarDays } from "lucide-react";
 import React from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 import heroImage from "@/public/EMSHeroImage.png";
+import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
 
 
 const Hero = () => {
@@ -21,28 +23,30 @@ const Hero = () => {
             Automatically email guests before, during, and after their booking - or embed a link into your existing messages - to drive revenue and elevate the guest experience.
           </p>
           <div className="mt-12 flex flex-col sm:flex-row items-center sm:justify-start md:justify-start gap-4">
-            <Button size="lg" className="w-full sm:w-auto rounded-full text-base">
-              Get Started Free <ArrowUpRight className="!h-5 !w-5" />
+            <Button asChild size="lg" className="w-full sm:w-auto rounded-full text-base">
+              <Link href="https://enhancemystay.com/register">
+                Get Started Free <ArrowUpRight className="!h-5 !w-5" />
+              </Link>
             </Button>
             <Button
+              asChild
               variant="contrast"
               size="lg"
               className="w-full sm:w-auto rounded-full text-base shadow-none"
             >
-              <CalendarDays className="!h-5 !w-5" /> Book a Demo
+              <Link href="https://calendly.com/emsgrow/30min">
+                <CalendarDays className="!h-5 !w-5" /> Book a Demo
+              </Link>
             </Button>
           </div>
         </div>
-
-      </div>
-      <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-        <Image
-      src={heroImage}
-      alt="EMS Hero"
-      className="w-full h-full object-contain rounded-3xl"
-      priority
-    />
-
+        <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
+          <Image
+            src={heroImage}
+            alt="EMS Hero"
+            className="w-full h-full object-contain rounded-3xl"
+            priority
+          />
         </div>
       </div>
     </section>

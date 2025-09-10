@@ -15,10 +15,12 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
           {/* Desktop Menu */}
           <NavMenu className="hidden md:block" />
-          <Button variant="outline" className="hidden sm:inline-flex">
-            Sign In
+          <Button asChild variant="outline" className="hidden sm:inline-flex">
+            <Link href="https://enhancemystay.com/login">Sign In</Link>
           </Button>
-          <Button className="hidden xs:inline-flex">Get Started</Button>
+          <Button asChild className="hidden xs:inline-flex">
+            <Link href="https://enhancemystay.com/register">Get Started</Link>
+          </Button>
 
           {/* Mobile Menu */}
           <div className="md:hidden">
