@@ -2,7 +2,7 @@ import PatternedCta from "@/components/cta/PatternedCta";
 import FAQ from "@/components/faq";
 import Features from "@/components/features";
 import Footer from "@/components/footer";
-import Hero from "@/components/hero";
+import Hero from "@/components/hero.tsx";
 import { Navbar } from "@/components/navbar";
 import Pricing from "@/components/pricing";
 import Testimonials from "@/components/testimonials";

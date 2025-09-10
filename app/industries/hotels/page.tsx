@@ -3,7 +3,7 @@ import { Navbar } from "@/components/navbar";
 import PatternedCta from "@/components/cta/PatternedCta";
 import PageScaffold from "@/components/layout/PageScaffold";
 import Section from "@/components/layout/Section";
-import Hero from "@/components/hero/Hero";
+import Hero from "@/components/hero/Hero.tsx";
 import FeatureCard from "@/components/cards/FeatureCard";
 import type { Metadata } from "next";
 import { Mail, Calendar, TrendingUp, Users, FileText, BarChart3, Settings, Clock, Inbox } from "lucide-react";

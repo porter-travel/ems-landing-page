@@ -4,15 +4,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight, CalendarDays } from "lucide-react";
 import React from "react";
 
-import Image from "next/image";
 import Link from "next/link";
-import heroImage from "@/public/EMSHeroImage.png";
+import Lottie from "lottie-react";
+import heroAnimation from "@/public/EMSHeroImage.json";
 import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
 
 
-const Hero = () => {
-  return (
-    <section className="relative overflow-hidden">
+export default function Hero() {
+  return (<section className="relative overflow-hidden">
       <AnimatedGridPattern className="absolute inset-0 opacity-40 [mask-image:radial-gradient(white,transparent)]" />
       <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 min-h-[calc(100vh-6rem)] flex flex-col md:flex-row items-center justify-between gap-8 py-20">
         <div className="md:w-1/2 text-center md:text-left max-w-2xl">
@@ -41,16 +40,11 @@ const Hero = () => {
           </div>
         </div>
         <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-          <Image
-            src={heroImage}
-            alt="EMS Hero"
+          <Lottie
+            animationData={heroAnimation}
             className="w-full h-full object-contain rounded-3xl"
-            priority
           />
         </div>
       </div>
-    </section>
-  );
-};
-
-export default Hero;
+    </section>);
+}
