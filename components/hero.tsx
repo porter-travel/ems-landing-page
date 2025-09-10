@@ -41,13 +41,15 @@ const Hero = () => {
           </div>
         </div>
         <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-          <Image
-            src={heroImage}
-            alt="EMS Hero"
-            className="w-full h-full object-contain rounded-3xl"
-            priority
-          />
-        </div>
+  <div className="w-full max-w-sm lg:max-w-md xl:max-w-lg">
+    <Image
+      src={heroImage}
+      alt="EMS Hero"
+      className="w-full h-auto object-contain rounded-3xl"
+      priority
+    />
+  </div>
+</div>
       </div>
     </section>
   );
