@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { Linkedin } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const productLinks = [
   { title: "Emails", href: "/emails" },
@@ -32,7 +33,13 @@ const Footer = () => {
           <div>
             {/* Logo */}
             <Link href="/">
-              <img src="/EMSLogoWhite.png" alt="EMS logo" className="h-8 w-auto" />
+              <Image
+                src="/EMSLogoWhite.png"
+                alt="EMS logo"
+                width={844}
+                height={297}
+                className="h-8 w-auto"
+              />
             </Link>
 
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
