@@ -187,12 +187,12 @@ const Features = () => {
       <div className="w-full max-w-screen-lg mx-auto mt-10 sm:mt-16">
         <div className="grid md:grid-cols-2 gap-6 items-center">
           <Image
-            src="/EMSUpsellSite.png"
-            alt="EMS Upsell Site"
-            width={800}
-            height={600}
-            className="w-full rounded-xl border"
-          />
+  src="/EMSUpsellSite.png"
+  alt="EMS Upsell Site"
+  width={800}
+  height={600}
+  className="w-full max-w-md lg:max-w-lg xl:max-w-xl h-auto rounded-xl shadow-md"
+/>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {howItWorks.map((item) => (
               <FeatureCard key={item.title} icon={item.icon} title={item.title}>
