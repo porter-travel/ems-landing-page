@@ -8,7 +8,7 @@ const testimonials = [
   {
     id: 1,
     name: "GM",
-    designation: "74-room boutique hotel, Bath",
+    designation: "74-room Boutique Hotel, Bath",
     testimonial:
       "Pre-arrival emails now do the selling for us. Upgrades, parking, late checkout—+17% ancillary within a month.",
     avatar: "",
@@ -16,7 +16,7 @@ const testimonials = [
   {
     id: 2,
     name: "Front Office Manager",
-    designation: "city hotel, Glasgow",
+    designation: "City Hotel, Glasgow",
     testimonial:
       "The welcome email killed the 'where do I park?' calls. Guests arrive calmer—and upsell take-rate hit 12%.",
     avatar: "",
@@ -24,7 +24,7 @@ const testimonials = [
   {
     id: 3,
     name: "Spa Director",
-    designation: "resort hotel, Cornwall",
+    designation: "Resort Hotel, Cornwall",
     testimonial:
       "Mid-stay tips + spa offer = weeknight spa bookings up 22%. All from one automated flow.",
     avatar: "",
@@ -32,7 +32,7 @@ const testimonials = [
   {
     id: 4,
     name: "Marketing Lead",
-    designation: "heritage hotel, York",
+    designation: "Heritage Hotel, York",
     testimonial:
       "Local recs in the day-before email get 60% click-through. Guests feel looked after before they even check in.",
     avatar: "",
@@ -40,7 +40,7 @@ const testimonials = [
   {
     id: 5,
     name: "Revenue Manager",
-    designation: "airport hotel, Manchester",
+    designation: "Airport Hotel, Manchester",
     testimonial:
       "We added late checkout to the T-24h email and it prints money. +£9.80 per booking on average.",
     avatar: "",
@@ -48,7 +48,7 @@ const testimonials = [
   {
     id: 6,
     name: "Owner",
-    designation: "coastal inn, Dorset",
+    designation: "Coastal Inn, Dorset",
     testimonial:
       "Post-stay thank-you + direct rebook code: repeat stays up 14% without lifting a finger.",
     avatar: "",
@@ -56,7 +56,7 @@ const testimonials = [
   {
     id: 7,
     name: "GM",
-    designation: "business hotel, Birmingham",
+    designation: "Business Hotel, Birmingham",
     testimonial:
       "No fancy integrations—just a CSV and great timing. We launched in a day and it paid back in a week.",
     avatar: "",
@@ -64,7 +64,7 @@ const testimonials = [
   {
     id: 8,
     name: "Ops Manager",
-    designation: "countryside hotel, Cotswolds",
+    designation: "Countryside Hotel, Cotswolds",
     testimonial:
       "Guests love the tone; ops loves the quiet inbox. The guide email cut questions by half.",
     avatar: "",
@@ -72,7 +72,7 @@ const testimonials = [
   {
     id: 9,
     name: "Owner-Operator",
-    designation: "brasserie, Bristol",
+    designation: "Brasserie, Bristol",
     testimonial:
       "Pre-booking email with a welcome cocktail? 18% of diners pre-add it. Easy win.",
     avatar: "",
@@ -80,7 +80,7 @@ const testimonials = [
   {
     id: 10,
     name: "GM",
-    designation: "modern European, Leeds",
+    designation: "Modern European Restaurant, Leeds",
     testimonial:
       "Chef's menu 'pre-order only' in the confirmation email sells out weekends. Higher spend, smoother service.",
     avatar: "",
@@ -88,7 +88,7 @@ const testimonials = [
   {
     id: 11,
     name: "Group Manager",
-    designation: "neighbourhood dining, London",
+    designation: "Neighbourhood Dining, London",
     testimonial:
       "Day-of reminder with local parking tips + add a dessert board—+11% ticket on a Tuesday.",
     avatar: "",
@@ -96,7 +96,7 @@ const testimonials = [
   {
     id: 12,
     name: "Co-Founder",
-    designation: "wine bar & kitchen, Edinburgh",
+    designation: "Wine Bar & Kitchen, Edinburgh",
     testimonial:
       "Post-meal note with neighbourhood recs keeps us top of mind. Return bookings climbed 9%.",
     avatar: "",
@@ -104,7 +104,7 @@ const testimonials = [
   {
     id: 13,
     name: "Marketing Lead",
-    designation: "casual dining group, Cardiff",
+    designation: "Casual Dining Group, Cardiff",
     testimonial:
       "We swapped generic newsletters for timed flows around bookings. Open rates doubled; basket size followed.",
     avatar: "",
@@ -112,7 +112,7 @@ const testimonials = [
   {
     id: 14,
     name: "Commercial Manager",
-    designation: "2k-cap venue, Liverpool",
+    designation: "Venue, Liverpool",
     testimonial:
       "Pre-event email upsells drink tokens and VIP entry—per-head spend up 15% before doors open.",
     avatar: "",
@@ -120,7 +120,7 @@ const testimonials = [
   {
     id: 15,
     name: "F&B Lead",
-    designation: "theatre, Newcastle",
+    designation: "Theatre, Newcastle",
     testimonial:
       "Set-time mail with 'skip the queue—pre-order now' is a license to print money.",
     avatar: "",
@@ -128,7 +128,7 @@ const testimonials = [
   {
     id: 16,
     name: "Ops Director",
-    designation: "arena, Midlands",
+    designation: "Arena, Midlands",
     testimonial:
       "Missed-the-merch follow-up the next morning clears stock without discounting.",
     avatar: "",
@@ -136,7 +136,7 @@ const testimonials = [
   {
     id: 17,
     name: "Event Manager",
-    designation: "concert hall, Dublin",
+    designation: "Concert Hall, Dublin",
     testimonial:
       "Local travel and timings in the welcome note slashed 'what time?' messages. Team finally breathes.",
     avatar: "",
@@ -144,7 +144,7 @@ const testimonials = [
   {
     id: 18,
     name: "Director",
-    designation: "holiday lets, North Devon",
+    designation: "Holiday Lets, North Devon",
     testimonial:
       "Pre-arrival email offers early check-in/firewood hamper. +£7.30 per stay across 42 cottages.",
     avatar: "",
@@ -152,7 +152,7 @@ const testimonials = [
   {
     id: 19,
     name: "Superhost",
-    designation: "12 units, Brighton",
+    designation: "12 Units, Brighton",
     testimonial:
       "Mid-stay local recs stopped the 'what should we do?' messages—and lifted late-checkout buys by 13%.",
     avatar: "",
@@ -160,7 +160,7 @@ const testimonials = [
   {
     id: 20,
     name: "Portfolio Manager",
-    designation: "60 units, Lake District",
+    designation: "60 Units, Lake District",
     testimonial:
       "Post-stay thank-you + direct rebook link = repeat direct up 16%. OTA fees down, stress down.",
     avatar: "",
@@ -168,7 +168,7 @@ const testimonials = [
   {
     id: 21,
     name: "Owner",
-    designation: "serviced apartments, Belfast",
+    designation: "Serviced Apartments, Belfast",
     testimonial:
       "We just upload bookings. The flows do the rest. Zero faff, real money.",
     avatar: "",
