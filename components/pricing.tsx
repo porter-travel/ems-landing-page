@@ -1,8 +1,22 @@
 "use client";
 
-
 import { Card } from "@/components/ui/card";
 import Section from "@/components/section";
+import { Check } from "lucide-react";
+
+const included = [
+  "Unlimited automations",
+  "Branded upsell microsite",
+  "Advanced guest guides",
+  "Calendar-linked products",
+  "Fulfilment dashboards",
+  "Live reporting & insights",
+  "CSV upload + 1-click PMS sync",
+  "Embed links & widgets",
+  "Multi-property management",
+  "White-glove onboarding",
+  "14-day free trial included",
+];
 
 export default function Pricing() {
   return (
@@ -15,7 +29,7 @@ export default function Pricing() {
           Everything you need to unlock pre-arrival upsells, guest guides and fulfilment.
         </p>
         <div className="mt-8 w-full max-w-screen-md">
-          <Card className="bg-accent p-8 flex flex-col items-center">
+          <Card className="p-8 flex flex-col items-center">
             <div className="flex items-baseline justify-center gap-2">
               <span className="text-5xl font-bold">£59</span>
               <span className="text-lg font-semibold">/ property / month + VAT</span>
@@ -23,17 +37,12 @@ export default function Pricing() {
             <div className="mt-8 w-full">
               <h2 className="text-xl font-semibold text-center">What’s included (per property):</h2>
               <ul className="mt-4 space-y-2 text-sm md:text-base">
-                <li>✅ Unlimited automations — Pre-, in- and post-stay journeys; unlimited sends.</li>
-                <li>✅ Branded upsell microsite — Your logo, fonts and colours.</li>
-                <li>✅ Advanced guest guides — Property info, welcome messages and local recommendations.</li>
-                <li>✅ Calendar-linked products — Sell anything that needs a time slot e.g. bike rental, picnic slots etc.</li>
-                <li>✅ Fulfilment dashboards — View orders in real-time and easily update the status.</li>
-                <li>✅ Live reporting & insights — Revenue, open rates, popular products, best customers.</li>
-                <li>✅ CSV upload + 1-click PMS sync — Start with CSVs; connect SiteMinder/HLS etc.</li>
-                <li>✅ Embed links & widgets — Drop the upsell link in emails, SMS or PMS messages.</li>
-                <li>✅ Multi-property management — Manage properties from one account.</li>
-                <li>✅ White-glove onboarding — Strategy call, setup help and optimisation check-ins.</li>
-                <li>✅ 14-day free trial included</li>
+                {included.map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <Check className="h-4 w-4 mt-1 text-primary" />
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="mt-8 w-full">
