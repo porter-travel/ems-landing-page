@@ -3,9 +3,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, CalendarDays } from "lucide-react";
 import React from "react";
-import Lottie from "lottie-react";
-import heroAnimation from "@/public/EMSHeroImage.png";
-import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
+
+import Image from "next/image";
+import heroImage from "@/public/EMSHeroImage.png";
+
 
 const Hero = () => {
   return (
@@ -32,26 +33,16 @@ const Hero = () => {
             </Button>
           </div>
         </div>
-        <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-          <div
-            className="
-              w-[260px]
-              h-[560px]
-              box-border
-              rounded-3xl
-              border-4
-              border-black
-              overflow-hidden
-              shadow-xl
-            "
-          >
-            <Lottie
-              animationData={heroAnimation}
-              loop
-              className="w-full h-full object-contain rounded-3xl"
-              rendererSettings={{ preserveAspectRatio: "xMidYMid meet" }}
-            />
-          </div>
+
+      </div>
+      <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
+        <Image
+      src={heroImage}
+      alt="EMS Hero"
+      className="w-full h-full object-contain rounded-3xl"
+      priority
+    />
+
         </div>
       </div>
     </section>
