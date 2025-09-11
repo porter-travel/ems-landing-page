@@ -23,10 +23,10 @@ export default function Pricing() {
     <Section id="pricing">
       <div>
         <div className="mt-8 w-full flex justify-center">
-          <Card className="p-8 flex flex-col items-center text-center max-w-md">
+          <Card className="p-8 flex flex-col items-center text-center max-w-sm w-full">
             <div className="flex items-baseline justify-center gap-2">
               <span className="text-5xl font-bold">£59</span>
-              <span className="text-sm font-normal">/ property / month + VAT</span>
+              <span className="text-sm font-normal">per property per month + VAT</span>
             </div>
 
             <div className="mt-8 w-full">
