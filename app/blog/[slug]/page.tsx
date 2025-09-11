@@ -1,5 +1,3 @@
-// app/blog/[slug]/page.tsx
-
 import { client } from "@/lib/contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Document } from "@contentful/rich-text-types";
@@ -16,7 +14,10 @@ type BlogPost = {
     body: Document;
     description?: string;
     coverImage?: {
-      fields: { file: { url: string }; title: string };
+      fields: {
+        file: { url: string };
+        title: string;
+      };
     };
     author?: string;
     publishedDate?: string;
@@ -24,14 +25,12 @@ type BlogPost = {
   };
 };
 
-export default async function BlogPostPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params; // ✅ destructure after awaiting params
+
   const entries = await client.getEntries({
     content_type: "post",
-    "fields.slug": params.slug,
+    "fields.slug": slug,
     limit: 1,
   });
 
@@ -68,17 +67,27 @@ export default async function BlogPostPage({
           />
         )}
 
-        {post.fields.body && (
-          <div className="prose prose-lg">
-            {documentToReactComponents(post.fields.body)}
+        {post.fields.body ? (
+          <div className="prose prose-lg">{documentToReactComponents(post.fields.body)}</div>
+        ) : (
+          <p className="text-muted-foreground">No content available.</p>
+        )}
+
+        {post.fields.tags && (
+          <div className="mt-8 flex flex-wrap gap-2">
+            {post.fields.tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1 text-sm rounded-full bg-muted text-muted-foreground"
+              >
+                {tag}
+              </span>
+            ))}
           </div>
         )}
 
-        <div className="mt-8">
-          <Link
-            href="/blog"
-            className="text-sm font-medium text-[#1a1a1a] hover:underline"
-          >
+        <div className="mt-12">
+          <Link href="/blog" className="text-[#1a1a1a] underline">
             ← Back to Blog
           </Link>
         </div>
