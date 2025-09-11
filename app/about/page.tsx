@@ -5,7 +5,15 @@ import PageScaffold from "@/components/layout/PageScaffold";
 import Section from "@/components/layout/Section";
 import Hero from "@/components/hero/Hero";
 import FeatureCard from "@/components/cards/FeatureCard";
-import { Users, Handshake, Rocket, BedDouble, UtensilsCrossed, Building2, Home } from "lucide-react";
+import {
+  Users,
+  Handshake,
+  Rocket,
+  BedDouble,
+  UtensilsCrossed,
+  Building2,
+  Home,
+} from "lucide-react";
 
 export default function Page() {
   const values = [
@@ -44,7 +52,7 @@ export default function Page() {
     },
     {
       icon: <Home className="h-6 w-6" aria-hidden />,
-      title: "Short-stay hosts",
+      title: "Airbnbs",
       description: "Boosting reviews and rebookings.",
     },
   ];
@@ -58,27 +66,46 @@ export default function Page() {
           subtext="Every guest. Every touchpoint. Elevated. We build pick-and-mix tools that turn routine interactions into unforgettable (and profitable) moments."
           showCtas
         />
+
+        {/* Our Story Section */}
         <section className="py-12 md:py-16">
-          <Section className="max-w-screen-md">
-            <div className="rounded-2xl border bg-background/60 backdrop-blur p-6 md:p-7 space-y-4">
-              <h2 className="text-3xl md:text-4xl font-heading font-semibold">Our Story</h2>
+          <Section className="max-w-5xl">
+            <div className="rounded-2xl border bg-background/60 backdrop-blur p-6 md:p-10 text-center space-y-6">
+              <img
+                src="/about-hero-image.png"
+                alt="Our Story"
+                className="mx-auto max-h-64 object-contain"
+              />
+              <h2 className="text-3xl md:text-4xl font-heading font-semibold">
+                Our Story
+              </h2>
               <p>It started with one question:</p>
-              <p>Why do guests wade through noise when a simple email could do the work?</p>
               <p>
-                In 2019 we built an AI engine to personalise hotel bookings. It worked—guests were happier, revenue went up.
-                Hotels then asked: “Can you help us sell more before guests arrive?” We listened.
+                Why do guests wade through noise when a simple email could do
+                the work?
               </p>
               <p>
-                EMS was born: an automation engine built for hospitality. From there, restaurants, venues, and Airbnbs joined in.
-                The idea stayed the same—replace messy manual work with seamless, branded communications that guests love.
+                In 2019 we built an AI engine to personalise hotel bookings. It
+                worked—guests were happier, revenue went up. Hotels then asked:
+                “Can you help us sell more before guests arrive?” We listened.
+              </p>
+              <p>
+                EMS was born: an automation engine built for hospitality. From
+                there, restaurants, venues, and Airbnbs joined in. The idea
+                stayed the same—replace messy manual work with seamless, branded
+                communications that guests love.
               </p>
             </div>
           </Section>
         </section>
+
+        {/* What Drives Us */}
         <section className="py-12 md:py-16">
-          <Section className="max-w-screen-md space-y-6">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold">What Drives Us</h2>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <Section className="max-w-5xl space-y-6">
+            <h2 className="text-3xl md:text-4xl font-heading font-semibold">
+              What Drives Us
+            </h2>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
               {values.map((item) => (
                 <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                   {item.description}
@@ -87,21 +114,31 @@ export default function Page() {
             </div>
           </Section>
         </section>
+
+        {/* Mission */}
         <section className="py-12 md:py-16">
-          <Section className="max-w-screen-md">
-            <div className="rounded-2xl border bg-background/60 backdrop-blur p-6 md:p-7 space-y-4 text-center">
-              <h2 className="text-3xl md:text-4xl font-heading font-semibold">Mission</h2>
+          <Section className="max-w-5xl">
+            <div className="rounded-2xl border bg-background/60 backdrop-blur p-6 md:p-10 space-y-4 text-center">
+              <h2 className="text-3xl md:text-4xl font-heading font-semibold">
+                Mission
+              </h2>
               <p>
-                To democratise guest-experience tech. If you can upload a CSV, you can run EMS. No dev team, no six-month rollout.
-                Just plug-and-play tools that boost revenue, save staff time, and turn guests into repeat fans.
+                To democratise guest-experience tech. If you can upload a CSV,
+                you can run EMS. No dev team, no six-month rollout. Just
+                plug-and-play tools that boost revenue, save staff time, and
+                turn guests into repeat fans.
               </p>
             </div>
           </Section>
         </section>
+
+        {/* Who We Serve */}
         <section className="py-12 md:py-16">
-          <Section className="max-w-screen-md space-y-6">
-            <h2 className="text-3xl md:text-4xl font-heading font-semibold">Who We Serve</h2>
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+          <Section className="max-w-5xl space-y-6">
+            <h2 className="text-3xl md:text-4xl font-heading font-semibold">
+              Who We Serve
+            </h2>
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
               {serve.map((item) => (
                 <FeatureCard key={item.title} icon={item.icon} title={item.title}>
                   {item.description}
@@ -110,6 +147,7 @@ export default function Page() {
             </div>
           </Section>
         </section>
+
         <PatternedCta
           title="The guest experience is evolving. Are you?"
           subtext="Drop the clunky workflows. EMS brings automations, guides, and upsells into one streamlined system."

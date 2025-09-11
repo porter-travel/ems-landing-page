@@ -38,9 +38,9 @@ export default async function BlogPage() {
             No posts yet. Add some in Contentful!
           </p>
         ) : (
-          <div className="space-y-8">
+          <div className="space-y-5">
   {items.map((post) => (
-    <Link key={post.sys.id} href={`/blog/${post.fields.slug}`}>
+    <Link key={post.sys.id} href={`/blog/${post.fields.slug}`} className="block">
       <div className="bg-card border rounded-xl shadow-sm hover:shadow-md transition flex flex-col md:flex-row overflow-hidden">
         {post.fields.coverImage && (
           <img
