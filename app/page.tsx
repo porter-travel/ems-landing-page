@@ -19,7 +19,7 @@ export default function Home() {
         <Testimonials />
         <PatternedCta
           title="The guest experience is evolving. Are you?"
-          subtext="Drop the clunky workflows. EMS brings ordering, requests, chat, and upsells into one streamlined system."
+          subtext="Drop the clunky workflows. EMS automates guest emails, upsells, and fulfilment in one streamlined system."
         />
         <Footer />
       </main>

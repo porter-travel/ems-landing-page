@@ -228,7 +228,7 @@ export default function Page() {
 
         <PatternedCta
           title="The guest experience is evolving. Are you?"
-          subtext="Drop the clunky workflows. EMS automates perfectly timed emails, property guides, and upsells—without lifting a finger."
+          subtext="Drop the clunky workflows. EMS automates guest emails, upsells, and fulfilment in one streamlined system."
         />
 
         <Footer />

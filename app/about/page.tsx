@@ -150,7 +150,7 @@ export default function Page() {
 
         <PatternedCta
           title="The guest experience is evolving. Are you?"
-          subtext="Drop the clunky workflows. EMS brings automations, guides, and upsells into one streamlined system."
+          subtext="Drop the clunky workflows. EMS automates guest emails, upsells, and fulfilment in one streamlined system."
         />
       </PageScaffold>
       <Footer />
