@@ -56,7 +56,7 @@ const Hero = () => {
             <Image
               src={heroImage}
               alt="EMS Hero"
-              className="w-full h-auto max-h-[420px] object-contain rounded-3xl"
+              className="w-full h-auto max-h-[520px] object-contain rounded-3xl"
               priority
             />
           </div>

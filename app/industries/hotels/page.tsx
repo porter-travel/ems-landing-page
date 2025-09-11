@@ -99,7 +99,7 @@ export default function Page() {
         />
         {/* Why Hoteliers Choose EMS */}
         <section className="py-12 md:py-16">
-          <Section className="max-w-screen-md space-y-6">
+          <Section className="max-w-screen-lg space-y-6">
             <h2 className="text-3xl md:text-4xl font-heading font-semibold">Why Hoteliers Choose EMS</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {why.map((item) => (
@@ -113,7 +113,7 @@ export default function Page() {
 
         {/* Guest Journey */}
         <section className="py-12 md:py-16">
-          <Section className="max-w-screen-md space-y-6">
+          <Section className="max-w-screen-lg space-y-6">
             <h2 className="text-3xl md:text-4xl font-heading font-semibold">Build the Guest Journey That Fits You</h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
               {journey.map((item) => (
@@ -127,7 +127,7 @@ export default function Page() {
 
         {/* Staff Features */}
         <section className="py-12 md:py-16">
-          <Section className="max-w-screen-md space-y-6">
+          <Section className="max-w-screen-lg space-y-6">
             <h2 className="text-3xl md:text-4xl font-heading font-semibold">Effortless for Staff</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {staffFeatures.map((item) => (
@@ -141,7 +141,7 @@ export default function Page() {
 
         {/* Testimonial */}
         <section className="py-12 md:py-16">
-          <Section className="max-w-screen-md">
+          <Section className="max-w-screen-lg">
             <div className="rounded-2xl border bg-background/60 backdrop-blur p-6 md:p-7 text-center space-y-4">
               <p className="text-lg font-semibold">
                 “Guests love the personal touch, staff love the simplicity—and the bottom line loves the upsells.”

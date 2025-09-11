@@ -24,10 +24,14 @@ export default function Pricing() {
       <div>
         <div className="mt-8 w-full flex justify-center">
           <Card className="p-8 flex flex-col items-center text-center max-w-sm w-full">
-            <div className="flex items-baseline justify-center gap-2">
-              <span className="text-5xl font-bold">£59</span>
-              <span className="text-sm font-normal">per property per month + VAT</span>
-            </div>
+            <div className="flex flex-col items-center text-center">
+  <h2 className="text-5xl xs:text-4xl sm:text-5xl font-bold tracking-tight text-center">
+  £59
+</h2>
+<p className="text-sm font-normal text-muted-foreground text-center">
+  per property per month + VAT
+</p>
+</div>
 
             <div className="mt-8 w-full">
               <h2 className="text-xl font-semibold">What’s included (per property):</h2>
@@ -51,9 +55,10 @@ export default function Pricing() {
             </div>
           </Card>
         </div>
-        <p className="mt-8 text-center text-sm text-muted-foreground max-w-[80ch]">
-          Need volume pricing or enterprise terms? Contact us - we offer custom discounts for larger portfolios and dedicated support packages.
-        </p>
+        <p className="mt-8 mx-auto text-center text-sm text-muted-foreground max-w-[60ch]">
+  Need volume pricing or enterprise terms? <br />
+  Contact us — we offer custom discounts for larger portfolios and dedicated support packages.
+</p>
       </div>
     </Section>
   );

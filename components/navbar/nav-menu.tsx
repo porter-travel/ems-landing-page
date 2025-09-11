@@ -110,10 +110,13 @@ export const NavMenu = ({ orientation, className, ...props }: NavigationMenuProp
         </NavigationMenuContent>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <NavigationMenuLink asChild>
-          <Link href="/blog">Blog</Link>
-        </NavigationMenuLink>
-      </NavigationMenuItem>
+  <NavigationMenuLink
+    asChild
+    className="px-3 py-2 text-sm font-medium transition-colors hover:text-foreground"
+  >
+    <Link href="/blog">Blog</Link>
+  </NavigationMenuLink>
+</NavigationMenuItem>
     </NavigationMenuList>
     </NavigationMenu>
   );
