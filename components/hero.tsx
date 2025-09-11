@@ -52,11 +52,11 @@ const Hero = () => {
 
         {/* Right column: hero image */}
         <div className="md:w-1/2 flex justify-center items-stretch mt-10 md:mt-0">
-          <div className="flex items-center w-full max-w-sm lg:max-w-md xl:max-w-lg">
+          <div className="flex items-center w-full max-w-xs sm:max-w-sm md:max-w-md">
             <Image
               src={heroImage}
               alt="EMS Hero"
-              className="w-full h-auto max-h-full object-contain rounded-3xl"
+              className="w-full h-auto max-h-[420px] object-contain rounded-3xl"
               priority
             />
           </div>

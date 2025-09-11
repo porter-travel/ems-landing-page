@@ -13,9 +13,9 @@ type BlogPost = {
 };
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -24,7 +24,8 @@ export async function generateStaticParams() {
   return items.map((post: BlogPost) => ({ slug: post.fields.slug }));
 }
 
-export default async function BlogPostPage({ params: { slug } }: BlogPostPageProps) {
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params;
   const entries = await client.getEntries({
     content_type: "blogPost",
     "fields.slug": slug,
