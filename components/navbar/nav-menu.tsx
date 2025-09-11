@@ -45,6 +45,14 @@ export const NavMenu = ({ orientation, className, ...props }: NavigationMenuProp
             </li>
           </ul>
         </div>
+        <div>
+          <p className="font-semibold">Resources</p>
+          <ul className="mt-2 ml-4 flex flex-col gap-2">
+            <li>
+              <Link href="/blog">Blog</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     );
   }
@@ -100,6 +108,11 @@ export const NavMenu = ({ orientation, className, ...props }: NavigationMenuProp
             </li>
           </ul>
         </NavigationMenuContent>
+      </NavigationMenuItem>
+      <NavigationMenuItem>
+        <NavigationMenuLink asChild>
+          <Link href="/blog">Blog</Link>
+        </NavigationMenuLink>
       </NavigationMenuItem>
     </NavigationMenuList>
     </NavigationMenu>
