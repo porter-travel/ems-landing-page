@@ -27,7 +27,7 @@ const companyLinks = [
 
 const Footer = () => {
   return (
-    <footer className="mt-40 bg-[#1a1a1a] text-white">
+    <footer className="mt-40 bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 text-white">
       <div className="max-w-screen-xl mx-auto px-6">
         <div className="py-12 flex flex-col sm:flex-row items-start justify-between gap-x-8 gap-y-10">
           <div>
@@ -46,7 +46,10 @@ const Footer = () => {
               <ul className="space-y-2">
                 {productLinks.map(({ title, href }) => (
                   <li key={title}>
-                    <Link href={href} className="text-white hover:text-white">
+                    <Link
+                      href={href}
+                      className="text-white/80 transition hover:text-white"
+                    >
                       {title}
                     </Link>
                   </li>
@@ -55,7 +58,10 @@ const Footer = () => {
               <ul className="space-y-2">
                 {industryLinks.map(({ title, href }) => (
                   <li key={title}>
-                    <Link href={href} className="text-white hover:text-white">
+                    <Link
+                      href={href}
+                      className="text-white/80 transition hover:text-white"
+                    >
                       {title}
                     </Link>
                   </li>
@@ -64,7 +70,10 @@ const Footer = () => {
               <ul className="space-y-2">
                 {companyLinks.map(({ title, href }) => (
                   <li key={title}>
-                    <Link href={href} className="text-white hover:text-white">
+                    <Link
+                      href={href}
+                      className="text-white/80 transition hover:text-white"
+                    >
                       {title}
                     </Link>
                   </li>
@@ -85,13 +94,13 @@ const Footer = () => {
         <Separator />
         <div className="py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5">
           {/* Copyright */}
-          <span className="text-white text-center sm:text-start">
+          <span className="text-white/70 text-center sm:text-start">
             &copy; 2025 Travel Global Limited. All rights reserved.
           </span>
 
-          <div className="flex items-center gap-5 text-white">
+          <div className="flex items-center gap-5 text-white/80">
             <Link href="https://www.linkedin.com/company/emsgrow/" target="_blank">
-              <Linkedin className="h-5 w-5" />
+              <Linkedin className="h-5 w-5 transition hover:text-white" />
             </Link>
           </div>
         </div>

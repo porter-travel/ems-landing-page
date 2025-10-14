@@ -10,7 +10,7 @@ export default function PatternedCta({ title, subtext, className }: PatternedCta
   return (
     <section className={cn("w-full", className)}>
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        <div className="relative overflow-hidden rounded-3xl bg-[#1A1A1A] text-white ring-1 ring-white/10">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 text-white ring-1 ring-indigo-500/20">
           {/* Decorative hatch background */}
           <svg
             aria-hidden
@@ -49,14 +49,14 @@ export default function PatternedCta({ title, subtext, className }: PatternedCta
               {/* Primary */}
               <a
                 href="https://enhancemystay.com/register"
-                className="inline-flex h-11 items-center justify-center rounded-xl bg-primary px-5 text-primary-foreground hover:opacity-90 transition"
+                className="inline-flex h-11 items-center justify-center rounded-xl bg-[linear-gradient(135deg,_hsl(227,86%,56%)_0%,_hsl(262,83%,67%)_60%,_hsl(199,89%,65%)_100%)] px-5 font-medium text-white shadow-[0_18px_32px_-18px_rgba(49,46,129,0.5)] transition hover:brightness-105"
               >
                 Get Started Free
               </a>
               {/* Secondary */}
               <a
                 href="https://calendly.com/emsgrow/30min"
-                className="inline-flex h-11 items-center justify-center rounded-xl border bg-white px-5 text-[#1A1A1A] hover:bg-white/90 transition"
+                className="inline-flex h-11 items-center justify-center rounded-xl border border-white/20 bg-white/10 px-5 text-white backdrop-blur transition hover:bg-white/15"
               >
                 <span className="inline-flex items-center gap-2">
                   Book a Demo
