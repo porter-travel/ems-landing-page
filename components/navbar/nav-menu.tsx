@@ -63,61 +63,61 @@ export const NavMenu = ({ orientation, className, ...props }: NavigationMenuProp
         <NavigationMenuItem>
           <NavigationMenuTrigger>Features</NavigationMenuTrigger>
           <NavigationMenuContent className="min-w-56">
-          <ul className="flex flex-col gap-2 p-3">
-            <li>
-              <NavigationMenuLink asChild>
-                <Link href="/emails">Emails</Link>
-              </NavigationMenuLink>
-            </li>
-            <li>
-              <NavigationMenuLink asChild>
-                <Link href="/fulfilment">Fulfilment</Link>
-              </NavigationMenuLink>
-            </li>
-            <li>
-              <NavigationMenuLink asChild>
-                <Link href="/insights">Insights</Link>
-              </NavigationMenuLink>
-            </li>
-          </ul>
-        </NavigationMenuContent>
-      </NavigationMenuItem>
-      <NavigationMenuItem>
-        <NavigationMenuTrigger>Industries</NavigationMenuTrigger>
-        <NavigationMenuContent className="min-w-56">
-          <ul className="flex flex-col gap-2 p-3">
-            <li>
-              <NavigationMenuLink asChild>
-                <Link href="/industries/hotels">Hotels</Link>
-              </NavigationMenuLink>
-            </li>
-            <li>
-              <NavigationMenuLink asChild>
-                <Link href="/industries/restaurants">Restaurants</Link>
-              </NavigationMenuLink>
-            </li>
-            <li>
-              <NavigationMenuLink asChild>
-                <Link href="/industries/venues">Venues</Link>
-              </NavigationMenuLink>
-            </li>
-            <li>
-              <NavigationMenuLink asChild>
-                <Link href="/industries/airbnbs">Airbnbs</Link>
-              </NavigationMenuLink>
-            </li>
-          </ul>
-        </NavigationMenuContent>
-      </NavigationMenuItem>
-      <NavigationMenuItem>
-  <NavigationMenuLink
-    asChild
-    className="px-3 py-2 text-sm font-medium transition-colors hover:text-foreground"
-  >
-    <Link href="/blog">Blog</Link>
-  </NavigationMenuLink>
-</NavigationMenuItem>
-    </NavigationMenuList>
+            <ul className="flex flex-col gap-2 p-3">
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link href="/emails">Emails</Link>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link href="/fulfilment">Fulfilment</Link>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link href="/insights">Insights</Link>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Industries</NavigationMenuTrigger>
+          <NavigationMenuContent className="min-w-56">
+            <ul className="flex flex-col gap-2 p-3">
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link href="/industries/hotels">Hotels</Link>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link href="/industries/restaurants">Restaurants</Link>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link href="/industries/venues">Venues</Link>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link href="/industries/airbnbs">Airbnbs</Link>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink
+            asChild
+            className="px-3 py-2 text-sm font-medium transition-colors hover:text-foreground"
+          >
+            <Link href="/blog">Blog</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+      </NavigationMenuList>
     </NavigationMenu>
   );
 };
